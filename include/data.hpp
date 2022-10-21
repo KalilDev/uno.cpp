@@ -1,3 +1,7 @@
+//
+// Created by pedro on 21/10/22.
+//
+#pragma once
 #include <string>
 #include <stack>
 #include <vector>
@@ -32,7 +36,7 @@ namespace Uno {
             enum Kind {
                 Default, Reverse, Block, PlusTwo, PlusFour, Rainbow
             };
-            virtual Kind kind() const;
+            virtual Kind kind() const = 0;
         };
 
         class Default : public Card{
@@ -120,8 +124,8 @@ namespace Uno {
             }
         };
 
-        using CardStack = std::stack<Card>;
-        using CardList = std::vector<Card>;
+        using CardStack = std::stack<std::unique_ptr<Card>>;
+        using CardList = std::vector<std::unique_ptr<Card>>;
 
         using PlusTwoOrPlusFour = std::variant<PlusTwo, PlusFour>;
         using PlusTwoOrPlusFourStack = std::stack<PlusTwoOrPlusFour>;
@@ -178,7 +182,7 @@ namespace Uno {
             enum Kind {
                 Playing, WaitingStart, Finished
             };
-            virtual Kind kind() const;
+            virtual Kind kind() const = 0;
         };
         class Playing : public State{
         private:
@@ -228,7 +232,7 @@ namespace Uno {
 
         class WaitingStart : public State {
         public:
-            WaitingStart();
+            WaitingStart() = default;
             virtual ~WaitingStart() override = default;
 
             bool operator==(const WaitingStart &) const;
@@ -310,7 +314,7 @@ namespace Uno {
                 PlayerDrewCard,
                 PlayerSnitchedUno
             };
-            virtual Kind kind() const;
+            virtual Kind kind() const = 0;
         };
 
         class StartGame : public Event{
@@ -448,63 +452,5 @@ namespace Uno {
         plus_four_stacks_plus_four,
     };
 
-    class StateMachine {
-    public:
-        class Listener {
-            virtual ~Listener() = 0;
-
-            virtual void on_state_changed(const State &);
-        };
-
-        StateMachine() = default;
-
-        virtual ~StateMachine() = 0;
-
-        virtual State currentState() const = 0;
-
-        virtual size_t add_listener(const std::unique_ptr<Listener> &) = 0;
-
-        virtual void remove_listener(size_t) = 0;
-
-        virtual bool dispatch(const Event::Event &) = 0;
-
-    protected:
-        virtual std::optional<State> reduce(const State &, const Event::Event &);
-    };
-    class ThreadLocalStateMachine: public StateMachine {
-        const size_t _cards_in_hand;
-        const duration_t _play_duration;
-        const duration_t _uno_snitch_time;
-        const std::set<Rule> _rules;
-        State _state = initial_state();
-        const std::map<size_t,std::unique_ptr<Listener>> _listeners = {};
-    public:
-        ThreadLocalStateMachine(size_t, const duration_t&, const duration_t&, const std::set<Rule>&);
-        virtual ~ThreadLocalStateMachine() override = default;
-        static constexpr State initial_state();
-
-        virtual State currentState() const override;
-
-        virtual size_t add_listener(const std::unique_ptr<Listener> &) override ;
-
-        virtual void remove_listener(size_t) override;
-
-        virtual bool dispatch(const Event::Event &) override;
-    };
-    class ThreadedStateMachine: public StateMachine {
-        const std::unique_ptr<StateMachine> _underlying_machine;
-        const std::thread _thread;
-        const std::mutex _state_mutex;
-    public:
-        virtual ~ThreadedStateMachine() override;
-
-        virtual State currentState() const override;
-
-        virtual size_t add_listener(const std::unique_ptr<Listener> &) override ;
-
-        virtual void remove_listener(size_t) override;
-
-        virtual bool dispatch(const Event::Event &) override;
-
-    };
+    using Rules = std::set<Rule>;
 };
