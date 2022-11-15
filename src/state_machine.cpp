@@ -106,6 +106,73 @@ Uno::State Uno::StateMachine::initial_state() {
 
 }
 
-std::optional<Uno::State> Uno::StateMachine::reduce(const Uno::State &, const Uno::Event::Event &) {
-    return std::optional<State>();
+void todo() {
+    throw "To be implemented";
+}
+
+std::optional<Uno::State> Uno::StateMachine::reduce(const Uno::State &state, const Uno::Event::Event &event) {
+    const auto &play_state = state.play_state();
+    switch(play_state.kind()) {
+        case Play::State::Playing: {
+            const auto &playing = dynamic_cast<const Play::Playing &>(play_state);
+            switch (event.kind()) {
+                case Event::Event::StartGame:
+                    return {};
+                case Event::Event::PlayCard:
+                    todo();
+                case Event::Event::SayUno:
+                    todo();
+                case Event::Event::AddPlayer:
+                    todo();
+                case Event::Event::ChangePlayerName:
+                    return change_player_name();
+                case Event::Event::RemovePlayer:
+                    return remove_player();
+                case Event::Event::TimePassed:
+                    todo();
+                case Event::Event::PlayerDrewCard:
+                    todo();
+                case Event::Event::PlayerSnitchedUno:
+                    todo();
+            }
+        }
+        case Play::State::WaitingStart: {
+            const auto &waiting_start = dynamic_cast<const Play::WaitingStart &>(play_state);
+            switch (event.kind()) {
+                case Event::Event::StartGame:
+                    todo();
+                case Event::Event::PlayCard:
+                case Event::Event::SayUno:
+                    return {};
+                case Event::Event::AddPlayer:
+                    todo();
+                case Event::Event::ChangePlayerName:
+                    return change_player_name();
+                case Event::Event::RemovePlayer:
+                    return remove_player();
+                case Event::Event::TimePassed:
+                case Event::Event::PlayerDrewCard:
+                case Event::Event::PlayerSnitchedUno:
+                    return {};
+            }
+        }
+        case Play::State::Finished: {
+            const auto &finished = dynamic_cast<const Play::Finished &>(play_state);
+            switch (event.kind()) {
+                case Event::Event::StartGame:
+                case Event::Event::PlayCard:
+                case Event::Event::SayUno:
+                case Event::Event::AddPlayer:
+                    return {};
+                case Event::Event::ChangePlayerName:
+                    return change_player_name();
+                case Event::Event::RemovePlayer:
+                    return remove_player();
+                case Event::Event::TimePassed:
+                case Event::Event::PlayerDrewCard:
+                case Event::Event::PlayerSnitchedUno:
+                    return {};
+            }
+        }
+    }
 }
