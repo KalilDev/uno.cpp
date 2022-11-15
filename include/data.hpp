@@ -124,8 +124,9 @@ namespace Uno {
             }
         };
 
-        using CardStack = std::stack<std::unique_ptr<Card>>;
-        using CardList = std::vector<std::unique_ptr<Card>>;
+        using CardStack = std::stack<std::reference_wrapper<Card>>;
+        using CardList = std::vector<std::reference_wrapper<Card>>;
+        using Cards = std::vector<std::unique_ptr<Card>>;
 
         using PlusTwoOrPlusFour = std::variant<PlusTwo, PlusFour>;
         using PlusTwoOrPlusFourStack = std::stack<PlusTwoOrPlusFour>;
@@ -271,6 +272,7 @@ namespace Uno {
         const Player::PlayerStates _players;
         const Card::CardStack _played_cards;
         const Card::CardStack _card_stack;
+        const Card::Cards _cards;
         const Card::Color _current_color;
         const std::unique_ptr<Play::State> _play_state;
     public:
@@ -278,6 +280,7 @@ namespace Uno {
                 const Player::PlayerStates &,
                 const Card::CardStack &,
                 const Card::CardStack &,
+                const Card::Cards &,
                 Card::Color,
                 const std::unique_ptr<Play::State> &);
 

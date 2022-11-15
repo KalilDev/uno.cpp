@@ -169,7 +169,7 @@ Uno::Play::Finished::with(const std::optional<Player::Id> &, const std::optional
 }
 
 Uno::State::State(const Uno::Player::PlayerStates &, const Uno::Card::CardStack &, const Uno::Card::CardStack &,
-                  Uno::Card::Color, const std::unique_ptr<Play::State> &) {
+                  Uno::Card::Cards, Uno::Card::Color, const std::unique_ptr<Play::State> &) {
 
 }
 
