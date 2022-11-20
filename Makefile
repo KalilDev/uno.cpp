@@ -17,3 +17,6 @@ docs:
 	$(DOXYGEN) $(DOXYFILE)
 
 all: main docs
+
+clean:
+	rm -r $(BUILD)/*
