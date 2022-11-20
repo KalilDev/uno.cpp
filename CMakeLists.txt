@@ -5,4 +5,4 @@ set(CMAKE_CXX_FLAGS "-Wall -Wconversion -Wextra")
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
-add_executable(main src/main.cpp)
+add_executable(main src/main.cpp src/add.cpp)
