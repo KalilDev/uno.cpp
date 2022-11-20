@@ -1,6 +1,7 @@
 CXX=g++
+THIRD_PARTY=third_party/
 INCLUDE=include/
-CXXFLAGS=-Wall -Wconversion -Wextra -I$(INCLUDE)
+CXXFLAGS=-Wall -Wconversion -Wextra -I$(INCLUDE) -I$(THIRD_PARTY)
 BUILD=build
 
 
