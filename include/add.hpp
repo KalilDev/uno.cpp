@@ -1,3 +1,7 @@
+/**
+ * @file add.hpp
+ * An module for adding two integers
+ */
 #pragma once
 
 /** Adds two integers

@@ -1,3 +1,7 @@
+/**
+ * @file main.cpp
+ * The program entry point
+ */
 #include <iostream>
 #include "add.hpp"
 
