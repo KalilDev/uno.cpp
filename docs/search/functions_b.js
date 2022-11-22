@@ -1,15 +1,13 @@
 var searchData=
 [
-  ['react_0',['react',['../structdoctest_1_1detail_1_1_result_builder.html#a03686f862471728c2980d72e02980213',1,'doctest::detail::ResultBuilder::react()'],['../structdoctest_1_1detail_1_1_message_builder.html#a3a65c5e39a0c04ae8e2a7c34997a2e4d',1,'doctest::detail::MessageBuilder::react()']]],
-  ['registerexceptiontranslator_1',['registerExceptionTranslator',['../namespacedoctest.html#a8e23e6bb4c6982688652060dbe41385d',1,'doctest']]],
-  ['registerexceptiontranslatorimpl_2',['registerExceptionTranslatorImpl',['../namespacedoctest_1_1detail.html#a3887426da16e0d12e6f0e270a767a6a5',1,'doctest::detail']]],
-  ['registerreporter_3',['registerReporter',['../namespacedoctest.html#a9e878a811f7bf0a615b3a39de3004673',1,'doctest']]],
-  ['registerreporterimpl_4',['registerReporterImpl',['../namespacedoctest_1_1detail.html#a828e011bb6028ab94eb14a3c7d8bd2c4',1,'doctest::detail']]],
-  ['regtest_5',['regTest',['../namespacedoctest_1_1detail.html#a00f99edefb8490a8e2602d58c96431f4',1,'doctest::detail']]],
-  ['report_5fquery_6',['report_query',['../structdoctest_1_1_i_reporter.html#ae7e30d1c2cd332094c66d39bf3a85e52',1,'doctest::IReporter']]],
-  ['reportercreator_7',['reporterCreator',['../namespacedoctest_1_1detail.html#ac78a52271e895d8485356c4516a18685',1,'doctest::detail']]],
-  ['result_8',['Result',['../structdoctest_1_1detail_1_1_result.html#ae38382da1a2d2f8e33aebc7da15febc9',1,'doctest::detail::Result::Result()=default'],['../structdoctest_1_1detail_1_1_result.html#ae4d2e8633aedaffa31f5c8b8530f522c',1,'doctest::detail::Result::Result(bool passed, const String &amp;decomposition=String())']]],
-  ['resultbuilder_9',['ResultBuilder',['../structdoctest_1_1detail_1_1_result_builder.html#a135e00690002d376f3d050700a635680',1,'doctest::detail::ResultBuilder::ResultBuilder(assertType::Enum at, const char *file, int line, const char *expr, const char *exception_type=&quot;&quot;, const String &amp;exception_string=&quot;&quot;)'],['../structdoctest_1_1detail_1_1_result_builder.html#ab55660e3aaa5d8fccbe19360f65bb1f3',1,'doctest::detail::ResultBuilder::ResultBuilder(assertType::Enum at, const char *file, int line, const char *expr, const char *exception_type, const Contains &amp;exception_string)']]],
-  ['rfind_10',['rfind',['../classdoctest_1_1_string.html#a6e22f4f3820de5ffdf82e0acc6646759',1,'doctest::String']]],
-  ['run_11',['run',['../classdoctest_1_1_context.html#a8059b137ef41cbe6c5d8160806a3cc63',1,'doctest::Context']]]
+  ['main_0',['main',['../_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
+  ['makecontextscope_1',['MakeContextScope',['../namespacedoctest_1_1detail.html#af15c2ff0484248d0966fc38a4b0d3a66',1,'doctest::detail']]],
+  ['mao_2',['Mao',['../class_mao.html#a16144144a20689d2d2f97128b3f4dc0d',1,'Mao']]],
+  ['mao_5fadicionar_5fcarta_3',['mao_adicionar_carta',['../capi_8h.html#ae46a0d7d5037d9835523ffad7ef5d5d9',1,'mao_adicionar_carta(struct Mao *, struct Carta *):&#160;capi.h'],['../mao_8hpp.html#a9e4875edd50d623e03cf2b2475d7f0d4',1,'mao_adicionar_carta(Mao *, Carta *):&#160;mao.hpp']]],
+  ['mao_5fbegin_4',['mao_begin',['../capi_8h.html#ac6e194ede272b498a951cab5dcecae20',1,'mao_begin(struct Mao *):&#160;capi.h'],['../mao_8hpp.html#a039166757ba8664516e50b57db5b7f08',1,'mao_begin(Mao *):&#160;mao.hpp']]],
+  ['mao_5fend_5',['mao_end',['../capi_8h.html#afa54a01928f7ea59e0c99659018a3626',1,'mao_end(struct Mao *):&#160;capi.h'],['../mao_8hpp.html#ac2f5c20a3fc62202c0796b2f0f3f75ef',1,'mao_end(Mao *):&#160;mao.hpp']]],
+  ['mao_5fget_5fcor_5fda_5fcarta_6',['mao_get_cor_da_carta',['../capi_8h.html#a0a1b17c4cb649bab5bcefc2e3a0b85b9',1,'mao_get_cor_da_carta(struct Mao *, size_t):&#160;capi.h'],['../mao_8hpp.html#a23e8e5b03772eddb38ccef74509043cc',1,'mao_get_cor_da_carta(Mao *, size_t):&#160;mao.hpp']]],
+  ['mao_5fremover_5fcarta_7',['mao_remover_carta',['../mao_8hpp.html#ad69e51b7e3d3870969fde6faf551acd9',1,'mao_remover_carta(Mao *, size_t):&#160;mao.hpp'],['../capi_8h.html#a315414ae320b2f37c8242d7826713b4b',1,'mao_remover_carta(struct Mao *, size_t):&#160;capi.h']]],
+  ['mao_5fsize_8',['mao_size',['../mao_8hpp.html#a8b4fd47b7e7dc139393cd813bc28c6b0',1,'mao_size(Mao *):&#160;mao.hpp'],['../capi_8h.html#a80e360759d17d4939db3ac52ce5ffe44',1,'mao_size(struct Mao *):&#160;capi.h']]],
+  ['messagebuilder_9',['MessageBuilder',['../structdoctest_1_1detail_1_1_message_builder.html#a1b5690556dd0fc3ac24c998f49b96147',1,'doctest::detail::MessageBuilder::MessageBuilder(MessageBuilder &amp;&amp;)=delete'],['../structdoctest_1_1detail_1_1_message_builder.html#ae40185a1fbaf07becd0bd077806f0358',1,'doctest::detail::MessageBuilder::MessageBuilder(const MessageBuilder &amp;)=delete'],['../structdoctest_1_1detail_1_1_message_builder.html#a93cb6f180968d38cb0f18b08ec6c9000',1,'doctest::detail::MessageBuilder::MessageBuilder(const char *file, int line, assertType::Enum severity)']]]
 ];

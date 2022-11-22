@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../_c_make_c_compiler_id_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../_c_make_c_x_x_compiler_id_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp']]],
-  ['makecontextscope_1',['MakeContextScope',['../namespacedoctest_1_1detail.html#af15c2ff0484248d0966fc38a4b0d3a66',1,'doctest::detail']]],
-  ['messagebuilder_2',['MessageBuilder',['../structdoctest_1_1detail_1_1_message_builder.html#a93cb6f180968d38cb0f18b08ec6c9000',1,'doctest::detail::MessageBuilder::MessageBuilder(const char *file, int line, assertType::Enum severity)'],['../structdoctest_1_1detail_1_1_message_builder.html#ae40185a1fbaf07becd0bd077806f0358',1,'doctest::detail::MessageBuilder::MessageBuilder(const MessageBuilder &amp;)=delete'],['../structdoctest_1_1detail_1_1_message_builder.html#a1b5690556dd0fc3ac24c998f49b96147',1,'doctest::detail::MessageBuilder::MessageBuilder(MessageBuilder &amp;&amp;)=delete']]]
+  ['jogador_0',['Jogador',['../class_jogador.html#a94a4939138ce04d2f3ceb68257517ac1',1,'Jogador']]],
+  ['jogador_5fget_5fid_1',['jogador_get_id',['../capi_8h.html#a0a509cdd6e635cb794021a48ac9d916c',1,'jogador_get_id(struct Jogador *):&#160;capi.h'],['../jogador_8hpp.html#aeaa1bcde84c646a094338a63f59c08e5',1,'jogador_get_id(Jogador *):&#160;jogador.hpp']]],
+  ['jogador_5fget_5fmao_2',['jogador_get_mao',['../capi_8h.html#af6a65b37ffdd77cb43ca42b8de5df242',1,'jogador_get_mao(struct Jogador *):&#160;capi.h'],['../jogador_8hpp.html#a1f10e38b2b3d40eac4a0f0f5f7e9994a',1,'jogador_get_mao(Jogador *):&#160;jogador.hpp']]],
+  ['jogarcarta_3',['jogarCarta',['../class_partida.html#ac11596089338c80912b2182a8f68e923',1,'Partida']]]
 ];

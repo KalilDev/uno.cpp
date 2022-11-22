@@ -68,5 +68,12 @@ var annotated_dup =
       [ "basic_ostream", "classstd_1_1basic__ostream.html", null ],
       [ "char_traits", "structstd_1_1char__traits.html", null ],
       [ "tuple", "classstd_1_1tuple.html", null ]
-    ] ]
+    ] ],
+    [ "Carta", "class_carta.html", "class_carta" ],
+    [ "CartaEspecial", "class_carta_especial.html", "class_carta_especial" ],
+    [ "Interface", "class_interface.html", "class_interface" ],
+    [ "Jogador", "class_jogador.html", "class_jogador" ],
+    [ "Mao", "class_mao.html", "class_mao" ],
+    [ "Partida", "class_partida.html", "class_partida" ],
+    [ "Pilha", "class_pilha.html", "class_pilha" ]
 ];

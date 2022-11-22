@@ -54,6 +54,9 @@ var NAVTREE =
         [ "All", "globals.html", "globals_dup" ],
         [ "Functions", "globals_func.html", null ],
         [ "Variables", "globals_vars.html", null ],
+        [ "Typedefs", "globals_type.html", null ],
+        [ "Enumerations", "globals_enum.html", null ],
+        [ "Enumerator", "globals_eval.html", null ],
         [ "Macros", "globals_defs.html", "globals_defs" ]
       ] ]
     ] ]
@@ -63,12 +66,12 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_c_compiler_id_8c.html",
-"doctest_8h.html#a1e295c708d2de0e47ac89c1632211159",
-"doctest_8h.html#aa30247b5e1a6e192c486364692e37832",
-"functions_r.html",
-"pages.html",
-"structdoctest_1_1_test_case_data.html#aa4876d06d5172070efeeb7d15bd786cf",
-"structdoctest_1_1detail_1_1types_1_1remove__reference_3_01_t_01_6_01_4.html"
+"classdoctest_1_1_string.html#adb57becb56e054d981e7c2b967a7e359",
+"doctest_8h.html#a631e7295c7abd3a071464fae6be07250",
+"doctest_8h.html#ae1bb5bed722f34f1c38b83cb19d326d3a5c330f1952cb85a8416902e237ec6f1f",
+"namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a44f079a43a4709abd7d6f22b317838a2",
+"structdoctest_1_1_context_options.html#a1ee59adf440880ebd7b31516471ddcab",
+"structdoctest_1_1detail_1_1_message_builder.html#ae40185a1fbaf07becd0bd077806f0358"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

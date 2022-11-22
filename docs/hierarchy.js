@@ -6,6 +6,9 @@ var hierarchy =
     ] ],
     [ "std::basic_istream< charT, traits >", "classstd_1_1basic__istream.html", null ],
     [ "std::basic_ostream< charT, traits >", "classstd_1_1basic__ostream.html", null ],
+    [ "Carta", "class_carta.html", [
+      [ "CartaEspecial", "class_carta_especial.html", null ]
+    ] ],
     [ "std::char_traits< charT >", "structstd_1_1char__traits.html", null ],
     [ "doctest::Contains", "classdoctest_1_1_contains.html", null ],
     [ "doctest::Context", "classdoctest_1_1_context.html", null ],
@@ -34,12 +37,17 @@ var hierarchy =
     [ "doctest::detail::IExceptionTranslator", "structdoctest_1_1detail_1_1_i_exception_translator.html", [
       [ "doctest::detail::ExceptionTranslator< T >", "classdoctest_1_1detail_1_1_exception_translator.html", null ]
     ] ],
+    [ "Interface", "class_interface.html", null ],
     [ "doctest::IReporter", "structdoctest_1_1_i_reporter.html", null ],
     [ "doctest::detail::types::is_enum< T >", "structdoctest_1_1detail_1_1types_1_1is__enum.html", null ],
     [ "doctest::IsNaN< F >", "structdoctest_1_1_is_na_n.html", null ],
+    [ "Jogador", "class_jogador.html", null ],
+    [ "Mao", "class_mao.html", null ],
     [ "doctest::MessageData", "structdoctest_1_1_message_data.html", [
       [ "doctest::detail::MessageBuilder", "structdoctest_1_1detail_1_1_message_builder.html", null ]
     ] ],
+    [ "Partida", "class_partida.html", null ],
+    [ "Pilha", "class_pilha.html", null ],
     [ "doctest::QueryData", "structdoctest_1_1_query_data.html", null ],
     [ "doctest::detail::RelationalComparator< int, L, R >", "structdoctest_1_1detail_1_1_relational_comparator.html", null ],
     [ "doctest::detail::types::remove_const< T >", "structdoctest_1_1detail_1_1types_1_1remove__const.html", null ],

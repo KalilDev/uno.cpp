@@ -1,6 +1,21 @@
 var searchData=
 [
-  ['instantiationhelper_0',['instantiationHelper',['../namespacedoctest_1_1detail.html#aad401b097a9af4df1d4a9d0911957c0f',1,'doctest::detail']]],
-  ['isdebuggeractive_1',['isDebuggerActive',['../namespacedoctest_1_1detail.html#a013828c4e677241cc26aeea33f762710',1,'doctest::detail']]],
-  ['isnan_2',['IsNaN',['../structdoctest_1_1_is_na_n.html#a47f3957c504f7d8bc40dd4014cce5ee1',1,'doctest::IsNaN']]]
+  ['get_5factive_5fcontexts_0',['get_active_contexts',['../structdoctest_1_1_i_reporter.html#ad34f2f1954ff43b6e8fe2dc595cec53a',1,'doctest::IReporter']]],
+  ['get_5fnum_5factive_5fcontexts_1',['get_num_active_contexts',['../structdoctest_1_1_i_reporter.html#a7d520de46d9104c0eeb02375fabad32d',1,'doctest::IReporter']]],
+  ['get_5fnum_5fstringified_5fcontexts_2',['get_num_stringified_contexts',['../structdoctest_1_1_i_reporter.html#ac8b96fef046edc609a3374a61b84797d',1,'doctest::IReporter']]],
+  ['get_5fstringified_5fcontexts_3',['get_stringified_contexts',['../structdoctest_1_1_i_reporter.html#a6db31e528efe08c9bc9b4037a2143c3a',1,'doctest::IReporter']]],
+  ['getcontextoptions_4',['getContextOptions',['../namespacedoctest.html#a13c02a469cfc2264d547fc0fc3a55569',1,'doctest']]],
+  ['getcor_5',['getCor',['../class_carta.html#a73da77cf6f6ce499af82abc550c13f3b',1,'Carta']]],
+  ['getcordacarta_6',['getCorDaCarta',['../class_mao.html#a91efd843649794049948003837ca5a6f',1,'Mao']]],
+  ['getcordapartida_7',['getCorDaPartida',['../class_partida.html#a12eeac403548d0a0f0562aa1c68c755c',1,'Partida']]],
+  ['getcurrenttestsuite_8',['getCurrentTestSuite',['../namespacedoctest__detail__test__suite__ns.html#a63d04c2e0ba35dff1e33cf0a24ec66c8',1,'doctest_detail_test_suite_ns']]],
+  ['getdirecao_9',['getDirecao',['../class_partida.html#a63861b1d704bc59037893bd28c2f11bd',1,'Partida']]],
+  ['getid_10',['getId',['../class_jogador.html#a031a95c7bf1477e3b30541c73f492aa9',1,'Jogador']]],
+  ['getinstrucoes_11',['getInstrucoes',['../class_interface.html#a7e4c264d6335d0eea7143bc1404e3d85',1,'Interface']]],
+  ['getjogadoratual_12',['getJogadorAtual',['../class_partida.html#a4671ea3520445022a283072e3f6fc763',1,'Partida']]],
+  ['getmao_13',['getMao',['../class_jogador.html#a58c8c2d24c24c66395f6afcb564fa100',1,'Jogador']]],
+  ['getnumero_14',['getNumero',['../class_carta.html#a8464e6968748bb11f9795c2194abd0e5',1,'Carta']]],
+  ['getpartida_15',['getPartida',['../class_interface.html#aa8be2251a0227182a60d1be1de456237',1,'Interface']]],
+  ['gettipo_16',['getTipo',['../class_carta_especial.html#ab34ccf0e08e506d77494738e590abbd3',1,'CartaEspecial']]],
+  ['gettop_17',['getTop',['../class_pilha.html#a92a77feca7bbfdaab8893f50ab6e77bc',1,'Pilha']]]
 ];

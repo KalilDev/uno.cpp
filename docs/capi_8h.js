@@ -1,0 +1,58 @@
+var capi_8h =
+[
+    [ "id_jogador", "capi_8h.html#ad44428500871ac42dec2cb372bad8bc8", null ],
+    [ "numero_da_carta", "capi_8h.html#aae46204c9d4647d0ec3045d5d36f6d5d", null ],
+    [ "CorDaCarta", "capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6", [
+      [ "Amarelo", "carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80a54ddb63d25ba5b6b4e05469f4f44669a", null ],
+      [ "Azul", "carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80aa1c2f7d857a72cb287f656f9d0cfac6c", null ],
+      [ "Verde", "carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80aaa44b44fb8d4de614cbb1f4f5f81143e", null ],
+      [ "Vermelho", "carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80aab8c48809f2aa64abc2190c4b14adfd2", null ]
+    ] ],
+    [ "DirecaoDaPartida", "capi_8h.html#a69b557ab052f553508f086c4380c01d2", [
+      [ "Normal", "partida_8hpp.html#a2941b8afa86322ed8fe2c1c946142af0a5ecbcf0afce98b042f35ec71ba03fa4b", null ],
+      [ "Reversa", "partida_8hpp.html#a2941b8afa86322ed8fe2c1c946142af0a8b188c4219710a4a46c7000fdd810d03", null ]
+    ] ],
+    [ "TipoDeCartaEspecial", "capi_8h.html#a2c44c1b0ba217c883cafe24622811df7", [
+      [ "Bloqueia", "carta__especial_8hpp.html#a7f6588d57fd306d7230912d136d55e68a89e5e63a5d3d48fe9452a5969c1fb4ce", null ],
+      [ "ComeDois", "carta__especial_8hpp.html#a7f6588d57fd306d7230912d136d55e68a644fca4d7103f5a776b604d140d890da", null ],
+      [ "Reverso", "carta__especial_8hpp.html#a7f6588d57fd306d7230912d136d55e68acc550c8508a1a5ec067cd779b14e1858", null ]
+    ] ],
+    [ "__attribute__", "capi_8h.html#a9f76f1fac85d2228b604c5ef7b29557a", null ],
+    [ "carta_delete", "capi_8h.html#aff3b1aed517d20149ab5d529a5476f5a", null ],
+    [ "carta_especial_get_tipo", "capi_8h.html#a6f6d0691a57fbf1e6f024ac6e8cb25af", null ],
+    [ "carta_get_cor", "capi_8h.html#a39713cdff0c486dd1151ef0548952ddc", null ],
+    [ "carta_get_numero", "capi_8h.html#acd40936c97d909a602f448c3cf23a32e", null ],
+    [ "cast_carta_to_carta_especial", "capi_8h.html#abb9f8d74a0429ac90606e1d16c7bb12d", null ],
+    [ "interface_comecar", "capi_8h.html#a48446a8b811d652c8bf9ee70d6e1ff07", null ],
+    [ "interface_delete", "capi_8h.html#a9ab20c08cc86948a9e0d5489ef63759a", null ],
+    [ "interface_get_instrucoes", "capi_8h.html#a448a0aeeff41a6ee3dae8cecd43598be", null ],
+    [ "interface_get_partida", "capi_8h.html#a8635ee4b0ac49d5e41337cec2cb49728", null ],
+    [ "interface_new", "capi_8h.html#a6e5f6e42bfb106aa9aa1b48128904fe8", null ],
+    [ "interface_resetar", "capi_8h.html#a16cf7e38f116c47e2cb0d1426eee5433", null ],
+    [ "interface_sair", "capi_8h.html#aa34fe4a580e700c9cc91c40a84f4cb3d", null ],
+    [ "jogador_get_id", "capi_8h.html#a0a509cdd6e635cb794021a48ac9d916c", null ],
+    [ "jogador_get_mao", "capi_8h.html#af6a65b37ffdd77cb43ca42b8de5df242", null ],
+    [ "mao_adicionar_carta", "capi_8h.html#ae46a0d7d5037d9835523ffad7ef5d5d9", null ],
+    [ "mao_begin", "capi_8h.html#ac6e194ede272b498a951cab5dcecae20", null ],
+    [ "mao_end", "capi_8h.html#afa54a01928f7ea59e0c99659018a3626", null ],
+    [ "mao_get_cor_da_carta", "capi_8h.html#a0a1b17c4cb649bab5bcefc2e3a0b85b9", null ],
+    [ "mao_remover_carta", "capi_8h.html#a315414ae320b2f37c8242d7826713b4b", null ],
+    [ "mao_size", "capi_8h.html#a80e360759d17d4939db3ac52ce5ffe44", null ],
+    [ "partida_begin", "capi_8h.html#ae823198992d0feabefddcf80116ede59", null ],
+    [ "partida_comer_carta", "capi_8h.html#ae863c90a33247efbd3e676e39b1e569b", null ],
+    [ "partida_end", "capi_8h.html#a8218409acdd1292c0dd51c02969653ae", null ],
+    [ "partida_get_cor_da_partida", "capi_8h.html#ad9f89fcd499b6dfca15a6c0f2c98995e", null ],
+    [ "partida_get_direcao", "capi_8h.html#a08177aad45656f691308d6def466822f", null ],
+    [ "partida_get_jogador_atual", "capi_8h.html#ad1b56c9625d7cf545b53ea1161e32927", null ],
+    [ "partida_imprime_partida", "capi_8h.html#a84eebde93ad95e8f1ed73e3b9f3aa89b", null ],
+    [ "partida_jogar_carta", "capi_8h.html#a54af4b93f9c68fe9b11c934c5604eeee", null ],
+    [ "Amarelo", "capi_8h.html#a66bcbe522e676e0919ccda67ad20cfc9", null ],
+    [ "Azul", "capi_8h.html#aad452ecf68e559a6c1717de9bf5af8a5", null ],
+    [ "Bloqueia", "capi_8h.html#a06ef9da7958bbffcba377508c2f86087", null ],
+    [ "ComeDois", "capi_8h.html#a5a30ed23713994a4ba6cdfcedee2fa84", null ],
+    [ "Normal", "capi_8h.html#abb5b863a4c7a7cc7d18a288c908b9f0b", null ],
+    [ "Reversa", "capi_8h.html#a36018fd1a4a487134fabbda44a5e160c", null ],
+    [ "Reverso", "capi_8h.html#aecc9e57a22d6ae81be9b1c0533d5a8ff", null ],
+    [ "Verde", "capi_8h.html#aa269d37660d730440193cc1d2fbdcae2", null ],
+    [ "Vermelho", "capi_8h.html#a606a89abdd891f487e3a9549fc1c7210", null ]
+];
