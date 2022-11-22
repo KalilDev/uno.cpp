@@ -67,7 +67,6 @@ id_jogador partida_get_jogador_atual(struct Partida*);
 void partida_jogar_carta(struct Partida*,id_jogador, size_t);
 CorDaCarta partida_get_cor_da_partida(struct Partida*);
 void partida_comer_carta(struct Partida*,id_jogador);
-void partida_imprime_partida(struct Partida*);
 struct Jogador *partida_begin(struct Partida*);
 struct Jogador *partida_end(struct Partida*);
 

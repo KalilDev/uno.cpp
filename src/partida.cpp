@@ -22,7 +22,7 @@ CartaInvalida::CartaInvalida(id_jogador jogador, Carta *ultima_carta, Carta *nov
 
 }
 
-Partida::Partida() =default;
+Partida::Partida() = default;
 
 DirecaoDaPartida Partida::getDirecao() {
     return _direcao;
@@ -85,9 +85,9 @@ void Partida::comerCarta(id_jogador id_jogador) {
 #define NUM_CARTAS 7
 
 void Partida::iniciarEstado() {
-    _cartas_na_mesa = {};
     _cartas_para_comer = Pilha::cheia();
     auto carta_inicial = _cartas_para_comer.PopPrimeiraNaoEspecial();
+    _cartas_na_mesa = {carta_inicial};
     for (id_jogador i = 0; i < NUM_JOGADORES; i++) {
         auto jogador = Jogador{i};
         _jogadores.push_back(jogador);
@@ -129,4 +129,28 @@ void Partida::comerUmaCarta() {
     }
     auto carta = _cartas_para_comer.pop();
     jogador.getMao()->adicionarCarta(carta);
+}
+
+extern "C" {
+    DirecaoDaPartida partida_get_direcao(Partida* self) {
+        return self->getDirecao();
+    }
+    id_jogador partida_get_jogador_atual(Partida* self) {
+        return self->getJogadorAtual();
+    }
+    void partida_jogar_carta(Partida* self,id_jogador id_jogador, size_t card_index) {
+        return self->jogarCarta(id_jogador, card_index);
+    }
+    CorDaCarta partida_get_cor_da_partida(Partida* self) {
+        return self->getCorDaPartida();
+    }
+    void partida_comer_carta(Partida*self,id_jogador id_jogador) {
+        return self->comerCarta(id_jogador);
+    }
+    Jogador *partida_begin(Partida*self) {
+        return self->begin();
+    }
+    Jogador *partida_end(Partida*self) {
+        return self->end();
+    }
 }

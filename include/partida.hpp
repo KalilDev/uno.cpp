@@ -63,7 +63,6 @@ extern "C" {
     void partida_jogar_carta(Partida*,id_jogador, size_t);
     CorDaCarta partida_get_cor_da_partida(Partida*);
     void partida_comer_carta(Partida*,id_jogador);
-    void partida_imprime_partida(Partida*);
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
 }
