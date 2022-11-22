@@ -15,6 +15,22 @@ enum DirecaoDaPartida : char {
     Reversa = -1,
 };
 
+class NaoESuaVez : std::exception {
+private:
+    id_jogador _jogador;
+public:
+    NaoESuaVez(id_jogador);
+};
+
+class CartaInvalida : std::exception {
+private:
+    id_jogador _jogador;
+    Carta*_ultima_carta;
+    Carta*_nova_carta;
+public:
+    CartaInvalida(id_jogador, Carta*, Carta*);
+};
+
 /** foo
  */
 class Partida {
@@ -36,6 +52,7 @@ public:
     Jogador *end();
 private:
     void avancarJogador();
+    void comerUmaCarta();
 };
 
 extern "C" {
