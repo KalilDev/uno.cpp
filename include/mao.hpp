@@ -20,6 +20,7 @@ public:
     void adicionarCarta(Carta *);
     Carta *removerCarta(size_t);
     CorDaCarta getCorDaCarta(size_t);
+    Carta *operator[](size_t);
 };
 
 extern "C" {
