@@ -48,7 +48,8 @@ public:
     void jogarCarta(id_jogador, size_t);
     CorDaCarta getCorDaPartida();
     void comerCarta(id_jogador);
-    void imprimePartida();
+    void iniciarEstado();
+    void limparEstado();
     Jogador *begin();
     Jogador *end();
 private:
