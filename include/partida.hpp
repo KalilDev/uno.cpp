@@ -14,6 +14,7 @@ enum DirecaoDaPartida : char {
     Normal = 1,
     Reversa = -1,
 };
+DirecaoDaPartida direcaoOposta(DirecaoDaPartida);
 
 class NaoESuaVez : std::exception {
 private:
