@@ -34,3 +34,38 @@ void Interface::sair();
 void Interface::resetar();
 
 void Interface::comecar();
+
+extern "C"
+{
+    Interface *interface_new();
+
+    void interface_delete(Interface *self)
+    {
+        self->interface_delete;
+    }
+
+    Partida *interface_get_partida(Interface *self)
+    {
+        return self->interface_get_partida;
+    }
+
+    char *interface_get_instrucoes(Interface *self)
+    {
+        return self->interface_get_instrucoes;
+    }
+
+    void interface_sair(Interface *self)
+    {
+        self->interface_sair;
+    }
+
+    void interface_resetar(Interface *self)
+    {
+        self->interface_resatar;
+    }
+
+    void interface_comecar(Interface *self)
+    {
+        self->interface_comecar;
+    }
+}
