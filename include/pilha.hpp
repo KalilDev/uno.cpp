@@ -14,6 +14,9 @@
 
 class Pilha {
 private:
+/**
+ * @brief vetor de cartas que representa a pilha da partida
+ */
     std::vector<Carta *> _cartas;
 public:
 /**
@@ -22,7 +25,11 @@ public:
  */
     Pilha();
 
-    Pilha(Carta *);
+/**
+ * @brief Construtor de um novo objeto Pilha
+ * @details Construtor que recebe o parâmetro do endereço de uma carta para adicioná-la na última posição do vetor de cartas
+ */
+    Pilha(Carta* carta);
 
 /**
  * @brief Destrutor de um objeto Pilha
@@ -39,7 +46,7 @@ public:
 
 /**
  * @brief Retira uma carta do vetor de cartas
- * @details Garante que a carta retirada da pilha teve seu endereço apagado e retorna o endereço da posição inicial do vetor de cartas
+ * @details Garante que a carta retirada da pilha teve seu endereço apagado e retorna o endereço da última carta (que foi retirada)
  * @return Carta* 
  */
     Carta *pop();
@@ -49,15 +56,30 @@ public:
  * @param Carta*
  * @details Insere uma nova carta (recebida por parâmetro) à pilha de lixo, que se trata de um vetor de cartas do tipo Carta
  */
-    void push(Carta *);
+    void push(Carta* carta);
 
 /**
  * @brief Embaralha as cartas
- * @details
+ * @details Embaralha as cartas após o vetor de cartas estiver completamente construido
  */
     void random();
-
+/**
+ * @brief Preenche o vetor de cartas no início da partida
+ * @details Preenche o vetor de cartas com todas as cartas do jogo ordenadas
+ * @return Pilha
+ */
     static Pilha cheia();
-
+/**
+ * @brief retorna o tamanho do vetor de cartas
+ * @details retorna o tamanho do vetor de cartas que representa a pilha da partida
+ * @return size_t 
+ */
     size_t size();
+
+/**
+ * @brief Retorna a primeira carta não especial
+ * @details Retorna a primeira carta não especial para o começo do jogo
+ * @return Carta*
+ */
+    Carta* PopPrimeiraNaoEspecial();
 };
