@@ -7,16 +7,19 @@
 
 /** foo
  */
-enum TipoDeCartaEspecial : unsigned char {
-    Bloqueia,
-    ComeDois,
-    Reverso
+enum TipoDeCartaEspecial : numero_da_carta {
+    Bloqueia = 10,
+    ComeDois = 11,
+    Reverso = 12
 };
 
+/** foo
+ */
 class CartaEspecial : public Carta {
 private:
     TipoDeCartaEspecial _tipo;
 public:
-    CartaEspecial();
+    CartaEspecial(CorDaCarta cor, TipoDeCartaEspecial tipo);
+    virtual ~CartaEspecial() override = default;
     TipoDeCartaEspecial getTipo();
 };

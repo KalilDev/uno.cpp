@@ -11,10 +11,10 @@ typedef unsigned char numero_da_carta;
 /** foo
  */
 enum CorDaCarta : unsigned char {
-    Amarelo,
-    Azul,
-    Verde,
-    Vermelho,
+    Amarelo = 0,
+    Azul = 1,
+    Verde = 2,
+    Vermelho = 3,
 };
 
 /** foo
@@ -24,7 +24,9 @@ private:
     CorDaCarta _cor;
     numero_da_carta _numero;
 public:
-    Carta();
+    Carta(CorDaCarta cor,
+    numero_da_carta numero);
+    virtual ~Carta() = default;
     CorDaCarta getCor();
     numero_da_carta getNumero();
 };
