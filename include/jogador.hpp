@@ -17,7 +17,7 @@ private:
     Mao _mao;
     id_jogador _id;
 public:
-    Jogador();
+    Jogador(id_jogador);
     Mao *getMao();
     id_jogador getId();
 };
