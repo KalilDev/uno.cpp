@@ -32,6 +32,19 @@ public:
     CorDaCarta getCorDaPartida();
     void comerCarta(id_jogador);
     void imprimePartida();
+    Jogador *begin();
+    Jogador *end();
 private:
     void avancarJogador();
 };
+
+extern "C" {
+    DirecaoDaPartida partida_get_direcao(Partida*);
+    id_jogador partida_get_jogador_atual(Partida*);
+    void partida_jogar_carta(Partida*,id_jogador, size_t);
+    CorDaCarta partida_get_cor_da_partida(Partida*);
+    void partida_comer_carta(Partida*,id_jogador);
+    void partida_imprime_partida(Partida*);
+    Jogador *partida_begin(Partida*);
+    Jogador *partida_end(Partida*);
+}

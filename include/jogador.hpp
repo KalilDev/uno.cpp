@@ -21,3 +21,8 @@ public:
     Mao *getMao();
     id_jogador getId();
 };
+
+extern "C" {
+    Mao *jogador_get_mao(Jogador*);
+    id_jogador jogador_get_id(Jogador*);
+}
