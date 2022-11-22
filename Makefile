@@ -50,7 +50,10 @@ pilha.test: test_dir pilha.o carta.o
 
 test: carta.test carta_especial.test interface.test jogador.test mao.test partida.test pilha.test
 
-all: main docs test
+libuno.so: carta.o carta_especial.o interface.o jogador.o mao.o partida.o pilha.o
+	$(CXX) $(CXXFLAGS) -shared $(BUILD)/carta.o $(BUILD)/carta_especial.o $(BUILD)/interface.o $(BUILD)/jogador.o $(BUILD)/mao.o $(BUILD)/partida.o $(BUILD)/pilha.o -o $(BUILD)/libuno.so
+
+all: main docs test libuno.so
 
 clean:
 	rm -r $(BUILD)/*
