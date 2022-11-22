@@ -23,3 +23,8 @@ public:
     virtual ~CartaEspecial() override = default;
     TipoDeCartaEspecial getTipo();
 };
+
+extern "C" {
+    CartaEspecial* cast_carta_to_carta_especial(Carta*);
+    TipoDeCartaEspecial carta_especial_get_tipo(CartaEspecial*);
+}
