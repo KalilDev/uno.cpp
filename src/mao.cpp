@@ -10,13 +10,11 @@
     }
 
     Carta Mao::*begin(){
-        *size_t = _cartas.begin();
-        return size_t;
+        return &*_cartas.begin();
     }
 
     Carta Mao::*end(){
-        *size_t = _cartas.end();
-        return size_t;
+        return &*_cartas.end();
     }
 
     void Mao::adicionarCarta(Carta * c){
@@ -27,7 +25,7 @@
         for(auto &x : _cartas){
             int aux = _cartas.getNumero();
             if(aux == size_t){
-                _cartas.erase(x);
+                _cartas.erase(x).at(aux);
             }
         }
     }
