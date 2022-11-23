@@ -81,5 +81,5 @@ public:
  * @details Retorna a primeira carta não especial para o começo do jogo
  * @return Carta*
  */
-    Carta* PopPrimeiraNaoEspecial();
+    Carta* popPrimeiraNaoEspecial();
 };
