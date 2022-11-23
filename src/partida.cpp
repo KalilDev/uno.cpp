@@ -86,6 +86,7 @@ void Partida::comerCarta(id_jogador id_jogador) {
 
 void Partida::iniciarEstado() {
     _cartas_para_comer = Pilha::cheia();
+    _cartas_para_comer.random();
     auto carta_inicial = _cartas_para_comer.PopPrimeiraNaoEspecial();
     _cartas_na_mesa = {carta_inicial};
     for (id_jogador i = 0; i < NUM_JOGADORES; i++) {
