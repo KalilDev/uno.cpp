@@ -38,5 +38,5 @@ O objetivo deste trabalho é construir um projeto de software de pequeno porte. 
 
 ### VERSÃO INICIAL DO DIAGRAMA DE CLASSES:
 [Link para o Draw.io](https://drive.google.com/file/d/1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW/view?usp=sharing)
-![Foto do Diagrama](https://drive.google.com/file/d/1D3OBK3tTO_uRSXs12gDLzpv7XSoR8_IX/view?usp=sharing)
+![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/diagrama%202.PNG)
 
