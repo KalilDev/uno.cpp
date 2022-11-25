@@ -6,7 +6,7 @@
 #include "mao.hpp"
 
     size_t size(){
-        return sizeof(size_t);
+        return _cartas.size();
     }
 
     Carta Mao::*begin(){
@@ -21,21 +21,16 @@
         _cartas.push_back(c);
     }
 
-    Carta Mao::*removerCarta(size_t){
-        for(auto &x : _cartas){
-            int aux = _cartas.getNumero();
-            if(aux == size_t){
-                _cartas.erase(x).at(aux);
-            }
-        }
+    Carta Mao::*removerCarta(size_t i){
+        _cartas.erase(_cartas.begin() + i);
     }
 
-    CorDaCarta Mao::getCorDaCarta(size_t){
-        return _cartas.getCor().at(size_t);
+    CorDaCarta Mao::getCorDaCarta(size_t i){
+        return _cartas[i].getCor();
     }
 
-    Carta Mao::*operator[](size_t){
-
+    Carta * Mao::operator[](size_t i){
+        return _cartas[i];
     }
 
 extern "C" {
