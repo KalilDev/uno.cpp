@@ -29,6 +29,7 @@ private:
      *
      */
     Partida _partida;
+    static const char* const_regras;
 
 public:
     /**
@@ -46,12 +47,13 @@ public:
 
     /**
      * @brief Retorna uma string com todas as instruções específicas ao jogo.
+     * @returns
      *
      */
-    std::string getInstrucoes();
+    char *getInstrucoes();
 
     /**
-     * @brief Fornece ao usuário a opção de desistir da partida e não continuar jogando.
+     * @brief Fornece ao usuário a opção de parar a partida e não continuar jogando.
      *
      */
     void sair();
