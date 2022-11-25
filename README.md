@@ -11,7 +11,7 @@
 - Raphael Amaral
 ### Professora: Camila Laranjeiras
 ### Em que consiste esse trabalho?
-O objetivo deste trabalho é construir um projeto de software de pequeno porte. Nosso grupo escolheu construir um jogo de cartas do tipo UNO, realizando todo o processo de desenvolvimento necessário para um sistema desse porte (análise, projeto e implementação), e aplicando os conceitos e técnicas vistos durante o curso (modelagem, POO, testes unitários, etc). O programa é baseado na linguagem C++, mas também interage com **[COLOCAR AQUI AS OUTRAS LINGUAGENS E INTERFACES QUE O KALIL USA].**
+O objetivo deste trabalho é construir um projeto de software de pequeno porte. Nosso grupo escolheu construir um jogo de cartas do tipo UNO, realizando todo o processo de desenvolvimento necessário para um sistema desse porte (análise, projeto e implementação), e aplicando os conceitos e técnicas vistos durante o curso (modelagem, POO, testes unitários, etc). O programa é baseado na linguagem C++, mas também expoe uma api em C para poder ser acessado em dart, no flutter, por meio do dart:ffi (foreign function interface), que provê uma maneira de linkar dinamicamente bibliotecas compartilhadas de C e usa-las como funções nativas em dart.
 
 ### REGRAS E INFORMAÇÕES GERAIS SOBRE COMO FUNCIONA A NOSSA VERSÃO DO UNO:
 1.  O jogo consiste em 4 jogadores, com 7 cartas cada;
@@ -27,13 +27,27 @@ O objetivo deste trabalho é construir um projeto de software de pequeno porte. 
 
 4.  O jogador não possui a possibilidade de falar “Uno” enquanto joga sua penúltima carta (uma vez que isso implicaria na necessidade da criação de todo um sistema de denúncia para quando isso não acontece, trazendo mais complexidade ao projeto);
     
-5.  A interface em que o jogo ocorrerá será [**EXPLICAR AQUI, N SEI COMO FUNCIONA FLUTTER E ETC].**
+5.  A interface em que o jogo será jogado será feita no framework flutter, feito pela Google para criar aplicações nativas e usando o pacote de gerenciamento de estado [Value Notifier](https://github.com/kalildev/value_notifier) e o renderizador de vetores [Vector Drawable.dart](https://github.com/KalilDev/vector_drawable.dart), feitos pelo aluno Pedro Morato Kalil.
     
 6.  O jogo não possui bots. Dessa maneira, todas as opções discutidas no tópico anterior serão apresentadas no mesmo ambiente e consecutivamente, isto é, logo após um jogador ter feito sua jogada, a vez será dada ao próximo.
 
 
 ### NOSSO USER STORIES:
-[colocar ele aqui, não sei onde tá]
+~~• Como jogador eu quero acessar meu histórico de partidas para saber como me sai e acompanhar meus resultados e minha evolução no jogo.~~
+
+~~• Como jogador eu quero incrementar a quantidade de jogadores com os quais iniciarei uma partida para tornar a experiência de jogo mais fidedigna.~~
+
+~~• Como jogador eu quero incrementar o nível dos bots com os quais jogarei, para testar a extensão das minhas habilidades.~~
+
+~~• Como jogador eu quero delimitar o tempo para um jogador lançar
+ uma carta para que a partida seja fluida e não seja prejudicada por
+um usuário “away from the keyboard”.~~
+
+~~• Como jogador eu quero poder alterar os estilos dos elementos visuais, como cartas e plano de fundo, para tornar o jogo mais envolvente e diversificar minhas opções de customização~~
+
+ - Como jogador, eu quero poder utilizar de menos 3 das cartas especiais do UNO, para tornar o jogo mais divertido e mais parecido com o real;
+- Como jogador, eu quero poder acessar um menu durante a partida, para ter opções como sair, reiniciar, ou ler as regras do jogo sem precisar de quitar a rodada;    
+- Como jogador, eu quero poder jogar com bots, para tornar a minha experiencia mais divertida, dinâmica e competitiva, de modo a testar minhas habilidades;
 
 ### VERSÃO INICIAL DO DIAGRAMA DE CLASSES:
 [Link para o Draw.io](https://drive.google.com/file/d/1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW/view?usp=sharing)
