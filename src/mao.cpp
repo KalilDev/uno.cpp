@@ -35,26 +35,26 @@
 
 extern "C" {
     size_t mao_size(Mao* self){
-        self->mao_size;
+        self->size();
     }
 
     Carta *mao_begin(Mao* self){
-        self->mao_begin;
+        self->begin();
     }
 
     Carta *mao_end(Mao* self){
-        self->mao_end;
+        self->end();
     }
 
-    void mao_adicionar_carta(Mao*, Carta*){
-
+    void mao_adicionar_carta(Mao* self, Carta* c){
+        self->adicionar_carta(c);
     }
 
-    Carta *mao_remover_carta(Mao* self, size_t){
-        self->mao_remover_carta;
+    Carta *mao_remover_carta(Mao* self, size_t i){
+        self->remover_carta(i);
     }
 
-    CorDaCarta mao_get_cor_da_carta(Mao* self, size_t){
-        self->mao_get_cor_da_carta;
+    CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i){
+        self->get_cor_da_carta(i);
     }
 }
