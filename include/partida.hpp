@@ -33,44 +33,140 @@ enum DirecaoDaPartida : char {
  */
 DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao);
 
+/**
+ * @brief A excessão arremessada quando o jogador tenta jogar fora da vez dele
+ */
 class NaoESuaVez : std::exception {
 private:
+/**
+ * @brief O id do jogador que tentou jogar fora da vez
+ */
     id_jogador _jogador;
 public:
     NaoESuaVez(id_jogador);
 };
 
+/**
+ * @brief A excessão arremessada quando o jogador tenta jogar uma carta que não pode ser jogada
+ */
 class CartaInvalida : std::exception {
 private:
+/**
+ * @brief O id do jogador
+ */
     id_jogador _jogador;
-    Carta*_ultima_carta;
-    Carta*_nova_carta;
+
+/**
+ * @brief A ultima carta jogada na pilha
+ */
+    Carta* _ultima_carta;
+
+/**
+ * @brief A carta que o jogador tentou jogar
+ */
+    Carta* _nova_carta;
 public:
     CartaInvalida(id_jogador, Carta*, Carta*);
 };
 
-/** foo
+/**
+ * @brief A classe que controla uma partida
+ * @details A classe que controla a direção da partida, o jogador que está jogando, os jogadores, a pilha de cartas para comer e a pilha de cartas jogadas
  */
 class Partida {
 private:
+
+/**
+ * @brief A direção atual da partida
+ */
     DirecaoDaPartida _direcao;
+
+/**
+ * @brief O id do jogador atual
+ */
     id_jogador _jogador_atual;
+
+/**
+ * @brief A pilha de cartas que já foram jogadas na mesa
+ */
     Pilha _cartas_na_mesa;
+
+/**
+ * @brief A pilha de cartas que serão comidas
+ */
     Pilha _cartas_para_comer;
+
+/**
+ * @brief Os jogadores da partida
+ */
     std::vector<Jogador> _jogadores;
 public:
+
+/**
+ * @brief O construtor que cria uma partida vazia
+ */
     Partida();
+
+/**
+ * @brief A direção atual da partida
+ */
     DirecaoDaPartida getDirecao();
+
+/**
+ * @brief O id do jogador atual
+ */
     id_jogador getJogadorAtual();
-    void jogarCarta(id_jogador, size_t);
+
+/**
+ * @brief Tenta jogar a carta e avançar a partida
+ * @param id_jogador o id do jogador
+ * @param i o índice da carta
+ * @details Verifica se é a vez do jogador, verifica se a carta pode ser jogada, executa as ações necessárias caso a carta seja especial e avança a partida
+ */
+    void jogarCarta(id_jogador id_jogador, size_t i);
+
+/**
+ * @brief A cor da ultima carta jogada
+ */
     CorDaCarta getCorDaPartida();
-    void comerCarta(id_jogador);
+
+/**
+ * @brief Tenta comer a carta
+ * @param id_jogador o id do jogador
+ * @details Verifica se é a vez do jogador, come a carta e avança a partida
+ */
+    void comerCarta(id_jogador id_jogador);
+
+/**
+ * @brief Reinicia o estado
+ * @details Limpa as pilhas e cria 4 jogadores com 7 cartas cada
+ */
     void iniciarEstado();
+
+/**
+ * @brief Limpa o estado
+ * @details Remove todos os jogadores e limpa as pilhas
+ */
     void limparEstado();
+
+/**
+ * @brief O iterator para o begin() de _jogadores
+ */
     Jogador *begin();
+/**
+ * @brief O iterator para o end() de _jogadores
+ */
     Jogador *end();
 private:
+
+/**
+ * @brief Avança o _jogadorAtual
+ */
     void avancarJogador();
+
+/**
+ * @brief Faz o _jogadorAtual comer uma carta
+ */
     void comerUmaCarta();
 };
 
