@@ -7,4 +7,7 @@
 #include "doctest.h"
 
 TEST_CASE("foo") {
+    Jogador j10(10); 
+    CHECK_EQ(10, j10.getId());
+    
 }
