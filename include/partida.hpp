@@ -1,20 +1,37 @@
 /**
- * @file partida.hpp
- * O arquivo que descreve a classe Partida e o enum DirecaoDaPartida
- */
+* @file partida.hpp
+* @author Pedro Morato Kalil (pedro-m-kalil@ufmg.br)
+* @brief O arquivo que descreve a classe Partida e o enum DirecaoDaPartida
+* @version 0.1
+* @date 2022-11-22
+* @details Responsável por lidar com o fluxo principal da partida.
+* @copyright Copyright (c) 2022
+*/
 #pragma once
 #include "pilha.hpp"
 #include "jogador.hpp"
 #include "carta.hpp"
 #include <vector>
 
-/** foo
+/**
+ * @brief A direção do próximo jogador
  */
 enum DirecaoDaPartida : char {
+    /**
+     * @brief O próximo jogador será à direita
+     */
     Normal = 1,
+    /**
+     * @brief O próximo jogador será à esquerda
+     */
     Reversa = -1,
 };
-DirecaoDaPartida direcaoOposta(DirecaoDaPartida);
+/**
+ * @brief
+ * @param direcao A direcao atual da partida
+ * @returns A direcao oposta
+ */
+DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao);
 
 class NaoESuaVez : std::exception {
 private:
