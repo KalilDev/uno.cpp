@@ -77,7 +77,7 @@ struct Interface;
 struct Interface* interface_new();
 void interface_delete(struct Interface*);
 struct Partida *interface_get_partida(struct Interface*);
-char *interface_get_instrucoes(struct Interface*);
+const char *interface_get_instrucoes(struct Interface*);
 void interface_sair(struct Interface*);
 void interface_resetar(struct Interface*);
 void interface_comecar(struct Interface*);

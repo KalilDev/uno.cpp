@@ -1,3 +1,4 @@
+#include <cstddef>
 #include "pilha.hpp"
 #include "carta_especial.hpp"
 

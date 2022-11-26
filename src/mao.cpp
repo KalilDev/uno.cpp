@@ -5,15 +5,15 @@
 
 #include "mao.hpp"
 
-    size_t size(){
+    size_t Mao::size(){
         return _cartas.size();
     }
 
-    Carta Mao::*begin(){
+    Carta **Mao::begin(){
         return &*_cartas.begin();
     }
 
-    Carta Mao::*end(){
+    Carta **Mao::end(){
         return &*_cartas.end();
     }
 
@@ -21,12 +21,12 @@
         _cartas.push_back(c);
     }
 
-    Carta Mao::*removerCarta(size_t i){
-        _cartas.erase(_cartas.begin() + i);
+    Carta *Mao::removerCarta(size_t i){
+        _cartas.erase(_cartas.begin() + (long)i);
     }
 
     CorDaCarta Mao::getCorDaCarta(size_t i){
-        return _cartas[i].getCor();
+        return _cartas[i]->getCor();
     }
 
     Carta * Mao::operator[](size_t i){
@@ -47,14 +47,14 @@ extern "C" {
     }
 
     void mao_adicionar_carta(Mao* self, Carta* c){
-        self->adicionar_carta(c);
+        self->adicionarCarta(c);
     }
 
     Carta *mao_remover_carta(Mao* self, size_t i){
-        self->remover_carta(i);
+        self->removerCarta(i);
     }
 
     CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i){
-        self->get_cor_da_carta(i);
+        self->getCorDaCarta(i);
     }
 }

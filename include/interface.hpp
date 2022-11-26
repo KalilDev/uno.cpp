@@ -50,7 +50,7 @@ public:
      * @returns
      *
      */
-    char *getInstrucoes();
+    const char *getInstrucoes();
 
     /**
      * @brief Fornece ao usuário a opção de parar a partida e não continuar jogando.
@@ -75,7 +75,7 @@ extern "C"
     Interface *interface_new();
     void interface_delete(Interface *);
     Partida *interface_get_partida(Interface *);
-    char *interface_get_instrucoes(Interface *);
+    const char *interface_get_instrucoes(Interface *);
     void interface_sair(Interface *);
     void interface_resetar(Interface *);
     void interface_comecar(Interface *);

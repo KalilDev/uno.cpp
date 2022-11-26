@@ -49,17 +49,17 @@ public:
      * @brief Função que retorna um ponteiro para o início do vector
      * @details Função que pega o ponteiro para o início do vector, desreferencia e retorna um endereco de memória
      * para a primeira casa do vector
-     * @return Carta* 
+     * @return Carta**
      */
-        Carta *begin();
+        Carta **begin();
 
     /**
      * @brief Função que retorna um ponteiro para o final do vector
      * @details Função que pega o ponteiro para o fim do vector, desreferencia e retorna um endereco de memória
      * para a última posição do vector
-     * @return Carta* 
+     * @return Carta**
      */
-        Carta *end();
+        Carta **end();
 
     /**
      * @brief Função responsável por adicionar uma carta à mão

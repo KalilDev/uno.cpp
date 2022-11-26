@@ -11,4 +11,10 @@ CartaEspecial::CartaEspecial(CorDaCarta cor, TipoDeCartaEspecial tipo) : Carta::
 TipoDeCartaEspecial CartaEspecial::getTipo() {
 	return _tipo;
 }
-
+extern "C" {
+CartaEspecial* cast_carta_to_carta_especial(Carta* self) {
+    return dynamic_cast<CartaEspecial *>(self);
+}
+TipoDeCartaEspecial carta_especial_get_tipo(CartaEspecial* self) {
+    return self->getTipo();
+}
