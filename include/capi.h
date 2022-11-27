@@ -38,8 +38,8 @@ enum TipoDeCartaEspecial carta_especial_get_tipo(struct CartaEspecial*);
  */
 struct Mao;
 size_t mao_size(struct Mao*);
-struct Carta *mao_begin(struct Mao*);
-struct Carta *mao_end(struct Mao*);
+struct Carta **mao_begin(struct Mao*);
+struct Carta **mao_end(struct Mao*);
 void mao_adicionar_carta(struct Mao*, struct Carta*);
 struct Carta *mao_remover_carta(struct Mao*, size_t);
 Carta *mao_at(Mao*, size_t, char**);
