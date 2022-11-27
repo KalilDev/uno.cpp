@@ -11,7 +11,9 @@
 - Raphael Amaral
 ### Professora: Camila Laranjeiras
 ### Em que consiste esse trabalho?
-O objetivo deste trabalho é construir um projeto de software de pequeno porte. Nosso grupo escolheu construir um jogo de cartas do tipo UNO, realizando todo o processo de desenvolvimento necessário para um sistema desse porte (análise, projeto e implementação), e aplicando os conceitos e técnicas vistos durante o curso (modelagem, POO, testes unitários, etc). O programa é baseado na linguagem C++, mas também expoe uma api em C para poder ser acessado em dart, no flutter, por meio do dart:ffi (foreign function interface), que provê uma maneira de linkar dinamicamente bibliotecas compartilhadas de C e usa-las como funções nativas em dart.
+O objetivo deste trabalho é construir um projeto de software de pequeno porte. Nosso grupo escolheu construir um jogo de cartas do tipo UNO, realizando todo o processo de desenvolvimento necessário para um sistema desse porte (análise, projeto e implementação), e aplicando os conceitos e técnicas vistos durante o curso (modelagem, POO, testes unitários, etc). O programa é baseado na linguagem C++, mas também expõe uma API em C para poder ser acessado em dart, no flutter, por meio do dart:ffi (foreign function interface), que provê uma maneira de linkar dinamicamente bibliotecas compartilhadas de C e usa-las como funções nativas em dart.
+
+O jogo Uno é um jogo de cartas lançado pela Mattel e Gameloft no qual o jogador relaciona os números com as cores. O objetivo é ser o primeiro jogador a ficar sem cartas na mão, utilizando-se de todas as regras possíveis para impedir que os outros jogadores façam a mesma coisa.
 
 ### REGRAS E INFORMAÇÕES GERAIS SOBRE COMO FUNCIONA A NOSSA VERSÃO DO UNO:
 1.  O jogo consiste em 4 jogadores, com 7 cartas cada;
