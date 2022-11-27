@@ -5,6 +5,7 @@
 #include <string>
 #include "partida.hpp"
 #include "carta_especial.hpp"
+#include "util.hpp"
 
 DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
     switch (direcao) {
@@ -143,14 +144,28 @@ extern "C" {
     id_jogador partida_get_jogador_atual(Partida* self) {
         return self->getJogadorAtual();
     }
-    void partida_jogar_carta(Partida* self,id_jogador id_jogador, size_t card_index) {
-        return self->jogarCarta(id_jogador, card_index);
+    void partida_jogar_carta(Partida* self,id_jogador id_jogador, size_t card_index, char** e) {
+        try {
+            *e = nullptr;
+            return self->jogarCarta(id_jogador, card_index);
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+            return;
+        }
     }
     CorDaCarta partida_get_cor_da_partida(Partida* self) {
         return self->getCorDaPartida();
     }
-    void partida_comer_carta(Partida*self,id_jogador id_jogador) {
-        return self->comerCarta(id_jogador);
+    void partida_comer_carta(Partida*self,id_jogador id_jogador, char** e) {
+        try {
+            *e = nullptr;
+            return self->comerCarta(id_jogador);
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+        }
+    }
+    void partida_jogar_bot(Partida* self) {
+        return self->jogarBot();
     }
     Jogador *partida_begin(Partida*self) {
         return self->begin();

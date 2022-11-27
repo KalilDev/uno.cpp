@@ -42,6 +42,7 @@ struct Carta *mao_begin(struct Mao*);
 struct Carta *mao_end(struct Mao*);
 void mao_adicionar_carta(struct Mao*, struct Carta*);
 struct Carta *mao_remover_carta(struct Mao*, size_t);
+Carta *mao_at(Mao*, size_t, char**);
 enum CorDaCarta mao_get_cor_da_carta(struct Mao*, size_t);
 
 /** jogador.hpp
@@ -64,9 +65,9 @@ struct Partida;
 
 DirecaoDaPartida partida_get_direcao(struct Partida*);
 id_jogador partida_get_jogador_atual(struct Partida*);
-void partida_jogar_carta(struct Partida*,id_jogador, size_t);
+void partida_jogar_carta(struct Partida*,id_jogador, size_t, char** e);
 CorDaCarta partida_get_cor_da_partida(struct Partida*);
-void partida_comer_carta(struct Partida*,id_jogador);
+void partida_comer_carta(struct Partida*,id_jogador, char** e);
 struct Jogador *partida_begin(struct Partida*);
 struct Jogador *partida_end(struct Partida*);
 

@@ -3,8 +3,10 @@
  * O arquivo que implementa a classe Mao
  */
 
+#include <stdexcept>
+#include <cstring>
 #include "mao.hpp"
-
+#include "util.hpp"
     size_t Mao::size(){
         return _cartas.size();
     }
@@ -35,26 +37,35 @@
 
 extern "C" {
     size_t mao_size(Mao* self){
-        self->size();
+        return self->size();
     }
 
-    Carta *mao_begin(Mao* self){
-        self->begin();
+    Carta **mao_begin(Mao* self){
+        return self->begin();
     }
 
-    Carta *mao_end(Mao* self){
-        self->end();
+    Carta **mao_end(Mao* self){
+        return self->end();
     }
 
     void mao_adicionar_carta(Mao* self, Carta* c){
-        self->adicionarCarta(c);
+        return self->adicionarCarta(c);
     }
 
     Carta *mao_remover_carta(Mao* self, size_t i){
-        self->removerCarta(i);
+        return self->removerCarta(i);
     }
 
     CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i){
-        self->getCorDaCarta(i);
+        return self->getCorDaCarta(i);
+    }
+    Carta *mao_at(Mao* self, size_t i, char** e) {
+        try {
+            *e = nullptr;
+            return (*self)[i];
+        } catch (const std::range_error& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }
     }
 }

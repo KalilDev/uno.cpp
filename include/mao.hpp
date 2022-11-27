@@ -110,9 +110,10 @@ public:
 
 extern "C" {
     size_t mao_size(Mao* self);
-    Carta *mao_begin(Mao* self);
-    Carta *mao_end(Mao* self);
+    Carta **mao_begin(Mao* self);
+    Carta **mao_end(Mao* self);
     void mao_adicionar_carta(Mao* self, Carta* c);
     Carta *mao_remover_carta(Mao* self, size_t i);
+    Carta *mao_at(Mao* self, size_t i, char**);
     CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i);
 }
