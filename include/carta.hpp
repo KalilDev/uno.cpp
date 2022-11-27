@@ -3,6 +3,7 @@
  * O arquivo que descreve a classe Carta, o enum CorDaCarta e o tipo numero_da_carta
  */
 #pragma once
+#include <string>
 
 /** foo
  */
@@ -28,6 +29,7 @@ public:
     virtual ~Carta() = default;
     CorDaCarta getCor();
     numero_da_carta getNumero();
+    virtual std::string toString();
 };
 
 extern "C" {

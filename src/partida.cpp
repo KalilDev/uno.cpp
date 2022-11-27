@@ -2,6 +2,7 @@
  * @file partida.cpp
  * O arquivo que implementa a classe Partida
  */
+#include <string>
 #include "partida.hpp"
 #include "carta_especial.hpp"
 
@@ -14,14 +15,17 @@ DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
     }
 }
 
-NaoESuaVez::NaoESuaVez(id_jogador jogador):_jogador(jogador) {
+NaoESuaVez::NaoESuaVez(id_jogador jogador):_jogador(jogador), _string("Não é a vez do jogador " + std::to_string(jogador)) {
+}
+const char* NaoESuaVez::what() const noexcept {
+    return _string.c_str();
+}
+CartaInvalida::CartaInvalida(id_jogador jogador, Carta *ultima_carta, Carta *nova_carta):_jogador(jogador),_ultima_carta(ultima_carta),_nova_carta(nova_carta), _string("O Jogador " + std::to_string(jogador) + " não pode jogar a carta " + nova_carta->toString() + " em cima da carta" + ultima_carta->toString()) {
 
 }
-
-CartaInvalida::CartaInvalida(id_jogador jogador, Carta *ultima_carta, Carta *nova_carta):_jogador(jogador),_ultima_carta(ultima_carta),_nova_carta(nova_carta) {
-
+const char* CartaInvalida::what() const noexcept {
+    return _string.c_str();
 }
-
 Partida::Partida() = default;
 
 DirecaoDaPartida Partida::getDirecao() {

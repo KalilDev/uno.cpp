@@ -17,6 +17,23 @@ numero_da_carta Carta::getNumero(){
 	return _numero;
 }
 
+std::string Carta::toString() {
+    auto result = std::string{};
+    result += std::to_string(_numero);
+    result += " ";
+    switch (_cor) {
+        case Amarelo:
+            result += "amarelo";
+        case Azul:
+            result += "azul";
+        case Verde:
+            result += "verde";
+        case Vermelho:
+            result += "vermelho";
+    }
+    return result;
+}
+
 extern "C" {
 	CorDaCarta carta_get_cor(Carta* self) {
 		return self->getCor();

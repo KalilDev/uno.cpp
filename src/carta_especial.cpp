@@ -11,6 +11,29 @@ CartaEspecial::CartaEspecial(CorDaCarta cor, TipoDeCartaEspecial tipo) : Carta::
 TipoDeCartaEspecial CartaEspecial::getTipo() {
 	return _tipo;
 }
+std::string CartaEspecial::toString() {
+    auto result = std::string{};
+    switch (_tipo) {
+        case Bloqueia:
+            result += "bloqueia";
+        case ComeDois:
+            result += "come dois";
+        case Reverso:
+            result += "reverso";
+    }
+    result += " ";
+    switch (getCor()) {
+        case Amarelo:
+            result += "amarelo";
+        case Azul:
+            result += "azul";
+        case Verde:
+            result += "verde";
+        case Vermelho:
+            result += "vermelho";
+    }
+    return result;
+}
 extern "C" {
 CartaEspecial* cast_carta_to_carta_especial(Carta* self) {
     return dynamic_cast<CartaEspecial *>(self);

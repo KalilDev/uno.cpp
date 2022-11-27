@@ -42,8 +42,14 @@ private:
  * @brief O id do jogador que tentou jogar fora da vez
  */
     id_jogador _jogador;
+/**
+ * @brief A string com o texto dessa exception
+ */
+    const std::string _string;
 public:
     NaoESuaVez(id_jogador);
+
+    virtual const char* what() const noexcept override;
 };
 
 /**
@@ -65,8 +71,13 @@ private:
  * @brief A carta que o jogador tentou jogar
  */
     Carta* _nova_carta;
+/**
+ * @brief A string com o texto dessa exception
+ */
+    const std::string _string;
 public:
     CartaInvalida(id_jogador, Carta*, Carta*);
+    virtual const char* what() const noexcept override;
 };
 
 /**
