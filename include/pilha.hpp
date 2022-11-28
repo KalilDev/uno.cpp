@@ -82,6 +82,10 @@ public:
  * @return Carta*
  */
     Carta* popPrimeiraNaoEspecial();
+
+    Carta** begin();
+
+    Carta** end();
 };
 
 extern "C" {
