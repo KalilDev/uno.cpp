@@ -116,6 +116,26 @@ void Partida::limparEstado() {
     _direcao=DirecaoDaPartida::Normal;
 }
 
+void Partida::jogarBot() {
+    auto &bot = _jogadores[_jogador_atual];
+    auto mao = bot.getMao();
+    auto cartas_possiveis = std::vector<size_t>{};
+    auto carta_atual = _cartas_na_mesa.getTop();
+    for (size_t i = 0 ; i < mao->size(); i++) {
+        auto carta = (*mao)[i];
+        if (carta->getCor() != carta_atual->getCor() && carta->getNumero() != carta_atual->getNumero()) {
+            continue;
+        }
+        cartas_possiveis.push_back(i);
+    }
+    if (cartas_possiveis.empty()) {
+        comerCarta(_jogador_atual);
+        return;
+    }
+    auto i = static_cast<size_t>(random()) % cartas_possiveis.size();
+    jogarCarta(_jogador_atual, i);
+}
+
 Jogador *Partida::begin() {
     return &*_jogadores.begin();
 }
