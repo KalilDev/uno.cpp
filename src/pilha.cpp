@@ -52,3 +52,14 @@ size_t Pilha::size(){
  return _cartas.size();
 }
 
+extern "C" {
+    size_t pilha_size(Pilha *self) {
+        return self->size();
+    }
+    Carta **pilha_begin(Pilha *self) {
+        return &*self->begin();
+    }
+    Carta **pilha_end(Pilha *self) {
+        return &*self->end();
+    }
+}

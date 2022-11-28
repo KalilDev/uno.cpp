@@ -164,7 +164,15 @@ public:
  * @brief Faz o bot jogar uma partida
  */
     void jogarBot();
+/**
+ * @brief Retorna a pilha de cartas que já foram jogadas na mesa
+ */
+    const Pilha *getCartasNaMesa();
 
+/**
+ * @brief Retorna a pilha de cartas que serão comidas
+ */
+    const Pilha *getCartasParaComer();
 /**
  * @brief O iterator para o begin() de _jogadores
  */
@@ -193,6 +201,8 @@ extern "C" {
     CorDaCarta partida_get_cor_da_partida(Partida*);
     void partida_comer_carta(Partida*,id_jogador, char** e);
     void partida_jogar_bot(Partida*);
+    const Pilha *partida_get_cartas_na_mesa();
+    const Pilha *partida_get_cartas_para_comer();
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
 }

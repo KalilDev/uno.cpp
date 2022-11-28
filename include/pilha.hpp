@@ -83,3 +83,9 @@ public:
  */
     Carta* popPrimeiraNaoEspecial();
 };
+
+extern "C" {
+    size_t pilha_size(Pilha*);
+    Carta **pilha_begin(Pilha*);
+    Carta **pilha_end(Pilha*);
+}

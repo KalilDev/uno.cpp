@@ -54,6 +54,14 @@ struct Jogador;
 struct Mao *jogador_get_mao(struct Jogador*);
 id_jogador jogador_get_id(struct Jogador*);
 
+/** pilha.hpp
+ *
+ */
+struct Pilha;
+size_t pilha_size(struct Pilha*);
+struct Carta **pilha_begin(struct Pilha*);
+struct Carta **pilha_end(struct Pilha*);
+
 /** partida.hpp
  *
  */
@@ -69,6 +77,8 @@ void partida_jogar_carta(struct Partida*,id_jogador, size_t, char** e);
 CorDaCarta partida_get_cor_da_partida(struct Partida*);
 void partida_comer_carta(struct Partida*,id_jogador, char** e);
 void partida_jogar_bot(Partida*);
+const struct Pilha *partida_get_cartas_na_mesa();
+const struct Pilha *partida_get_cartas_para_comer();
 struct Jogador *partida_begin(struct Partida*);
 struct Jogador *partida_end(struct Partida*);
 
