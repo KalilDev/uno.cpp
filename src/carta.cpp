@@ -24,12 +24,16 @@ std::string Carta::toString() {
     switch (_cor) {
         case Amarelo:
             result += "amarelo";
+            break;
         case Azul:
             result += "azul";
+            break;
         case Verde:
             result += "verde";
+            break;
         case Vermelho:
             result += "vermelho";
+            break;
     }
     return result;
 }

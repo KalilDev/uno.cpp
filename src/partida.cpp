@@ -6,6 +6,7 @@
 #include "partida.hpp"
 #include "carta_especial.hpp"
 #include "util.hpp"
+#include <stdexcept>
 
 DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
     switch (direcao) {
@@ -13,6 +14,8 @@ DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
             return DirecaoDaPartida::Reversa;
         case Reversa:
             return DirecaoDaPartida::Normal;
+        default:
+            throw std::invalid_argument("DirecaoDaPartida invalida");
     }
 }
 

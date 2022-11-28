@@ -1,7 +1,7 @@
 CXX=g++
 THIRD_PARTY=third_party/
 INCLUDE=include/
-CXXFLAGS=-std=c++17 -Wall -Wconversion -Wextra -I$(INCLUDE) -I$(THIRD_PARTY)
+CXXFLAGS=-std=c++17 -Werror -Wall -Wconversion -Wextra -fPIC -I$(INCLUDE) -I$(THIRD_PARTY)
 BUILD=build
 DOXYGEN=doxygen
 DOXYFILE=Doxyfile

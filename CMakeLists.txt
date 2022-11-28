@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.23)
 project(uno_cpp VERSION 1.0.0 DESCRIPTION "Uma biblioteca do jogo uno")
 
-set(CMAKE_CXX_FLAGS "-Wall -Wconversion -Wextra")
+set(CMAKE_CXX_FLAGS "-Werror -Wall -Wconversion -Wextra -fPIC")
 set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)

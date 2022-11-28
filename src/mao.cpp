@@ -24,7 +24,10 @@
     }
 
     Carta *Mao::removerCarta(size_t i){
-        _cartas.erase(_cartas.begin() + (long)i);
+        auto it = _cartas.begin() + (long)i;
+        auto carta = *it;
+        _cartas.erase(it);
+        return carta;
     }
 
     CorDaCarta Mao::getCorDaCarta(size_t i){

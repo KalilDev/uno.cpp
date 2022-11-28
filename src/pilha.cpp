@@ -38,13 +38,14 @@ Pilha Pilha::cheia(){
     Pilha pilha;
     for (int c = 0; c < 4; c++){
         CorDaCarta cor = static_cast<CorDaCarta>(c);
-        for (int i = 0; i < 10; i++)
+        for (numero_da_carta i = 0; i < 10; i++)
             pilha.push(new Carta(cor, i));
         
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::Bloqueia));
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::ComeDois));
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::Reverso));
     }
+    return pilha;
 }
 
 size_t Pilha::size(){
