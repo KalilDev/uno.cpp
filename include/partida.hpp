@@ -178,6 +178,11 @@ public:
  */
     const Pilha *getCartasParaComer();
 /**
+ * @brief Retorna o pointer para o jogador no indice i
+ * @param i indice
+ */
+    Jogador *operator[](size_t i);
+/**
  * @brief O iterator para o begin() de _jogadores
  */
     Jogador *begin();
@@ -208,6 +213,7 @@ extern "C" {
     const Pilha *partida_get_cartas_na_mesa(Partida*);
     const Pilha *partida_get_cartas_para_comer(Partida*);
     int partida_get_vencedor(Partida*);
+    Jogador *partida_at(Partida*, size_t, char**);
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
 }

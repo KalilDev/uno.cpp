@@ -178,6 +178,13 @@ Jogador *Partida::end() {
     return &*_jogadores.end();
 }
 
+Jogador *Partida::operator[](size_t i) {
+    if (i >= _jogadores.size()) {
+        throw std::range_error("Indice invalido para jogador");
+    }
+    return &_jogadores[i];
+}
+
 extern "C" {
     DirecaoDaPartida partida_get_direcao(Partida* self) {
         return self->getDirecao();
@@ -217,6 +224,15 @@ extern "C" {
     int partida_get_vencedor(Partida* self) {
         return self->getVencedor();
     };
+    Jogador *partida_at(Partida *self, size_t i, char**e) {
+        try {
+            *e = nullptr;
+            return (*self)[i];
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }
+    }
     Jogador *partida_begin(Partida*self) {
         return self->begin();
     }

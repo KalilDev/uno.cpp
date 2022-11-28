@@ -7,7 +7,7 @@ Pilha::Pilha(){
 }
 
 Pilha::Pilha(Carta* carta){
-
+    _cartas.push_back(carta);
 }
 
 Pilha::~Pilha(){
