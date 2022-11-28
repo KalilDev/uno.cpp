@@ -165,6 +165,10 @@ public:
  */
     void jogarBot();
 /**
+ * @brief Retorna o id do vencedor da partida ou -1 quando a partida não tem vencedor
+ */
+    int getVencedor();
+/**
  * @brief Retorna a pilha de cartas que já foram jogadas na mesa
  */
     const Pilha *getCartasNaMesa();
@@ -201,8 +205,9 @@ extern "C" {
     CorDaCarta partida_get_cor_da_partida(Partida*);
     void partida_comer_carta(Partida*,id_jogador, char** e);
     void partida_jogar_bot(Partida*);
-    const Pilha *partida_get_cartas_na_mesa();
-    const Pilha *partida_get_cartas_para_comer();
+    const Pilha *partida_get_cartas_na_mesa(Partida*);
+    const Pilha *partida_get_cartas_para_comer(Partida*);
+    int partida_get_vencedor(Partida*);
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
 }

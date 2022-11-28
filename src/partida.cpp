@@ -136,14 +136,6 @@ void Partida::jogarBot() {
     jogarCarta(_jogador_atual, i);
 }
 
-Jogador *Partida::begin() {
-    return &*_jogadores.begin();
-}
-
-Jogador *Partida::end() {
-    return &*_jogadores.end();
-}
-
 void Partida::avancarJogador() {
     _jogador_atual = (unsigned long long)((unsigned long long)((long long) _jogador_atual + (char) _direcao+(long long)_jogadores.size())) % _jogadores.size();
 }
@@ -158,6 +150,32 @@ void Partida::comerUmaCarta() {
     }
     auto carta = _cartas_para_comer.pop();
     jogador.getMao()->adicionarCarta(carta);
+}
+
+int Partida::getVencedor() {
+    for (size_t i =0; i < _jogadores.size(); i++) {
+        auto &jogador = _jogadores[i];
+        if (jogador.getMao()->size() == 0) {
+            return static_cast<int>(i);
+        }
+    }
+    return -1;
+}
+
+const Pilha *Partida::getCartasNaMesa() {
+    return &_cartas_na_mesa;
+}
+
+const Pilha *Partida::getCartasParaComer() {
+    return &_cartas_para_comer;
+}
+
+Jogador *Partida::begin() {
+    return &*_jogadores.begin();
+}
+
+Jogador *Partida::end() {
+    return &*_jogadores.end();
 }
 
 extern "C" {
@@ -190,6 +208,15 @@ extern "C" {
     void partida_jogar_bot(Partida* self) {
         return self->jogarBot();
     }
+    const Pilha *partida_get_cartas_na_mesa(Partida* self) {
+        return self->getCartasNaMesa();
+    }
+    const Pilha *partida_get_cartas_para_comer(Partida* self) {
+        return self->getCartasParaComer();
+    }
+    int partida_get_vencedor(Partida* self) {
+        return self->getVencedor();
+    };
     Jogador *partida_begin(Partida*self) {
         return self->begin();
     }

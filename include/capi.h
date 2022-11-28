@@ -77,8 +77,9 @@ void partida_jogar_carta(struct Partida*,id_jogador, size_t, char** e);
 CorDaCarta partida_get_cor_da_partida(struct Partida*);
 void partida_comer_carta(struct Partida*,id_jogador, char** e);
 void partida_jogar_bot(Partida*);
-const struct Pilha *partida_get_cartas_na_mesa();
-const struct Pilha *partida_get_cartas_para_comer();
+const struct Pilha *partida_get_cartas_na_mesa(Partida*);
+const struct Pilha *partida_get_cartas_para_comer(Partida*);
+int partida_get_vencedor(Partida*);
 struct Jogador *partida_begin(struct Partida*);
 struct Jogador *partida_end(struct Partida*);
 
