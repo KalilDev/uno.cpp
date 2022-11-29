@@ -7,5 +7,5 @@
 #include "doctest.h"
 
 TEST_CASE("Teste da Interface: ") {
-    CHECK(getInstrucoes() == const_regras);
+    Interface i;
 }

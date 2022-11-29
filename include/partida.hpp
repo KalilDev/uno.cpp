@@ -42,8 +42,14 @@ private:
  * @brief O id do jogador que tentou jogar fora da vez
  */
     id_jogador _jogador;
+/**
+ * @brief A string com o texto dessa exception
+ */
+    const std::string _string;
 public:
     NaoESuaVez(id_jogador);
+
+    virtual const char* what() const noexcept override;
 };
 
 /**
@@ -65,8 +71,13 @@ private:
  * @brief A carta que o jogador tentou jogar
  */
     Carta* _nova_carta;
+/**
+ * @brief A string com o texto dessa exception
+ */
+    const std::string _string;
 public:
     CartaInvalida(id_jogador, Carta*, Carta*);
+    virtual const char* what() const noexcept override;
 };
 
 /**
@@ -150,6 +161,28 @@ public:
     void limparEstado();
 
 /**
+ * @brief Faz o bot jogar uma partida
+ */
+    void jogarBot();
+/**
+ * @brief Retorna o id do vencedor da partida ou -1 quando a partida não tem vencedor
+ */
+    int getVencedor();
+/**
+ * @brief Retorna a pilha de cartas que já foram jogadas na mesa
+ */
+    const Pilha *getCartasNaMesa();
+
+/**
+ * @brief Retorna a pilha de cartas que serão comidas
+ */
+    const Pilha *getCartasParaComer();
+/**
+ * @brief Retorna o pointer para o jogador no indice i
+ * @param i indice
+ */
+    Jogador *operator[](size_t i);
+/**
  * @brief O iterator para o begin() de _jogadores
  */
     Jogador *begin();
@@ -157,6 +190,12 @@ public:
  * @brief O iterator para o end() de _jogadores
  */
     Jogador *end();
+
+/**
+ * @brief Retorna a quantidade de jogadores
+ */
+    size_t size();
+
 private:
 
 /**
@@ -173,9 +212,15 @@ private:
 extern "C" {
     DirecaoDaPartida partida_get_direcao(Partida*);
     id_jogador partida_get_jogador_atual(Partida*);
-    void partida_jogar_carta(Partida*,id_jogador, size_t);
+    void partida_jogar_carta(Partida*,id_jogador, size_t, char** e);
     CorDaCarta partida_get_cor_da_partida(Partida*);
-    void partida_comer_carta(Partida*,id_jogador);
+    void partida_comer_carta(Partida*,id_jogador, char** e);
+    void partida_jogar_bot(Partida*);
+    const Pilha *partida_get_cartas_na_mesa(Partida*);
+    const Pilha *partida_get_cartas_para_comer(Partida*);
+    int partida_get_vencedor(Partida*);
+    size_t partida_size(Partida*);
+    Jogador *partida_at(Partida*, size_t, char**);
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
 }

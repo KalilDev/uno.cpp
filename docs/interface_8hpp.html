@@ -97,6 +97,9 @@ $(document).ready(function(){initNavTree('interface_8hpp.html',''); initResizabl
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interface.html">Interface</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disponibiliza um pequeno menu ao usuário.  <a href="class_interface.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_excecao_interface.html">ExcecaoInterface</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -107,8 +110,8 @@ Functions</h2></td></tr>
 <tr class="separator:a4eebc192badd276dc9048eaedf81e2b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacc791e51c4402948b5b2318e620350a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_partida.html">Partida</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#aacc791e51c4402948b5b2318e620350a">interface_get_partida</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
 <tr class="separator:aacc791e51c4402948b5b2318e620350a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afad58fce67c5e94bf317e6219a44b5f1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#afad58fce67c5e94bf317e6219a44b5f1">interface_get_instrucoes</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
-<tr class="separator:afad58fce67c5e94bf317e6219a44b5f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97532f3f0f77a85ace7d83db6a58339c"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#a97532f3f0f77a85ace7d83db6a58339c">interface_get_instrucoes</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
+<tr class="separator:a97532f3f0f77a85ace7d83db6a58339c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3efec8f348127134c1267c1af876a053"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#a3efec8f348127134c1267c1af876a053">interface_sair</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
 <tr class="separator:a3efec8f348127134c1267c1af876a053"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c8724b2a729eaef5a42d9ce00807882"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#a7c8724b2a729eaef5a42d9ce00807882">interface_resetar</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
@@ -116,9 +119,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a9e6d8705e4fc6edb9847044ff0357e55"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_8hpp.html#a9e6d8705e4fc6edb9847044ff0357e55">interface_comecar</a> (<a class="el" href="class_interface.html">Interface</a> *)</td></tr>
 <tr class="separator:a9e6d8705e4fc6edb9847044ff0357e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >O arquivo que descreve a classe <a class="el" href="class_interface.html">Interface</a> </p>
-</div><h2 class="groupheader">Function Documentation</h2>
+<h2 class="groupheader">Function Documentation</h2>
 <a id="a9e6d8705e4fc6edb9847044ff0357e55" name="a9e6d8705e4fc6edb9847044ff0357e55"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e6d8705e4fc6edb9847044ff0357e55">&#9670;&nbsp;</a></span>interface_comecar()</h2>
 
@@ -129,7 +130,7 @@ Functions</h2></td></tr>
           <td class="memname">void interface_comecar </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -147,7 +148,7 @@ Functions</h2></td></tr>
           <td class="memname">void interface_delete </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -155,17 +156,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afad58fce67c5e94bf317e6219a44b5f1" name="afad58fce67c5e94bf317e6219a44b5f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afad58fce67c5e94bf317e6219a44b5f1">&#9670;&nbsp;</a></span>interface_get_instrucoes()</h2>
+<a id="a97532f3f0f77a85ace7d83db6a58339c" name="a97532f3f0f77a85ace7d83db6a58339c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97532f3f0f77a85ace7d83db6a58339c">&#9670;&nbsp;</a></span>interface_get_instrucoes()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">char * interface_get_instrucoes </td>
+          <td class="memname">const char * interface_get_instrucoes </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -183,7 +184,7 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="class_partida.html">Partida</a> * interface_get_partida </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -218,7 +219,7 @@ Functions</h2></td></tr>
           <td class="memname">void interface_resetar </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -236,7 +237,7 @@ Functions</h2></td></tr>
           <td class="memname">void interface_sair </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_interface.html">Interface</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

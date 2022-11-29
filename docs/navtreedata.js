@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Uno.cpp", "index.html", [
+    [ "Trabalho Prático da Disciplina de Programação e Desenvolvimento de Software 2 (UFMG): Jogo de Uno", "md__r_e_a_d_m_e.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ],
       [ "Namespace Members", "namespacemembers.html", [
@@ -42,7 +43,7 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
-        [ "Functions", "functions_func.html", null ],
+        [ "Functions", "functions_func.html", "functions_func" ],
         [ "Variables", "functions_vars.html", null ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Related Functions", "functions_rela.html", null ]
@@ -66,12 +67,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_c_compiler_id_8c.html",
-"classdoctest_1_1_string.html#adb57becb56e054d981e7c2b967a7e359",
-"doctest_8h.html#a631e7295c7abd3a071464fae6be07250",
-"doctest_8h.html#ae1bb5bed722f34f1c38b83cb19d326d3a5c330f1952cb85a8416902e237ec6f1f",
-"namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a44f079a43a4709abd7d6f22b317838a2",
-"structdoctest_1_1_context_options.html#a1ee59adf440880ebd7b31516471ddcab",
-"structdoctest_1_1detail_1_1_message_builder.html#ae40185a1fbaf07becd0bd077806f0358"
+"classdoctest_1_1_string.html#a15633c5d68057a07bccdadadd6acae05",
+"doctest_8h.html#a4a746a6cb24ff5b89c7b9a86a20335e8",
+"doctest_8h.html#ad75dcf90106a8c319c6bc74df579d5c2",
+"mao_8hpp.html#a92852c295f09599a444b6dfbd6ac5d2f",
+"src_2interface_8cpp.html#af4b0b00917210ffd71549a3fdc4671cb",
+"structdoctest_1_1_query_data.html#af1033338fe975ae3c19b16452401230d",
+"structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

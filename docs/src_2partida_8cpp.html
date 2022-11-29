@@ -83,13 +83,402 @@ $(document).ready(function(){initNavTree('src_2partida_8cpp.html',''); initResiz
 </div>
 
 <div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">partida.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="partida_8hpp_source.html">partida.hpp</a>&quot;</code><br />
-</div><a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >O arquivo que implementa a classe <a class="el" href="class_partida.html">Partida</a> </p>
-</div></div><!-- contents -->
+<div class="textblock"><code>#include &lt;string&gt;</code><br />
+<code>#include &quot;<a class="el" href="partida_8hpp_source.html">partida.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="carta__especial_8hpp_source.html">carta_especial.hpp</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="util_8hpp_source.html">util.hpp</a>&quot;</code><br />
+<code>#include &lt;stdexcept&gt;</code><br />
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a185b946e9eb5c04591eadc9768455b61"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a185b946e9eb5c04591eadc9768455b61">NUM_JOGADORES</a>&#160;&#160;&#160;4</td></tr>
+<tr class="separator:a185b946e9eb5c04591eadc9768455b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d553d3f146589b89f689acf424db4a0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a4d553d3f146589b89f689acf424db4a0">NUM_CARTAS</a>&#160;&#160;&#160;7</td></tr>
+<tr class="separator:a4d553d3f146589b89f689acf424db4a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:ac9f2ad1904f8a9c8ed65ba47d426b52c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#ac9f2ad1904f8a9c8ed65ba47d426b52c">direcaoOposta</a> (<a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a> direcao)</td></tr>
+<tr class="separator:ac9f2ad1904f8a9c8ed65ba47d426b52c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251b4ca7282b99d753bd0fb52e25f940"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a251b4ca7282b99d753bd0fb52e25f940">partida_get_direcao</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a251b4ca7282b99d753bd0fb52e25f940"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe647ad16b7eb7f68993cd3c93a8876a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#afe647ad16b7eb7f68993cd3c93a8876a">partida_get_jogador_atual</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:afe647ad16b7eb7f68993cd3c93a8876a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13558874522480a29a3850630167ef7a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a13558874522480a29a3850630167ef7a">partida_jogar_carta</a> (<a class="el" href="class_partida.html">Partida</a> *self, <a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a> <a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a>, size_t card_index, char **e)</td></tr>
+<tr class="separator:a13558874522480a29a3850630167ef7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d2f67d3d2aa9e0cb1bbbf82316a276e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a6d2f67d3d2aa9e0cb1bbbf82316a276e">partida_get_cor_da_partida</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a6d2f67d3d2aa9e0cb1bbbf82316a276e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee89a35b87498a79c6dd83e4ecc01fe3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#aee89a35b87498a79c6dd83e4ecc01fe3">partida_comer_carta</a> (<a class="el" href="class_partida.html">Partida</a> *self, <a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a> <a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a>, char **e)</td></tr>
+<tr class="separator:aee89a35b87498a79c6dd83e4ecc01fe3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf08ddde8dfd4981841e8550b1578927"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#aaf08ddde8dfd4981841e8550b1578927">partida_jogar_bot</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:aaf08ddde8dfd4981841e8550b1578927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0a7e0cdfc46287e58482c7ad8963228"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_pilha.html">Pilha</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#ad0a7e0cdfc46287e58482c7ad8963228">partida_get_cartas_na_mesa</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:ad0a7e0cdfc46287e58482c7ad8963228"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13abe87de36953ed10a40564f078b096"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_pilha.html">Pilha</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a13abe87de36953ed10a40564f078b096">partida_get_cartas_para_comer</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a13abe87de36953ed10a40564f078b096"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f709ea62746ebc5f9e5cebcc457a0e5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a5f709ea62746ebc5f9e5cebcc457a0e5">partida_get_vencedor</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a5f709ea62746ebc5f9e5cebcc457a0e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1432e80b980e3371b506b6693da95f3"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#ab1432e80b980e3371b506b6693da95f3">partida_size</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:ab1432e80b980e3371b506b6693da95f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72b9eb04ba57cc567b435d677f98507d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jogador.html">Jogador</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a72b9eb04ba57cc567b435d677f98507d">partida_at</a> (<a class="el" href="class_partida.html">Partida</a> *self, size_t i, char **e)</td></tr>
+<tr class="separator:a72b9eb04ba57cc567b435d677f98507d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a689546694911e48a95937bad207820fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jogador.html">Jogador</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a689546694911e48a95937bad207820fb">partida_begin</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a689546694911e48a95937bad207820fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a708db9a0d33ea5c98bbc384d9d3e2da4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_jogador.html">Jogador</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src_2partida_8cpp.html#a708db9a0d33ea5c98bbc384d9d3e2da4">partida_end</a> (<a class="el" href="class_partida.html">Partida</a> *self)</td></tr>
+<tr class="separator:a708db9a0d33ea5c98bbc384d9d3e2da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >O arquivo que implementa a classe <a class="el" href="class_partida.html" title="A classe que controla uma partida.">Partida</a> </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a4d553d3f146589b89f689acf424db4a0" name="a4d553d3f146589b89f689acf424db4a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d553d3f146589b89f689acf424db4a0">&#9670;&nbsp;</a></span>NUM_CARTAS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_CARTAS&#160;&#160;&#160;7</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a185b946e9eb5c04591eadc9768455b61" name="a185b946e9eb5c04591eadc9768455b61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185b946e9eb5c04591eadc9768455b61">&#9670;&nbsp;</a></span>NUM_JOGADORES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NUM_JOGADORES&#160;&#160;&#160;4</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="ac9f2ad1904f8a9c8ed65ba47d426b52c" name="ac9f2ad1904f8a9c8ed65ba47d426b52c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f2ad1904f8a9c8ed65ba47d426b52c">&#9670;&nbsp;</a></span>direcaoOposta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a> direcaoOposta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a>&#160;</td>
+          <td class="paramname"><em>direcao</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">direcao</td><td>A direcao atual da partida </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A direcao oposta </dd></dl>
+
+</div>
+</div>
+<a id="a72b9eb04ba57cc567b435d677f98507d" name="a72b9eb04ba57cc567b435d677f98507d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72b9eb04ba57cc567b435d677f98507d">&#9670;&nbsp;</a></span>partida_at()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_jogador.html">Jogador</a> * partida_at </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a689546694911e48a95937bad207820fb" name="a689546694911e48a95937bad207820fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a689546694911e48a95937bad207820fb">&#9670;&nbsp;</a></span>partida_begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_jogador.html">Jogador</a> * partida_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aee89a35b87498a79c6dd83e4ecc01fe3" name="aee89a35b87498a79c6dd83e4ecc01fe3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee89a35b87498a79c6dd83e4ecc01fe3">&#9670;&nbsp;</a></span>partida_comer_carta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void partida_comer_carta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a>&#160;</td>
+          <td class="paramname"><em>id_jogador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a708db9a0d33ea5c98bbc384d9d3e2da4" name="a708db9a0d33ea5c98bbc384d9d3e2da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a708db9a0d33ea5c98bbc384d9d3e2da4">&#9670;&nbsp;</a></span>partida_end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_jogador.html">Jogador</a> * partida_end </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad0a7e0cdfc46287e58482c7ad8963228" name="ad0a7e0cdfc46287e58482c7ad8963228"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0a7e0cdfc46287e58482c7ad8963228">&#9670;&nbsp;</a></span>partida_get_cartas_na_mesa()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_pilha.html">Pilha</a> * partida_get_cartas_na_mesa </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13abe87de36953ed10a40564f078b096" name="a13abe87de36953ed10a40564f078b096"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13abe87de36953ed10a40564f078b096">&#9670;&nbsp;</a></span>partida_get_cartas_para_comer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_pilha.html">Pilha</a> * partida_get_cartas_para_comer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d2f67d3d2aa9e0cb1bbbf82316a276e" name="a6d2f67d3d2aa9e0cb1bbbf82316a276e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d2f67d3d2aa9e0cb1bbbf82316a276e">&#9670;&nbsp;</a></span>partida_get_cor_da_partida()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a> partida_get_cor_da_partida </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a251b4ca7282b99d753bd0fb52e25f940" name="a251b4ca7282b99d753bd0fb52e25f940"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a251b4ca7282b99d753bd0fb52e25f940">&#9670;&nbsp;</a></span>partida_get_direcao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="capi_8h.html#a69b557ab052f553508f086c4380c01d2">DirecaoDaPartida</a> partida_get_direcao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afe647ad16b7eb7f68993cd3c93a8876a" name="afe647ad16b7eb7f68993cd3c93a8876a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe647ad16b7eb7f68993cd3c93a8876a">&#9670;&nbsp;</a></span>partida_get_jogador_atual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a> partida_get_jogador_atual </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5f709ea62746ebc5f9e5cebcc457a0e5" name="a5f709ea62746ebc5f9e5cebcc457a0e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f709ea62746ebc5f9e5cebcc457a0e5">&#9670;&nbsp;</a></span>partida_get_vencedor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int partida_get_vencedor </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaf08ddde8dfd4981841e8550b1578927" name="aaf08ddde8dfd4981841e8550b1578927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf08ddde8dfd4981841e8550b1578927">&#9670;&nbsp;</a></span>partida_jogar_bot()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void partida_jogar_bot </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a13558874522480a29a3850630167ef7a" name="a13558874522480a29a3850630167ef7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13558874522480a29a3850630167ef7a">&#9670;&nbsp;</a></span>partida_jogar_carta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void partida_jogar_carta </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="capi_8h.html#ad44428500871ac42dec2cb372bad8bc8">id_jogador</a>&#160;</td>
+          <td class="paramname"><em>id_jogador</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>card_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab1432e80b980e3371b506b6693da95f3" name="ab1432e80b980e3371b506b6693da95f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1432e80b980e3371b506b6693da95f3">&#9670;&nbsp;</a></span>partida_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t partida_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_partida.html">Partida</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

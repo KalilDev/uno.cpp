@@ -16,6 +16,11 @@ var hierarchy =
     [ "doctest::CurrentTestCaseStats", "structdoctest_1_1_current_test_case_stats.html", null ],
     [ "doctest::detail::types::enable_if< COND, T >", "structdoctest_1_1detail_1_1types_1_1enable__if.html", null ],
     [ "doctest::detail::types::enable_if< true, T >", "structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html", null ],
+    [ "std::exception", null, [
+      [ "CartaInvalida", "class_carta_invalida.html", null ],
+      [ "ExcecaoInterface", "class_excecao_interface.html", null ],
+      [ "NaoESuaVez", "class_nao_e_sua_vez.html", null ]
+    ] ],
     [ "doctest::detail::ExpressionDecomposer", "structdoctest_1_1detail_1_1_expression_decomposer.html", null ],
     [ "doctest::detail::types::false_type", "structdoctest_1_1detail_1_1types_1_1false__type.html", [
       [ "doctest::detail::deferred_false< T >", "structdoctest_1_1detail_1_1deferred__false.html", null ],

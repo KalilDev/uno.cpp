@@ -71,9 +71,12 @@ var annotated_dup =
     ] ],
     [ "Carta", "class_carta.html", "class_carta" ],
     [ "CartaEspecial", "class_carta_especial.html", "class_carta_especial" ],
+    [ "CartaInvalida", "class_carta_invalida.html", "class_carta_invalida" ],
+    [ "ExcecaoInterface", "class_excecao_interface.html", "class_excecao_interface" ],
     [ "Interface", "class_interface.html", "class_interface" ],
     [ "Jogador", "class_jogador.html", "class_jogador" ],
     [ "Mao", "class_mao.html", "class_mao" ],
+    [ "NaoESuaVez", "class_nao_e_sua_vez.html", "class_nao_e_sua_vez" ],
     [ "Partida", "class_partida.html", "class_partida" ],
     [ "Pilha", "class_pilha.html", "class_pilha" ]
 ];

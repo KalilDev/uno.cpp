@@ -38,10 +38,11 @@ enum TipoDeCartaEspecial carta_especial_get_tipo(struct CartaEspecial*);
  */
 struct Mao;
 size_t mao_size(struct Mao*);
-struct Carta *mao_begin(struct Mao*);
-struct Carta *mao_end(struct Mao*);
+struct Carta **mao_begin(struct Mao*);
+struct Carta **mao_end(struct Mao*);
 void mao_adicionar_carta(struct Mao*, struct Carta*);
 struct Carta *mao_remover_carta(struct Mao*, size_t);
+struct Carta *mao_at(struct Mao*, size_t, char**);
 enum CorDaCarta mao_get_cor_da_carta(struct Mao*, size_t);
 
 /** jogador.hpp
@@ -52,6 +53,14 @@ struct Jogador;
 
 struct Mao *jogador_get_mao(struct Jogador*);
 id_jogador jogador_get_id(struct Jogador*);
+
+/** pilha.hpp
+ *
+ */
+struct Pilha;
+size_t pilha_size(struct Pilha*);
+struct Carta **pilha_begin(struct Pilha*);
+struct Carta **pilha_end(struct Pilha*);
 
 /** partida.hpp
  *
@@ -64,9 +73,15 @@ struct Partida;
 
 DirecaoDaPartida partida_get_direcao(struct Partida*);
 id_jogador partida_get_jogador_atual(struct Partida*);
-void partida_jogar_carta(struct Partida*,id_jogador, size_t);
+void partida_jogar_carta(struct Partida*,id_jogador, size_t, char** e);
 CorDaCarta partida_get_cor_da_partida(struct Partida*);
-void partida_comer_carta(struct Partida*,id_jogador);
+void partida_comer_carta(struct Partida*,id_jogador, char** e);
+void partida_jogar_bot(struct Partida*);
+const struct Pilha *partida_get_cartas_na_mesa(struct Partida*);
+const struct Pilha *partida_get_cartas_para_comer(struct Partida*);
+int partida_get_vencedor(struct Partida*);
+size_t partida_size(struct Partida*);
+struct Jogador *partida_at(struct Partida*, size_t, char**);
 struct Jogador *partida_begin(struct Partida*);
 struct Jogador *partida_end(struct Partida*);
 

@@ -43,7 +43,7 @@ public:
      * @brief Construtor de um objeto mão
      * @details Construtor sem parâmetros para a criação de um novo objeto mão
      */
-        Mao();
+        Mao() = default;
 
     /**
      * @brief Função que retorna um ponteiro para o início do vector
@@ -106,13 +106,18 @@ public:
      */
         size_t size();
 
+    Mao(Mao&) = delete;
+    Mao(Mao&&) noexcept;
+    void operator=(Mao&) = delete;
+    Mao& operator=(Mao&&) noexcept;
 };
 
 extern "C" {
     size_t mao_size(Mao* self);
-    Carta *mao_begin(Mao* self);
-    Carta *mao_end(Mao* self);
+    Carta **mao_begin(Mao* self);
+    Carta **mao_end(Mao* self);
     void mao_adicionar_carta(Mao* self, Carta* c);
     Carta *mao_remover_carta(Mao* self, size_t i);
+    Carta *mao_at(Mao* self, size_t i, char**);
     CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i);
 }
