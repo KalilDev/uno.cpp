@@ -106,6 +106,17 @@ public:
      */
         size_t size();
 
+    /**
+     * @brief Destrutor de objeto mão
+     * @details Destrutor que libera a memória alocada dinamicamente para um objeto mão
+     */
+        ~Mao();
+
+        Mao(Mao&) = delete;
+        Mao(Mao&&) noexcept;
+        void operator=(Mao&) = delete;
+        Mao& operator=(Mao&&) noexcept;
+
 };
 
 extern "C" {
