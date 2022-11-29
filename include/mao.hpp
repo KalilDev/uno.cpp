@@ -106,6 +106,10 @@ public:
      */
         size_t size();
 
+    Mao(Mao&) = delete;
+    Mao(Mao&&) noexcept;
+    void operator=(Mao&) = delete;
+    Mao& operator=(Mao&&) noexcept;
 };
 
 extern "C" {

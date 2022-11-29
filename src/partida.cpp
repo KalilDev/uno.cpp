@@ -102,7 +102,7 @@ void Partida::iniciarEstado() {
         for (auto j = 0; j < NUM_CARTAS; j++) {
             jogador.getMao()->adicionarCarta(_cartas_para_comer.pop());
         }
-        _jogadores.push_back(jogador);
+        _jogadores.push_back(std::move(jogador));
     }
     _jogador_atual = 0;
     _direcao = DirecaoDaPartida::Normal;

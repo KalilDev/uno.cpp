@@ -38,6 +38,23 @@
         return _cartas[i];
     }
 
+Mao::Mao(Mao &&rvalue) noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+}
+
+Mao& Mao::operator=(Mao &&rvalue)  noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+    return *this;
+}
+
 extern "C" {
     size_t mao_size(Mao* self){
         return self->size();
