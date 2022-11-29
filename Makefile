@@ -1,7 +1,7 @@
 CXX=g++
 THIRD_PARTY=third_party/
 INCLUDE=include/
-CXXFLAGS=-std=c++17 -Werror -Wall -Wconversion -Wextra -fPIC -I$(INCLUDE) -I$(THIRD_PARTY)
+CXXFLAGS=-std=c++17 -Werror -Wall -Wconversion -Wextra -fPIC -g -I$(INCLUDE) -I$(THIRD_PARTY)
 BUILD=build
 DOXYGEN=doxygen
 DOXYFILE=Doxyfile
@@ -39,8 +39,8 @@ carta.test: test_dir carta.o util.o
 
 carta_especial.test: test_dir carta_especial.o carta.o util.o
 	$(CXX) $(CXXFLAGS) $(BUILD)/carta_especial.o $(BUILD)/carta.o $(BUILD)/carta.o test/carta_especial.cpp -o $(BUILD_TEST)/carta_especial
-interface.test: test_dir interface.o partida.o carta.o jogador.o mao.o pilha.o util.o
-	$(CXX) $(CXXFLAGS) $(BUILD)/interface.o $(BUILD)/carta.o $(BUILD)/jogador.o $(BUILD)/mao.o $(BUILD)/partida.o $(BUILD)/pilha.o $(BUILD)/carta.o test/interface.cpp -o $(BUILD_TEST)/interface
+interface.test: test_dir interface.o partida.o carta.o carta_especial.o jogador.o mao.o pilha.o util.o
+	$(CXX) $(CXXFLAGS) $(BUILD)/interface.o $(BUILD)/carta.o $(BUILD)/carta_especial.o $(BUILD)/jogador.o $(BUILD)/mao.o $(BUILD)/partida.o $(BUILD)/pilha.o $(BUILD)/util.o test/interface.cpp -o $(BUILD_TEST)/interface
 jogador.test: test_dir jogador.o carta.o carta_especial.o mao.o util.o
 	$(CXX) $(CXXFLAGS) $(BUILD)/jogador.o $(BUILD)/carta.o $(BUILD)/carta_especial.o $(BUILD)/mao.o $(BUILD)/util.o test/jogador.cpp -o $(BUILD_TEST)/jogador
 mao.test: test_dir mao.o carta.o carta_especial.o util.o

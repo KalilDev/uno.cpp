@@ -52,7 +52,7 @@ void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) {
     }
     _cartas_na_mesa.push(nova_carta);
     jogador.getMao()->removerCarta(card_index);
-    auto carta_especial = dynamic_cast<CartaEspecial *>(nova_carta);
+    auto carta_especial = cast_carta_to_carta_especial(nova_carta);
     if (carta_especial == nullptr) {
         avancarJogador();
         return;
@@ -94,7 +94,7 @@ void Partida::comerCarta(id_jogador id_jogador) {
 
 void Partida::iniciarEstado() {
     _cartas_para_comer = Pilha::cheia();
-    _cartas_para_comer.random();
+    //_cartas_para_comer.random();
     auto carta_inicial = _cartas_para_comer.popPrimeiraNaoEspecial();
     _cartas_na_mesa = {carta_inicial};
     for (id_jogador i = 0; i < NUM_JOGADORES; i++) {
@@ -144,7 +144,10 @@ void Partida::comerUmaCarta() {
     auto &jogador = _jogadores[_jogador_atual];
     if (_cartas_para_comer.size() == 0) {
         auto ultima_carta = _cartas_na_mesa.pop();
-        _cartas_para_comer = _cartas_na_mesa;
+        _cartas_para_comer = {};
+        for (auto carta : _cartas_na_mesa) {
+            _cartas_para_comer.push(carta);
+        }
         _cartas_para_comer.random();
         _cartas_na_mesa = {ultima_carta};
     }

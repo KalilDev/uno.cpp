@@ -3,7 +3,7 @@
  * O arquivo que implementa a classe CartaEspecial
  */
 #include "carta_especial.hpp"
-
+#include <iostream>
 CartaEspecial::CartaEspecial(CorDaCarta cor, TipoDeCartaEspecial tipo) : Carta::Carta(cor,static_cast<numero_da_carta>(tipo)) {
 	_tipo = tipo;
 }
@@ -43,6 +43,7 @@ std::string CartaEspecial::toString() {
 }
 extern "C" {
 CartaEspecial *cast_carta_to_carta_especial(Carta *self) {
+    std::cout << self->toString() << std::endl << std::flush;
     return dynamic_cast<CartaEspecial *>(self);
 }
 TipoDeCartaEspecial carta_especial_get_tipo(CartaEspecial *self) {

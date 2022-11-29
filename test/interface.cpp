@@ -7,5 +7,5 @@
 #include "doctest.h"
 
 TEST_CASE("Teste da Interface: ") {
-    
+    Interface i;
 }

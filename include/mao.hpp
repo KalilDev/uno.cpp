@@ -43,7 +43,7 @@ public:
      * @brief Construtor de um objeto mão
      * @details Construtor sem parâmetros para a criação de um novo objeto mão
      */
-        Mao();
+        Mao() = default;
 
     /**
      * @brief Função que retorna um ponteiro para o início do vector

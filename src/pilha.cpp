@@ -52,12 +52,42 @@ size_t Pilha::size(){
  return _cartas.size();
 }
 
+Carta *Pilha::popPrimeiraNaoEspecial() {
+    for (auto it = _cartas.begin(); it != _cartas.end(); it++) {
+        auto carta = *it;
+        auto carta_especial = cast_carta_to_carta_especial(carta);
+        if (carta_especial != nullptr) {
+            continue;
+        }
+        _cartas.erase(it);
+        return carta;
+    }
+    return nullptr;
+}
+
 Carta **Pilha::begin() {
     return &*_cartas.begin();
 }
 
 Carta **Pilha::end() {
     return &*_cartas.end();
+}
+
+Pilha::Pilha(Pilha &&rvalue) noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+}
+
+Pilha& Pilha::operator=(Pilha &&rvalue)  noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+    return *this;
 }
 
 extern "C" {

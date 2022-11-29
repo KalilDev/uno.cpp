@@ -37,6 +37,11 @@ public:
  */
     ~Pilha();
 
+    Pilha(Pilha&) = delete;
+    Pilha(Pilha&&) noexcept;
+    void operator=(Pilha&) = delete;
+    Pilha& operator=(Pilha&&) noexcept;
+
 /**
  * @brief Pega a última carta do vetor de cartas
  * @details Pega a última carta do vetor de cartas que representa a carta do topo da pilha de cartas
