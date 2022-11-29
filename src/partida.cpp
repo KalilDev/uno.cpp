@@ -2,8 +2,11 @@
  * @file partida.cpp
  * O arquivo que implementa a classe Partida
  */
+#include <string>
 #include "partida.hpp"
 #include "carta_especial.hpp"
+#include "util.hpp"
+#include <stdexcept>
 
 DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
     switch (direcao) {
@@ -11,17 +14,22 @@ DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao) {
             return DirecaoDaPartida::Reversa;
         case Reversa:
             return DirecaoDaPartida::Normal;
+        default:
+            throw std::invalid_argument("DirecaoDaPartida invalida");
     }
 }
 
-NaoESuaVez::NaoESuaVez(id_jogador jogador):_jogador(jogador) {
+NaoESuaVez::NaoESuaVez(id_jogador jogador):_jogador(jogador), _string("Não é a vez do jogador " + std::to_string(jogador)) {
+}
+const char* NaoESuaVez::what() const noexcept {
+    return _string.c_str();
+}
+CartaInvalida::CartaInvalida(id_jogador jogador, Carta *ultima_carta, Carta *nova_carta):_jogador(jogador),_ultima_carta(ultima_carta),_nova_carta(nova_carta), _string("O Jogador " + std::to_string(jogador) + " não pode jogar a carta " + nova_carta->toString() + " em cima da carta" + ultima_carta->toString()) {
 
 }
-
-CartaInvalida::CartaInvalida(id_jogador jogador, Carta *ultima_carta, Carta *nova_carta):_jogador(jogador),_ultima_carta(ultima_carta),_nova_carta(nova_carta) {
-
+const char* CartaInvalida::what() const noexcept {
+    return _string.c_str();
 }
-
 Partida::Partida() = default;
 
 DirecaoDaPartida Partida::getDirecao() {
@@ -44,7 +52,7 @@ void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) {
     }
     _cartas_na_mesa.push(nova_carta);
     jogador.getMao()->removerCarta(card_index);
-    auto carta_especial = dynamic_cast<CartaEspecial *>(nova_carta);
+    auto carta_especial = cast_carta_to_carta_especial(nova_carta);
     if (carta_especial == nullptr) {
         avancarJogador();
         return;
@@ -86,7 +94,8 @@ void Partida::comerCarta(id_jogador id_jogador) {
 
 void Partida::iniciarEstado() {
     _cartas_para_comer = Pilha::cheia();
-    auto carta_inicial = _cartas_para_comer.PopPrimeiraNaoEspecial();
+    //_cartas_para_comer.random();
+    auto carta_inicial = _cartas_para_comer.popPrimeiraNaoEspecial();
     _cartas_na_mesa = {carta_inicial};
     for (id_jogador i = 0; i < NUM_JOGADORES; i++) {
         auto jogador = Jogador{i};
@@ -107,12 +116,24 @@ void Partida::limparEstado() {
     _direcao=DirecaoDaPartida::Normal;
 }
 
-Jogador *Partida::begin() {
-    return &*_jogadores.begin();
-}
-
-Jogador *Partida::end() {
-    return &*_jogadores.end();
+void Partida::jogarBot() {
+    auto &bot = _jogadores[_jogador_atual];
+    auto mao = bot.getMao();
+    auto cartas_possiveis = std::vector<size_t>{};
+    auto carta_atual = _cartas_na_mesa.getTop();
+    for (size_t i = 0 ; i < mao->size(); i++) {
+        auto carta = (*mao)[i];
+        if (carta->getCor() != carta_atual->getCor() && carta->getNumero() != carta_atual->getNumero()) {
+            continue;
+        }
+        cartas_possiveis.push_back(i);
+    }
+    if (cartas_possiveis.empty()) {
+        comerCarta(_jogador_atual);
+        return;
+    }
+    auto i = static_cast<size_t>(random()) % cartas_possiveis.size();
+    jogarCarta(_jogador_atual, i);
 }
 
 void Partida::avancarJogador() {
@@ -123,12 +144,48 @@ void Partida::comerUmaCarta() {
     auto &jogador = _jogadores[_jogador_atual];
     if (_cartas_para_comer.size() == 0) {
         auto ultima_carta = _cartas_na_mesa.pop();
-        _cartas_para_comer = _cartas_na_mesa;
+        _cartas_para_comer = {};
+        for (auto carta : _cartas_na_mesa) {
+            _cartas_para_comer.push(carta);
+        }
         _cartas_para_comer.random();
         _cartas_na_mesa = {ultima_carta};
     }
     auto carta = _cartas_para_comer.pop();
     jogador.getMao()->adicionarCarta(carta);
+}
+
+int Partida::getVencedor() {
+    for (size_t i =0; i < _jogadores.size(); i++) {
+        auto &jogador = _jogadores[i];
+        if (jogador.getMao()->size() == 0) {
+            return static_cast<int>(i);
+        }
+    }
+    return -1;
+}
+
+const Pilha *Partida::getCartasNaMesa() {
+    return &_cartas_na_mesa;
+}
+
+const Pilha *Partida::getCartasParaComer() {
+    return &_cartas_para_comer;
+}
+
+Jogador *Partida::begin() {
+    return &*_jogadores.begin();
+}
+
+Jogador *Partida::end() {
+    return &*_jogadores.end();
+}
+
+Jogador *Partida::operator[](size_t i) {
+    if (i >= _jogadores.size()) {
+        throw std::range_error("Indice invalido para jogador");
+    }
+    return &_jogadores[i];
 }
 
 extern "C" {
@@ -138,14 +195,46 @@ extern "C" {
     id_jogador partida_get_jogador_atual(Partida* self) {
         return self->getJogadorAtual();
     }
-    void partida_jogar_carta(Partida* self,id_jogador id_jogador, size_t card_index) {
-        return self->jogarCarta(id_jogador, card_index);
+    void partida_jogar_carta(Partida* self,id_jogador id_jogador, size_t card_index, char** e) {
+        try {
+            *e = nullptr;
+            return self->jogarCarta(id_jogador, card_index);
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+            return;
+        }
     }
     CorDaCarta partida_get_cor_da_partida(Partida* self) {
         return self->getCorDaPartida();
     }
-    void partida_comer_carta(Partida*self,id_jogador id_jogador) {
-        return self->comerCarta(id_jogador);
+    void partida_comer_carta(Partida*self,id_jogador id_jogador, char** e) {
+        try {
+            *e = nullptr;
+            return self->comerCarta(id_jogador);
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+        }
+    }
+    void partida_jogar_bot(Partida* self) {
+        return self->jogarBot();
+    }
+    const Pilha *partida_get_cartas_na_mesa(Partida* self) {
+        return self->getCartasNaMesa();
+    }
+    const Pilha *partida_get_cartas_para_comer(Partida* self) {
+        return self->getCartasParaComer();
+    }
+    int partida_get_vencedor(Partida* self) {
+        return self->getVencedor();
+    };
+    Jogador *partida_at(Partida *self, size_t i, char**e) {
+        try {
+            *e = nullptr;
+            return (*self)[i];
+        } catch (const std::exception& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }
     }
     Jogador *partida_begin(Partida*self) {
         return self->begin();

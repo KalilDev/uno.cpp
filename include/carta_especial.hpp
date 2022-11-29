@@ -22,6 +22,7 @@ public:
     CartaEspecial(CorDaCarta cor, TipoDeCartaEspecial tipo);
     virtual ~CartaEspecial() override = default;
     TipoDeCartaEspecial getTipo();
+    virtual std::string toString() override;
 };
 
 extern "C" {

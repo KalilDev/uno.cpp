@@ -1,3 +1,4 @@
+#include <cstddef>
 #include "pilha.hpp"
 #include "carta_especial.hpp"
 #include <algorithm>
@@ -41,30 +42,66 @@ Pilha Pilha::cheia(){
     Pilha pilha;
     for (int c = 0; c < 4; c++){
         CorDaCarta cor = static_cast<CorDaCarta>(c);
-        for (int i = 0; i < 10; i++)
+        for (numero_da_carta i = 0; i < 10; i++)
             pilha.push(new Carta(cor, i));
         
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::Bloqueia));
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::ComeDois));
         pilha.push(new CartaEspecial(cor, TipoDeCartaEspecial::Reverso));
     }
+    return pilha;
 }
 
 size_t Pilha::size(){
  return _cartas.size();
 }
 
-Carta* Pilha::popPrimeiraNaoEspecial(){
-    for (auto it = _cartas.begin(); it != _cartas.end(); it++){
+Carta *Pilha::popPrimeiraNaoEspecial() {
+    for (auto it = _cartas.begin(); it != _cartas.end(); it++) {
         auto carta = *it;
-        CartaEspecial *carta_especial = (CartaEspecial*) carta;
-        if (carta_especial != nullptr) { //conseguiu converter então é para ignorar
-            continue; // passa para a próxima carta/proxima iteração
-        } 
-        else {
-            _cartas.erase(it); //se n for especial dá o erase
-            return carta; //retorna a carta n especial 
-            break; // faz o pop da primeira não especial e sai do for
+        auto carta_especial = cast_carta_to_carta_especial(carta);
+        if (carta_especial != nullptr) {
+            continue;
         }
+        _cartas.erase(it);
+        return carta;
+    }
+    return nullptr;
+}
+
+Carta **Pilha::begin() {
+    return &*_cartas.begin();
+}
+
+Carta **Pilha::end() {
+    return &*_cartas.end();
+}
+
+Pilha::Pilha(Pilha &&rvalue) noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+}
+
+Pilha& Pilha::operator=(Pilha &&rvalue)  noexcept {
+    _cartas.reserve(rvalue._cartas.size());
+    for (auto & _carta : rvalue._cartas) {
+        _cartas.push_back(_carta);
+    }
+    rvalue._cartas.clear();
+    return *this;
+}
+
+extern "C" {
+    size_t pilha_size(Pilha *self) {
+        return self->size();
+    }
+    Carta **pilha_begin(Pilha *self) {
+        return &*self->begin();
+    }
+    Carta **pilha_end(Pilha *self) {
+        return &*self->end();
     }
 }

@@ -3,65 +3,72 @@
  * O arquivo que implementa a classe Mao
  */
 
+#include <stdexcept>
+#include <cstring>
 #include "mao.hpp"
-
-    size_t size(){
-        return sizeof(size_t);
+#include "util.hpp"
+    size_t Mao::size(){
+        return _cartas.size();
     }
 
-    Carta Mao::*begin(){
-        *size_t = _cartas.begin();
-        return size_t;
+    Carta **Mao::begin(){
+        return &*_cartas.begin();
     }
 
-    Carta Mao::*end(){
-        *size_t = _cartas.end();
-        return size_t;
+    Carta **Mao::end(){
+        return &*_cartas.end();
     }
 
     void Mao::adicionarCarta(Carta * c){
         _cartas.push_back(c);
     }
 
-    Carta Mao::*removerCarta(size_t){
-        for(auto &x : _cartas){
-            int aux = _cartas.getNumero();
-            if(aux == size_t){
-                _cartas.erase(x);
-            }
-        }
+    Carta *Mao::removerCarta(size_t i){
+        auto it = _cartas.begin() + (long)i;
+        auto carta = *it;
+        _cartas.erase(it);
+        return carta;
     }
 
-    CorDaCarta Mao::getCorDaCarta(size_t){
-        return _cartas.getCor().at(size_t);
+    CorDaCarta Mao::getCorDaCarta(size_t i){
+        return _cartas[i]->getCor();
     }
 
-    Carta Mao::*operator[](size_t){
-
+    Carta * Mao::operator[](size_t i){
+        return _cartas[i];
     }
 
 extern "C" {
     size_t mao_size(Mao* self){
-        self->mao_size;
+        return self->size();
     }
 
-    Carta *mao_begin(Mao* self){
-        self->mao_begin;
+    Carta **mao_begin(Mao* self){
+        return self->begin();
     }
 
-    Carta *mao_end(Mao* self){
-        self->mao_end;
+    Carta **mao_end(Mao* self){
+        return self->end();
     }
 
-    void mao_adicionar_carta(Mao*, Carta*){
-
+    void mao_adicionar_carta(Mao* self, Carta* c){
+        return self->adicionarCarta(c);
     }
 
-    Carta *mao_remover_carta(Mao* self, size_t){
-        self->mao_remover_carta;
+    Carta *mao_remover_carta(Mao* self, size_t i){
+        return self->removerCarta(i);
     }
 
-    CorDaCarta mao_get_cor_da_carta(Mao* self, size_t){
-        self->mao_get_cor_da_carta;
+    CorDaCarta mao_get_cor_da_carta(Mao* self, size_t i){
+        return self->getCorDaCarta(i);
+    }
+    Carta *mao_at(Mao* self, size_t i, char** e) {
+        try {
+            *e = nullptr;
+            return (*self)[i];
+        } catch (const std::range_error& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }
     }
 }

@@ -6,5 +6,6 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-TEST_CASE("foo") {
+TEST_CASE("Teste da Interface: ") {
+    Interface i;
 }
