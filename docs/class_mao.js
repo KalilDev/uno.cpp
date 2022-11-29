@@ -1,10 +1,15 @@
 var class_mao =
 [
-    [ "Mao", "class_mao.html#a16144144a20689d2d2f97128b3f4dc0d", null ],
-    [ "adicionarCarta", "class_mao.html#a730cf375503f0d4a04be60bae6c3ff5c", null ],
-    [ "begin", "class_mao.html#aa3b583f060934919ae09e9112c93094a", null ],
-    [ "end", "class_mao.html#ad91afff38dfacf747d724984e74a2909", null ],
-    [ "getCorDaCarta", "class_mao.html#a91efd843649794049948003837ca5a6f", null ],
-    [ "removerCarta", "class_mao.html#a91c08e98304f9365d14ec393bcf26717", null ],
+    [ "Mao", "class_mao.html#a2453f7f2cbf6e5282756f8ea171873fd", null ],
+    [ "Mao", "class_mao.html#aefee0ff634dbce4afe08273f6493aed4", null ],
+    [ "Mao", "class_mao.html#a61e56a6c2631297ba5e040aadd949e59", null ],
+    [ "adicionarCarta", "class_mao.html#a080d44b8ae64a122d8a8bd11996ada93", null ],
+    [ "begin", "class_mao.html#a5b460267ee60e29e1bb9d6672df8b75d", null ],
+    [ "end", "class_mao.html#aaec2d0ce9579d44621061761ad99e6fe", null ],
+    [ "getCorDaCarta", "class_mao.html#a466b4d47fe8c83b84cbe2f58e30bb1f5", null ],
+    [ "operator=", "class_mao.html#a1fa2b513e97579a9b7baa891b2aaf76b", null ],
+    [ "operator=", "class_mao.html#a15f7e4c69a8a3975a37ef1336f09aa4c", null ],
+    [ "operator[]", "class_mao.html#a324cfe8e3ebf902ef5dd20490ab88fc6", null ],
+    [ "removerCarta", "class_mao.html#ab5bd5729c68efcd36833d4c64e4d6bf8", null ],
     [ "size", "class_mao.html#af6ecc057f89958525aaa4e36fa71afa6", null ]
 ];

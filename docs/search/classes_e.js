@@ -1,11 +1,11 @@
 var searchData=
 [
-  ['testcase_0',['TestCase',['../structdoctest_1_1detail_1_1_test_case.html',1,'doctest::detail']]],
-  ['testcasedata_1',['TestCaseData',['../structdoctest_1_1_test_case_data.html',1,'doctest']]],
-  ['testcaseexception_2',['TestCaseException',['../structdoctest_1_1_test_case_exception.html',1,'doctest']]],
-  ['testfailureexception_3',['TestFailureException',['../structdoctest_1_1detail_1_1_test_failure_exception.html',1,'doctest::detail']]],
-  ['testrunstats_4',['TestRunStats',['../structdoctest_1_1_test_run_stats.html',1,'doctest']]],
-  ['testsuite_5',['TestSuite',['../structdoctest_1_1detail_1_1_test_suite.html',1,'doctest::detail']]],
-  ['true_5ftype_6',['true_type',['../structdoctest_1_1detail_1_1types_1_1true__type.html',1,'doctest::detail::types']]],
-  ['tuple_7',['tuple',['../classstd_1_1tuple.html',1,'std']]]
+  ['string_0',['String',['../classdoctest_1_1_string.html',1,'doctest']]],
+  ['stringcontains_1',['StringContains',['../classdoctest_1_1_assert_data_1_1_string_contains.html',1,'doctest::AssertData']]],
+  ['stringmaker_2',['StringMaker',['../structdoctest_1_1_string_maker.html',1,'doctest']]],
+  ['stringmakerbase_3',['StringMakerBase',['../structdoctest_1_1detail_1_1_string_maker_base.html',1,'doctest::detail']]],
+  ['stringmakerbase_3c_20detail_3a_3ahas_5finsertion_5foperator_3c_20t_20_3e_3a_3avalue_7c_7cdetail_3a_3atypes_3a_3ais_5fpointer_3c_20t_20_3e_3a_3avalue_7c_7cdetail_3a_3atypes_3a_3ais_5farray_3c_20t_20_3e_3a_3avalue_20_3e_4',['StringMakerBase&lt; detail::has_insertion_operator&lt; T &gt;::value||detail::types::is_pointer&lt; T &gt;::value||detail::types::is_array&lt; T &gt;::value &gt;',['../structdoctest_1_1detail_1_1_string_maker_base.html',1,'doctest::detail']]],
+  ['stringmakerbase_3c_20true_20_3e_5',['StringMakerBase&lt; true &gt;',['../structdoctest_1_1detail_1_1_string_maker_base_3_01true_01_4.html',1,'doctest::detail']]],
+  ['subcase_6',['Subcase',['../structdoctest_1_1detail_1_1_subcase.html',1,'doctest::detail']]],
+  ['subcasesignature_7',['SubcaseSignature',['../structdoctest_1_1_subcase_signature.html',1,'doctest']]]
 ];

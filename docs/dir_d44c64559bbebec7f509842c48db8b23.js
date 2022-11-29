@@ -7,7 +7,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "jogador.hpp", "jogador_8hpp.html", "jogador_8hpp" ],
     [ "mao.hpp", "mao_8hpp.html", "mao_8hpp" ],
     [ "partida.hpp", "partida_8hpp.html", "partida_8hpp" ],
-    [ "pilha.hpp", "pilha_8hpp.html", [
-      [ "Pilha", "class_pilha.html", "class_pilha" ]
-    ] ]
+    [ "pilha.hpp", "pilha_8hpp.html", "pilha_8hpp" ],
+    [ "util.hpp", "util_8hpp.html", "util_8hpp" ]
 ];
