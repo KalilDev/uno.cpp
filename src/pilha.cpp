@@ -1,12 +1,15 @@
 #include "pilha.hpp"
 #include "carta_especial.hpp"
+#include <algorithm>
+#include <random>
+#include <chrono>
 
 Pilha::Pilha(){
 
 }
 
 Pilha::Pilha(Carta* carta){
-
+    _cartas.push_back(carta);
 }
 
 Pilha::~Pilha(){
@@ -20,7 +23,7 @@ Carta* Pilha::getTop(){
 }
 
 Carta* Pilha::pop(){
-    Carta *ultima = _cartas[_cartas.size() - 1];
+    Carta* ultima = _cartas[_cartas.size() - 1];
     _cartas.pop_back();
     return ultima;
 }
@@ -30,7 +33,8 @@ void Pilha::push(Carta* carta){
 }
 
 void Pilha::random(){
-
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::shuffle (_cartas.begin(), _cartas.end(), std::default_random_engine(seed));
 }
 
 Pilha Pilha::cheia(){
@@ -50,3 +54,17 @@ size_t Pilha::size(){
  return _cartas.size();
 }
 
+Carta* Pilha::popPrimeiraNaoEspecial(){
+    for (auto it = _cartas.begin(); it != _cartas.end(); it++){
+        auto carta = *it;
+        CartaEspecial *carta_especial = (CartaEspecial*) carta;
+        if (carta_especial != nullptr) { //conseguiu converter então é para ignorar
+            continue; // passa para a próxima carta/proxima iteração
+        } 
+        else {
+            _cartas.erase(it); //se n for especial dá o erase
+            return carta; //retorna a carta n especial 
+            break; // faz o pop da primeira não especial e sai do for
+        }
+    }
+}

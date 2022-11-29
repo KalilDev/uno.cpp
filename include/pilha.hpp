@@ -21,19 +21,19 @@ private:
 public:
 /**
  * @brief Construtor de um novo objeto Pilha
- * @details Construtor sem parâmetros para um novo objeto Pilha
+ * @details Construtor sem parâmetros para um novo objeto Pilha, usado no início do jogo 
  */
     Pilha();
 
 /**
- * @brief Construtor de um novo objeto Pilha
+ * @brief Construtor de um novo objeto Pilha com parâmetro
  * @details Construtor que recebe o parâmetro do endereço de uma carta para adicioná-la na última posição do vetor de cartas
  */
     Pilha(Carta* carta);
 
 /**
  * @brief Destrutor de um objeto Pilha
- * @details Destrutor de um objeto Pilha
+ * @details Destrutor de um objeto Pilha para liberar a memória alocada dinâmicamente pela classe 
  */
     ~Pilha();
 
@@ -46,8 +46,8 @@ public:
 
 /**
  * @brief Retira uma carta do vetor de cartas
- * @details Garante que a carta retirada da pilha teve seu endereço apagado e retorna o endereço da última carta (que foi retirada)
- * @return Carta* 
+ * @details Retira a última carta do vetor de cartas usando pop_back e retorna a carta retirada
+ * @return Carta* (ponteiro de uma carta do tipo objeto Carta)
  */
     Carta *pop();
 
@@ -60,25 +60,25 @@ public:
 
 /**
  * @brief Embaralha as cartas
- * @details Embaralha as cartas após o vetor de cartas estiver completamente construido
+ * @details Embaralha as cartas após o vetor de cartas estiver completamente construido usando shuffle e uma semente aleatória
  */
     void random();
 /**
  * @brief Preenche o vetor de cartas no início da partida
- * @details Preenche o vetor de cartas com todas as cartas do jogo ordenadas
+ * @details Função do tipo static que preenche o vetor de cartas com todas as cartas do jogo ordenadas com as cores determinadas por um Enum CorDaCarta (determinadas na classe Carta). É inserido no objeto pilha uma carta alocada dinamicamente com sua cor e seu número (0 a 9), além das cartas especiais, que possuem suas cores e seus respectivos tipos (bloqueia, comeDois e reverso)
  * @return Pilha
  */
     static Pilha cheia();
 /**
  * @brief retorna o tamanho do vetor de cartas
- * @details retorna o tamanho do vetor de cartas que representa a pilha da partida
+ * @details retorna o tamanho do vetor de cartas que representa uma pilha da partida
  * @return size_t 
  */
     size_t size();
 
 /**
- * @brief Retorna a primeira carta não especial
- * @details Retorna a primeira carta não especial para o começo do jogo
+ * @brief Retira a primeira carta não especial
+ * @details Retira e retorna a primeira carta não especial para ser lançada como a primeira carta do começo do jogo
  * @return Carta*
  */
     Carta* popPrimeiraNaoEspecial();
