@@ -34,7 +34,7 @@ void Pilha::push(Carta* carta){
 }
 
 void Pilha::random(){
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    unsigned seed = static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count());
     std::shuffle (_cartas.begin(), _cartas.end(), std::default_random_engine(seed));
 }
 
