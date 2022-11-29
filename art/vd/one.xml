@@ -1,0 +1,36 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="62dp"
+    android:height="88dp"
+    android:viewportWidth="62"
+    android:viewportHeight="88">
+    <path
+        android:name="path"
+        android:pathData="M 4.032 0 L 57.968 0 C 60.202 0 62 1.798 62 4.032 L 62 83.968 C 62 86.202 60.202 88 57.968 88 L 4.032 88 C 1.798 88 0 86.202 0 83.968 L 0 4.032 C 0 1.798 1.798 0 4.032 0 Z"
+        android:fillColor="#ff17ef"
+        android:strokeWidth="1"/>
+    <group android:name="group">
+        <path
+            android:name="path_1"
+            android:pathData="M 25.991 52.536 L 30.509 52.536 L 30.509 38.207 Q 30.509 37.561 30.553 36.901 L 26.798 40.113 Q 26.651 40.231 26.505 40.289 Q 26.358 40.333 26.226 40.333 Q 26.006 40.333 25.83 40.245 Q 25.654 40.143 25.566 40.011 L 24.745 38.881 L 30.993 33.469 L 33.119 33.469 L 33.119 52.536 L 37.255 52.536 L 37.255 54.531 L 25.991 54.531 Z"
+            android:fillColor="#ffffff"
+            android:strokeWidth="1"/>
+    </group>
+    <group android:name="group_1">
+        <path
+            android:name="path_2"
+            android:pathData="M 6.169 15.061 L 7.812 15.061 L 7.812 9.851 Q 7.812 9.616 7.828 9.376 L 6.462 10.544 Q 6.409 10.587 6.356 10.608 Q 6.302 10.624 6.254 10.624 Q 6.174 10.624 6.11 10.592 Q 6.046 10.555 6.014 10.507 L 5.716 10.096 L 7.988 8.128 L 8.761 8.128 L 8.761 15.061 L 10.265 15.061 L 10.265 15.787 L 6.169 15.787 Z"
+            android:fillColor="#ffffff"
+            android:fillAlpha="0.997719"
+            android:strokeWidth="1"/>
+    </group>
+    <group android:name="group_2">
+        <path
+            android:name="path_3"
+            android:pathData="M 55.831 72.939 L 54.188 72.939 L 54.188 78.15 Q 54.188 78.384 54.172 78.624 L 55.538 77.456 Q 55.591 77.414 55.644 77.392 Q 55.698 77.376 55.746 77.376 Q 55.826 77.376 55.89 77.408 Q 55.954 77.446 55.986 77.494 L 56.284 77.904 L 54.012 79.872 L 53.239 79.872 L 53.239 72.939 L 51.735 72.939 L 51.735 72.214 L 55.831 72.214 Z"
+            android:fillColor="#ffffff"
+            android:fillAlpha="0.996636"
+            android:strokeWidth="1"/>
+    </group>
+</vector>
