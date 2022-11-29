@@ -137,7 +137,10 @@ void Partida::jogarBot() {
 }
 
 void Partida::avancarJogador() {
-    _jogador_atual = (id_jogador)((id_jogador)((long long) _jogador_atual + (char) _direcao+(long long)_jogadores.size())) % _jogadores.size();
+    using id = id_jogador;
+    using ll = long long;
+    using c = char;
+    _jogador_atual = (id)((id)((ll) _jogador_atual + (c) _direcao+(ll)_jogadores.size())) % _jogadores.size();
 }
 
 void Partida::comerUmaCarta() {
