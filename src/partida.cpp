@@ -99,10 +99,10 @@ void Partida::iniciarEstado() {
     _cartas_na_mesa = {carta_inicial};
     for (id_jogador i = 0; i < NUM_JOGADORES; i++) {
         auto jogador = Jogador{i};
-        _jogadores.push_back(jogador);
         for (auto j = 0; j < NUM_CARTAS; j++) {
             jogador.getMao()->adicionarCarta(_cartas_para_comer.pop());
         }
+        _jogadores.push_back(jogador);
     }
     _jogador_atual = 0;
     _direcao = DirecaoDaPartida::Normal;
@@ -188,6 +188,10 @@ Jogador *Partida::operator[](size_t i) {
     return &_jogadores[i];
 }
 
+size_t Partida::size() {
+    return _jogadores.size();
+}
+
 extern "C" {
     DirecaoDaPartida partida_get_direcao(Partida* self) {
         return self->getDirecao();
@@ -226,7 +230,10 @@ extern "C" {
     }
     int partida_get_vencedor(Partida* self) {
         return self->getVencedor();
-    };
+    }
+    size_t partida_size(Partida* self) {
+	return self->size();
+    }
     Jogador *partida_at(Partida *self, size_t i, char**e) {
         try {
             *e = nullptr;

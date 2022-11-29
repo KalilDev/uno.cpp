@@ -190,6 +190,12 @@ public:
  * @brief O iterator para o end() de _jogadores
  */
     Jogador *end();
+
+/**
+ * @brief Retorna a quantidade de jogadores
+ */
+    size_t size();
+
 private:
 
 /**
@@ -213,6 +219,7 @@ extern "C" {
     const Pilha *partida_get_cartas_na_mesa(Partida*);
     const Pilha *partida_get_cartas_para_comer(Partida*);
     int partida_get_vencedor(Partida*);
+    size_t partida_size(Partida*);
     Jogador *partida_at(Partida*, size_t, char**);
     Jogador *partida_begin(Partida*);
     Jogador *partida_end(Partida*);
