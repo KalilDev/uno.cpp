@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['querydata_0',['QueryData',['../structdoctest_1_1_query_data.html',1,'doctest']]]
+  ['partida_0',['Partida',['../class_partida.html',1,'']]],
+  ['pilha_1',['Pilha',['../class_pilha.html',1,'']]]
 ];

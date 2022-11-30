@@ -5,7 +5,7 @@ var searchData=
   ['add_5ffail_5fcheck_5fat_2',['ADD_FAIL_CHECK_AT',['../doctest_8h.html#a4608a06d7117332c14b21b93f9655653',1,'doctest.h']]],
   ['add_5fmessage_5fat_3',['ADD_MESSAGE_AT',['../doctest_8h.html#adb66a4c291609d4a1c554ad0a23f0662',1,'doctest.h']]],
   ['addfilter_4',['addFilter',['../classdoctest_1_1_context.html#a60ad57a46c19db2b142468c3acac448a',1,'doctest::Context']]],
-  ['adicionarcarta_5',['adicionarCarta',['../class_mao.html#a730cf375503f0d4a04be60bae6c3ff5c',1,'Mao']]],
+  ['adicionarcarta_5',['adicionarCarta',['../class_mao.html#a080d44b8ae64a122d8a8bd11996ada93',1,'Mao']]],
   ['amarelo_6',['Amarelo',['../capi_8h.html#a66bcbe522e676e0919ccda67ad20cfc9',1,'Amarelo():&#160;capi.h'],['../carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80a54ddb63d25ba5b6b4e05469f4f44669a',1,'Amarelo():&#160;carta.hpp']]],
   ['and_5fthen_7',['AND_THEN',['../doctest_8h.html#aff5ab767c4b4b5f02218e9060d09e826',1,'doctest.h']]],
   ['and_5fwhen_8',['AND_WHEN',['../doctest_8h.html#a49fd020eb5d05b1e021d84558ef297a5',1,'doctest.h']]],

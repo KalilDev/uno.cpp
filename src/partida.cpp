@@ -102,7 +102,7 @@ void Partida::iniciarEstado() {
         for (auto j = 0; j < NUM_CARTAS; j++) {
             jogador.getMao()->adicionarCarta(_cartas_para_comer.pop());
         }
-        _jogadores.push_back(jogador);
+        _jogadores.push_back(std::move(jogador));
     }
     _jogador_atual = 0;
     _direcao = DirecaoDaPartida::Normal;
@@ -137,7 +137,10 @@ void Partida::jogarBot() {
 }
 
 void Partida::avancarJogador() {
-    _jogador_atual = (unsigned long long)((unsigned long long)((long long) _jogador_atual + (char) _direcao+(long long)_jogadores.size())) % _jogadores.size();
+    using id = id_jogador;
+    using ll = long long;
+    using c = char;
+    _jogador_atual = (id)((id)((ll) _jogador_atual + (c) _direcao+(ll)_jogadores.size())) % _jogadores.size();
 }
 
 void Partida::comerUmaCarta() {

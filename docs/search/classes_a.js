@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['partida_0',['Partida',['../class_partida.html',1,'']]],
-  ['pilha_1',['Pilha',['../class_pilha.html',1,'']]]
+  ['naoesuavez_0',['NaoESuaVez',['../class_nao_e_sua_vez.html',1,'']]]
 ];

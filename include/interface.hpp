@@ -78,15 +78,6 @@ public:
     void comecar();
 };
 
-
-class ExcecaoInterface : public std::exception {
-     public:
-        virtual const char* what() const noexcept {
-            return "Houve algum erro na interface do jogo!";
-        }
-};
-
-
 extern "C"
 {
     Interface *interface_new();

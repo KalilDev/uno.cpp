@@ -90,33 +90,59 @@ $(document).ready(function(){initNavTree('class_mao.html',''); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
+<p>Classe que faz a manipulação das cartas de um usuário em uma rodada.  
+ <a href="class_mao.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="mao_8hpp_source.html">mao.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a16144144a20689d2d2f97128b3f4dc0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a16144144a20689d2d2f97128b3f4dc0d">Mao</a> ()</td></tr>
-<tr class="separator:a16144144a20689d2d2f97128b3f4dc0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2453f7f2cbf6e5282756f8ea171873fd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a2453f7f2cbf6e5282756f8ea171873fd">Mao</a> ()=default</td></tr>
+<tr class="memdesc:a2453f7f2cbf6e5282756f8ea171873fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construtor de um objeto mão.  <a href="class_mao.html#a2453f7f2cbf6e5282756f8ea171873fd">More...</a><br /></td></tr>
+<tr class="separator:a2453f7f2cbf6e5282756f8ea171873fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b460267ee60e29e1bb9d6672df8b75d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a5b460267ee60e29e1bb9d6672df8b75d">begin</a> ()</td></tr>
+<tr class="memdesc:a5b460267ee60e29e1bb9d6672df8b75d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna um ponteiro para o início do vector.  <a href="class_mao.html#a5b460267ee60e29e1bb9d6672df8b75d">More...</a><br /></td></tr>
+<tr class="separator:a5b460267ee60e29e1bb9d6672df8b75d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaec2d0ce9579d44621061761ad99e6fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#aaec2d0ce9579d44621061761ad99e6fe">end</a> ()</td></tr>
+<tr class="memdesc:aaec2d0ce9579d44621061761ad99e6fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna um ponteiro para o final do vector.  <a href="class_mao.html#aaec2d0ce9579d44621061761ad99e6fe">More...</a><br /></td></tr>
+<tr class="separator:aaec2d0ce9579d44621061761ad99e6fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080d44b8ae64a122d8a8bd11996ada93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a080d44b8ae64a122d8a8bd11996ada93">adicionarCarta</a> (<a class="el" href="class_carta.html">Carta</a> *c)</td></tr>
+<tr class="memdesc:a080d44b8ae64a122d8a8bd11996ada93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função responsável por adicionar uma carta à mão.  <a href="class_mao.html#a080d44b8ae64a122d8a8bd11996ada93">More...</a><br /></td></tr>
+<tr class="separator:a080d44b8ae64a122d8a8bd11996ada93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5bd5729c68efcd36833d4c64e4d6bf8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#ab5bd5729c68efcd36833d4c64e4d6bf8">removerCarta</a> (size_t i)</td></tr>
+<tr class="memdesc:ab5bd5729c68efcd36833d4c64e4d6bf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função responsável por remover uma carta da mão.  <a href="class_mao.html#ab5bd5729c68efcd36833d4c64e4d6bf8">More...</a><br /></td></tr>
+<tr class="separator:ab5bd5729c68efcd36833d4c64e4d6bf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a466b4d47fe8c83b84cbe2f58e30bb1f5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a466b4d47fe8c83b84cbe2f58e30bb1f5">getCorDaCarta</a> (size_t i)</td></tr>
+<tr class="memdesc:a466b4d47fe8c83b84cbe2f58e30bb1f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função get que retorna a cor da carta.  <a href="class_mao.html#a466b4d47fe8c83b84cbe2f58e30bb1f5">More...</a><br /></td></tr>
+<tr class="separator:a466b4d47fe8c83b84cbe2f58e30bb1f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a324cfe8e3ebf902ef5dd20490ab88fc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a324cfe8e3ebf902ef5dd20490ab88fc6">operator[]</a> (size_t i)</td></tr>
+<tr class="memdesc:a324cfe8e3ebf902ef5dd20490ab88fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Uma sobrescrita do método operator.  <a href="class_mao.html#a324cfe8e3ebf902ef5dd20490ab88fc6">More...</a><br /></td></tr>
+<tr class="separator:a324cfe8e3ebf902ef5dd20490ab88fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6ecc057f89958525aaa4e36fa71afa6"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#af6ecc057f89958525aaa4e36fa71afa6">size</a> ()</td></tr>
+<tr class="memdesc:af6ecc057f89958525aaa4e36fa71afa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que retorna o tamanho do vector.  <a href="class_mao.html#af6ecc057f89958525aaa4e36fa71afa6">More...</a><br /></td></tr>
 <tr class="separator:af6ecc057f89958525aaa4e36fa71afa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3b583f060934919ae09e9112c93094a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#aa3b583f060934919ae09e9112c93094a">begin</a> ()</td></tr>
-<tr class="separator:aa3b583f060934919ae09e9112c93094a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad91afff38dfacf747d724984e74a2909"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#ad91afff38dfacf747d724984e74a2909">end</a> ()</td></tr>
-<tr class="separator:ad91afff38dfacf747d724984e74a2909"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a730cf375503f0d4a04be60bae6c3ff5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a730cf375503f0d4a04be60bae6c3ff5c">adicionarCarta</a> (<a class="el" href="class_carta.html">Carta</a> *)</td></tr>
-<tr class="separator:a730cf375503f0d4a04be60bae6c3ff5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91c08e98304f9365d14ec393bcf26717"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a91c08e98304f9365d14ec393bcf26717">removerCarta</a> (size_t)</td></tr>
-<tr class="separator:a91c08e98304f9365d14ec393bcf26717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91efd843649794049948003837ca5a6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a91efd843649794049948003837ca5a6f">getCorDaCarta</a> (size_t)</td></tr>
-<tr class="separator:a91efd843649794049948003837ca5a6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefee0ff634dbce4afe08273f6493aed4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#aefee0ff634dbce4afe08273f6493aed4">Mao</a> (<a class="el" href="class_mao.html">Mao</a> &amp;)=delete</td></tr>
+<tr class="separator:aefee0ff634dbce4afe08273f6493aed4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61e56a6c2631297ba5e040aadd949e59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a61e56a6c2631297ba5e040aadd949e59">Mao</a> (<a class="el" href="class_mao.html">Mao</a> &amp;&amp;) noexcept</td></tr>
+<tr class="separator:a61e56a6c2631297ba5e040aadd949e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15f7e4c69a8a3975a37ef1336f09aa4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a15f7e4c69a8a3975a37ef1336f09aa4c">operator=</a> (<a class="el" href="class_mao.html">Mao</a> &amp;)=delete</td></tr>
+<tr class="separator:a15f7e4c69a8a3975a37ef1336f09aa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa2b513e97579a9b7baa891b2aaf76b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_mao.html">Mao</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html#a1fa2b513e97579a9b7baa891b2aaf76b">operator=</a> (<a class="el" href="class_mao.html">Mao</a> &amp;&amp;) noexcept</td></tr>
+<tr class="separator:a1fa2b513e97579a9b7baa891b2aaf76b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >foo </p>
+<div class="textblock"><p >Classe que faz a manipulação das cartas de um usuário em uma rodada. </p>
+<p >foo</p>
+<p >Permite o fluxo do jogo e das jogadas, adicionando e removendo cartas </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a16144144a20689d2d2f97128b3f4dc0d" name="a16144144a20689d2d2f97128b3f4dc0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a16144144a20689d2d2f97128b3f4dc0d">&#9670;&nbsp;</a></span>Mao()</h2>
+<a id="a2453f7f2cbf6e5282756f8ea171873fd" name="a2453f7f2cbf6e5282756f8ea171873fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2453f7f2cbf6e5282756f8ea171873fd">&#9670;&nbsp;</a></span>Mao() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Mao::Mao </td>
@@ -125,13 +151,73 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construtor de um objeto mão. </p>
+<p >Construtor sem parâmetros para a criação de um novo objeto mão </p>
+
+</div>
+</div>
+<a id="aefee0ff634dbce4afe08273f6493aed4" name="aefee0ff634dbce4afe08273f6493aed4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefee0ff634dbce4afe08273f6493aed4">&#9670;&nbsp;</a></span>Mao() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mao::Mao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a61e56a6c2631297ba5e040aadd949e59" name="a61e56a6c2631297ba5e040aadd949e59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61e56a6c2631297ba5e040aadd949e59">&#9670;&nbsp;</a></span>Mao() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Mao::Mao </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rvalue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a730cf375503f0d4a04be60bae6c3ff5c" name="a730cf375503f0d4a04be60bae6c3ff5c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a730cf375503f0d4a04be60bae6c3ff5c">&#9670;&nbsp;</a></span>adicionarCarta()</h2>
+<a id="a080d44b8ae64a122d8a8bd11996ada93" name="a080d44b8ae64a122d8a8bd11996ada93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080d44b8ae64a122d8a8bd11996ada93">&#9670;&nbsp;</a></span>adicionarCarta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -140,22 +226,25 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Mao::adicionarCarta </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_carta.html">Carta</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>c</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função responsável por adicionar uma carta à mão. </p>
+<p >Função que recebe uma carta como parâmetro por referência e insere essa carta passada como parâmetro na última posição do vector que armazena cartas na classe Mão. A ideia é que esse método seja utilizada quando, na rodada, o jogador deve acrescentar cartas em sua mão. Nesse caso, a adição da carta ocorrerá por meio da função push_back(), que acrescenta na ultima posição do vector a carta referenciada </p><dl class="section return"><dt>Returns</dt><dd>* void </dd></dl>
+
 </div>
 </div>
-<a id="aa3b583f060934919ae09e9112c93094a" name="aa3b583f060934919ae09e9112c93094a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3b583f060934919ae09e9112c93094a">&#9670;&nbsp;</a></span>begin()</h2>
+<a id="a5b460267ee60e29e1bb9d6672df8b75d" name="a5b460267ee60e29e1bb9d6672df8b75d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b460267ee60e29e1bb9d6672df8b75d">&#9670;&nbsp;</a></span>begin()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * Mao::begin </td>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> ** Mao::begin </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -163,16 +252,19 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função que retorna um ponteiro para o início do vector. </p>
+<p >Função que pega o ponteiro para o início do vector, desreferencia e retorna um endereco de memória para a primeira casa do vector </p><dl class="section return"><dt>Returns</dt><dd>Carta** </dd></dl>
+
 </div>
 </div>
-<a id="ad91afff38dfacf747d724984e74a2909" name="ad91afff38dfacf747d724984e74a2909"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad91afff38dfacf747d724984e74a2909">&#9670;&nbsp;</a></span>end()</h2>
+<a id="aaec2d0ce9579d44621061761ad99e6fe" name="aaec2d0ce9579d44621061761ad99e6fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaec2d0ce9579d44621061761ad99e6fe">&#9670;&nbsp;</a></span>end()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * Mao::end </td>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> ** Mao::end </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -180,10 +272,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função que retorna um ponteiro para o final do vector. </p>
+<p >Função que pega o ponteiro para o fim do vector, desreferencia e retorna um endereco de memória para a última posição do vector </p><dl class="section return"><dt>Returns</dt><dd>Carta** </dd></dl>
+
 </div>
 </div>
-<a id="a91efd843649794049948003837ca5a6f" name="a91efd843649794049948003837ca5a6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91efd843649794049948003837ca5a6f">&#9670;&nbsp;</a></span>getCorDaCarta()</h2>
+<a id="a466b4d47fe8c83b84cbe2f58e30bb1f5" name="a466b4d47fe8c83b84cbe2f58e30bb1f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a466b4d47fe8c83b84cbe2f58e30bb1f5">&#9670;&nbsp;</a></span>getCorDaCarta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,16 +287,92 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a> Mao::getCorDaCarta </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função get que retorna a cor da carta. </p>
+<p >Função que recebe como parâmetro o número para um índice do vector, em que a função retornará a cor da carta correspondente ao índice passado </p><dl class="section return"><dt>Returns</dt><dd>CorDaCarta </dd></dl>
+
 </div>
 </div>
-<a id="a91c08e98304f9365d14ec393bcf26717" name="a91c08e98304f9365d14ec393bcf26717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91c08e98304f9365d14ec393bcf26717">&#9670;&nbsp;</a></span>removerCarta()</h2>
+<a id="a1fa2b513e97579a9b7baa891b2aaf76b" name="a1fa2b513e97579a9b7baa891b2aaf76b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa2b513e97579a9b7baa891b2aaf76b">&#9670;&nbsp;</a></span>operator=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_mao.html">Mao</a> &amp; Mao::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> &amp;&amp;&#160;</td>
+          <td class="paramname"><em>rvalue</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">noexcept</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a15f7e4c69a8a3975a37ef1336f09aa4c" name="a15f7e4c69a8a3975a37ef1336f09aa4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15f7e4c69a8a3975a37ef1336f09aa4c">&#9670;&nbsp;</a></span>operator=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mao::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a324cfe8e3ebf902ef5dd20490ab88fc6" name="a324cfe8e3ebf902ef5dd20490ab88fc6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324cfe8e3ebf902ef5dd20490ab88fc6">&#9670;&nbsp;</a></span>operator[]()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * Mao::operator[] </td>
+          <td>(</td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Uma sobrescrita do método operator. </p>
+<p >Nesse caso, a sobrescrita do operator será responsável por retornar uma referência para o elemento do vector _cartas, na posição i. </p><dl class="section return"><dt>Returns</dt><dd>Carta* </dd></dl>
+
+</div>
+</div>
+<a id="ab5bd5729c68efcd36833d4c64e4d6bf8" name="ab5bd5729c68efcd36833d4c64e4d6bf8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5bd5729c68efcd36833d4c64e4d6bf8">&#9670;&nbsp;</a></span>removerCarta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -210,11 +381,14 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="class_carta.html">Carta</a> * Mao::removerCarta </td>
           <td>(</td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Função responsável por remover uma carta da mão. </p>
+<p >Função que recebe como parâmetro o número de uma carta e remove da mão do jogador a carta de número correspondente no vector. A ideia é que esse método seja utilizado quando, na rodada, o jogador deve remover cartas de sua Mão. A remoção ocorrerá por meio da função erase, apagando o elemento de ("posição inicial do vector" + " i") no vector. </p><dl class="section return"><dt>Returns</dt><dd>* Carta* </dd></dl>
 
 </div>
 </div>
@@ -233,10 +407,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Função que retorna o tamanho do vector. </p>
+<p >Como estamos utilizando o size_t para padronizar a navegação pelo vector, a ideia deste método é que retorne o tamanho do vector de cartas, nesse caso, a quantidade de posições que ele possui </p><dl class="section return"><dt>Returns</dt><dd>size_t </dd></dl>
+
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>include/<a class="el" href="mao_8hpp_source.html">mao.hpp</a></li>
+<li>src/<a class="el" href="src_2mao_8cpp.html">mao.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('mao_8hpp.html',''); initResizable(); }
   <div class="headertitle"><div class="title">mao.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável pela manipulação das cartas de um jogador em uma rodada.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;cstdlib&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &quot;<a class="el" href="carta_8hpp_source.html">carta.hpp</a>&quot;</code><br />
@@ -98,28 +101,37 @@ $(document).ready(function(){initNavTree('mao_8hpp.html',''); initResizable(); }
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mao.html">Mao</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Classe que faz a manipulação das cartas de um usuário em uma rodada.  <a href="class_mao.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8b4fd47b7e7dc139393cd813bc28c6b0"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a8b4fd47b7e7dc139393cd813bc28c6b0">mao_size</a> (<a class="el" href="class_mao.html">Mao</a> *)</td></tr>
-<tr class="separator:a8b4fd47b7e7dc139393cd813bc28c6b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a039166757ba8664516e50b57db5b7f08"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a039166757ba8664516e50b57db5b7f08">mao_begin</a> (<a class="el" href="class_mao.html">Mao</a> *)</td></tr>
-<tr class="separator:a039166757ba8664516e50b57db5b7f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2f5c20a3fc62202c0796b2f0f3f75ef"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#ac2f5c20a3fc62202c0796b2f0f3f75ef">mao_end</a> (<a class="el" href="class_mao.html">Mao</a> *)</td></tr>
-<tr class="separator:ac2f5c20a3fc62202c0796b2f0f3f75ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e4875edd50d623e03cf2b2475d7f0d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a9e4875edd50d623e03cf2b2475d7f0d4">mao_adicionar_carta</a> (<a class="el" href="class_mao.html">Mao</a> *, <a class="el" href="class_carta.html">Carta</a> *)</td></tr>
-<tr class="separator:a9e4875edd50d623e03cf2b2475d7f0d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad69e51b7e3d3870969fde6faf551acd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#ad69e51b7e3d3870969fde6faf551acd9">mao_remover_carta</a> (<a class="el" href="class_mao.html">Mao</a> *, size_t)</td></tr>
-<tr class="separator:ad69e51b7e3d3870969fde6faf551acd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a23e8e5b03772eddb38ccef74509043cc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a23e8e5b03772eddb38ccef74509043cc">mao_get_cor_da_carta</a> (<a class="el" href="class_mao.html">Mao</a> *, size_t)</td></tr>
-<tr class="separator:a23e8e5b03772eddb38ccef74509043cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29dc675a4d8d8b2785a8efca85386203"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a29dc675a4d8d8b2785a8efca85386203">mao_size</a> (<a class="el" href="class_mao.html">Mao</a> *self)</td></tr>
+<tr class="separator:a29dc675a4d8d8b2785a8efca85386203"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92852c295f09599a444b6dfbd6ac5d2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a92852c295f09599a444b6dfbd6ac5d2f">mao_begin</a> (<a class="el" href="class_mao.html">Mao</a> *self)</td></tr>
+<tr class="separator:a92852c295f09599a444b6dfbd6ac5d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03f6d9034f460092c7e47e1368bf5af8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a03f6d9034f460092c7e47e1368bf5af8">mao_end</a> (<a class="el" href="class_mao.html">Mao</a> *self)</td></tr>
+<tr class="separator:a03f6d9034f460092c7e47e1368bf5af8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c6330dabdfaa69b8c060274b89e806"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a36c6330dabdfaa69b8c060274b89e806">mao_adicionar_carta</a> (<a class="el" href="class_mao.html">Mao</a> *self, <a class="el" href="class_carta.html">Carta</a> *c)</td></tr>
+<tr class="separator:a36c6330dabdfaa69b8c060274b89e806"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ca0b4d22d328bbcca1c08d7b74ccff5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a3ca0b4d22d328bbcca1c08d7b74ccff5">mao_remover_carta</a> (<a class="el" href="class_mao.html">Mao</a> *self, size_t i)</td></tr>
+<tr class="separator:a3ca0b4d22d328bbcca1c08d7b74ccff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e4f1806215ddc1a2aa3b603598be798"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_carta.html">Carta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#a4e4f1806215ddc1a2aa3b603598be798">mao_at</a> (<a class="el" href="class_mao.html">Mao</a> *self, size_t i, char **)</td></tr>
+<tr class="separator:a4e4f1806215ddc1a2aa3b603598be798"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac014ff9719e99c39bac61b9ffb8a24e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="mao_8hpp.html#ac014ff9719e99c39bac61b9ffb8a24e0">mao_get_cor_da_carta</a> (<a class="el" href="class_mao.html">Mao</a> *self, size_t i)</td></tr>
+<tr class="separator:ac014ff9719e99c39bac61b9ffb8a24e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >O arquivo que descreve a classe <a class="el" href="class_mao.html">Mao</a> </p>
+<div class="textblock"><p >Classe responsável pela manipulação das cartas de um jogador em uma rodada. </p>
+<dl class="section author"><dt>Author</dt><dd>Bruno Lima Soares (<a href="#" onclick="location.href='mai'+'lto:'+'bru'+'no'+'lim'+'a2'+'801'+'03'+'@gm'+'ai'+'l.c'+'om'; return false;">bruno<span class="obfuscator">.nosp@m.</span>lima<span class="obfuscator">.nosp@m.</span>28010<span class="obfuscator">.nosp@m.</span>3@gm<span class="obfuscator">.nosp@m.</span>ail.c<span class="obfuscator">.nosp@m.</span>om</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>0.1 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-11-22</dd></dl>
+<p>Classe Mão, que implementa métodos para manipular as cartas que estão na "mão" de um jogador em uma rodada, podendo acrescentar novas cartas, remover outras.</p>
+<dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2022</dd></dl>
+<p>O arquivo que descreve a classe <a class="el" href="class_mao.html" title="Classe que faz a manipulação das cartas de um usuário em uma rodada.">Mao</a> </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a9e4875edd50d623e03cf2b2475d7f0d4" name="a9e4875edd50d623e03cf2b2475d7f0d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e4875edd50d623e03cf2b2475d7f0d4">&#9670;&nbsp;</a></span>mao_adicionar_carta()</h2>
+<a id="a36c6330dabdfaa69b8c060274b89e806" name="a36c6330dabdfaa69b8c060274b89e806"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c6330dabdfaa69b8c060274b89e806">&#9670;&nbsp;</a></span>mao_adicionar_carta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -128,13 +140,13 @@ Functions</h2></td></tr>
           <td class="memname">void mao_adicionar_carta </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_carta.html">Carta</a> *&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>c</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -146,17 +158,51 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a039166757ba8664516e50b57db5b7f08" name="a039166757ba8664516e50b57db5b7f08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a039166757ba8664516e50b57db5b7f08">&#9670;&nbsp;</a></span>mao_begin()</h2>
+<a id="a4e4f1806215ddc1a2aa3b603598be798" name="a4e4f1806215ddc1a2aa3b603598be798"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e4f1806215ddc1a2aa3b603598be798">&#9670;&nbsp;</a></span>mao_at()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * mao_begin </td>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * mao_at </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>i</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>e</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a92852c295f09599a444b6dfbd6ac5d2f" name="a92852c295f09599a444b6dfbd6ac5d2f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92852c295f09599a444b6dfbd6ac5d2f">&#9670;&nbsp;</a></span>mao_begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> ** mao_begin </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -164,17 +210,17 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac2f5c20a3fc62202c0796b2f0f3f75ef" name="ac2f5c20a3fc62202c0796b2f0f3f75ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2f5c20a3fc62202c0796b2f0f3f75ef">&#9670;&nbsp;</a></span>mao_end()</h2>
+<a id="a03f6d9034f460092c7e47e1368bf5af8" name="a03f6d9034f460092c7e47e1368bf5af8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03f6d9034f460092c7e47e1368bf5af8">&#9670;&nbsp;</a></span>mao_end()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_carta.html">Carta</a> * mao_end </td>
+          <td class="memname"><a class="el" href="class_carta.html">Carta</a> ** mao_end </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -182,8 +228,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a23e8e5b03772eddb38ccef74509043cc" name="a23e8e5b03772eddb38ccef74509043cc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a23e8e5b03772eddb38ccef74509043cc">&#9670;&nbsp;</a></span>mao_get_cor_da_carta()</h2>
+<a id="ac014ff9719e99c39bac61b9ffb8a24e0" name="ac014ff9719e99c39bac61b9ffb8a24e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac014ff9719e99c39bac61b9ffb8a24e0">&#9670;&nbsp;</a></span>mao_get_cor_da_carta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,13 +238,13 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="capi_8h.html#a740e79c3cefc2ddabd20e3ca54ef6cc6">CorDaCarta</a> mao_get_cor_da_carta </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -210,8 +256,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad69e51b7e3d3870969fde6faf551acd9" name="ad69e51b7e3d3870969fde6faf551acd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad69e51b7e3d3870969fde6faf551acd9">&#9670;&nbsp;</a></span>mao_remover_carta()</h2>
+<a id="a3ca0b4d22d328bbcca1c08d7b74ccff5" name="a3ca0b4d22d328bbcca1c08d7b74ccff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ca0b4d22d328bbcca1c08d7b74ccff5">&#9670;&nbsp;</a></span>mao_remover_carta()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -220,13 +266,13 @@ Functions</h2></td></tr>
           <td class="memname"><a class="el" href="class_carta.html">Carta</a> * mao_remover_carta </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>self</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>i</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -238,8 +284,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8b4fd47b7e7dc139393cd813bc28c6b0" name="a8b4fd47b7e7dc139393cd813bc28c6b0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8b4fd47b7e7dc139393cd813bc28c6b0">&#9670;&nbsp;</a></span>mao_size()</h2>
+<a id="a29dc675a4d8d8b2785a8efca85386203" name="a29dc675a4d8d8b2785a8efca85386203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29dc675a4d8d8b2785a8efca85386203">&#9670;&nbsp;</a></span>mao_size()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -248,7 +294,7 @@ Functions</h2></td></tr>
           <td class="memname">size_t mao_size </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_mao.html">Mao</a> *&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

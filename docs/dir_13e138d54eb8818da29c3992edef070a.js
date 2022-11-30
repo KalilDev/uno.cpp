@@ -6,5 +6,6 @@ var dir_13e138d54eb8818da29c3992edef070a =
     [ "jogador.cpp", "test_2jogador_8cpp.html", "test_2jogador_8cpp" ],
     [ "mao.cpp", "test_2mao_8cpp.html", "test_2mao_8cpp" ],
     [ "partida.cpp", "test_2partida_8cpp.html", "test_2partida_8cpp" ],
-    [ "pilha.cpp", "test_2pilha_8cpp.html", "test_2pilha_8cpp" ]
+    [ "pilha.cpp", "test_2pilha_8cpp.html", "test_2pilha_8cpp" ],
+    [ "util.cpp", "test_2util_8cpp.html", "test_2util_8cpp" ]
 ];
