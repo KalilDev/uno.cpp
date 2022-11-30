@@ -16,14 +16,21 @@
  */
 typedef size_t id_jogador;
 
-/** foo
+/**
+ * @brief Cria um novo jogador 
+ * @details O jogador inicia com uma mao vazia e um identificador.
+ * 
  */
 class Jogador {
 private:
 /**
- * @brief Cada jogador possui uma mão e um identificador
+ * @brief Cada jogador possui uma mão
  */
     Mao _mao;
+    /**
+     * @brief Cada jogador possui um identificador
+     * 
+     */
     id_jogador _id;
 public:
 /**

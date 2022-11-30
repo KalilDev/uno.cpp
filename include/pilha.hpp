@@ -1,3 +1,7 @@
+#pragma once
+#include "carta.hpp"
+#include <vector>
+
 /**
  * @file pilha.hpp
  * @author Maria Eduarda Sampaio (mariaeduardamrs0@gmail.com)
@@ -7,10 +11,6 @@
  * @details Responsável por armazenar um vetor de cartas que representa a pilha de lixo :wastebasket: e de comer cartas :yum: :wink:. Possui métodos de retirar a última carta (do topo), embaralhar as cartas e colocar carta no lixo. 
  * @copyright Copyright (c) 2022
  */
-
-#pragma once
-#include "carta.hpp"
-#include <vector>
 
 class Pilha {
 private:

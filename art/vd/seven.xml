@@ -1,0 +1,34 @@
+<vector
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="vector"
+    android:width="62dp"
+    android:height="88dp"
+    android:viewportWidth="62"
+    android:viewportHeight="88">
+    <path
+        android:name="path_4"
+        android:pathData="M 4.032 0 L 57.968 0 C 60.202 0 62 1.798 62 4.032 L 62 83.968 C 62 86.202 60.202 88 57.968 88 L 4.032 88 C 1.798 88 0 86.202 0 83.968 L 0 4.032 C 0 1.798 1.798 0 4.032 0 Z"
+        android:fillColor="#ff17ef"
+        android:strokeWidth="1"/>
+    <group android:name="group_3">
+        <path
+            android:name="path_5"
+            android:pathData="M 10.588 8.136 L 10.588 8.562 Q 10.588 8.744 10.545 8.861 Q 10.508 8.978 10.465 9.058 L 7.302 15.442 Q 7.233 15.581 7.11 15.682 Q 6.988 15.778 6.78 15.778 L 6.102 15.778 L 9.313 9.474 Q 9.382 9.341 9.452 9.229 Q 9.526 9.117 9.617 9.016 L 5.628 9.016 Q 5.537 9.016 5.462 8.946 Q 5.393 8.872 5.393 8.781 L 5.393 8.136 Z"
+            android:fillColor="#ffffff"
+            android:strokeWidth="1"/>
+    </group>
+    <group android:name="group_4">
+        <path
+            android:name="path_6"
+            android:pathData="M 38.143 33.491 L 38.143 34.665 Q 38.143 35.163 38.025 35.486 Q 37.923 35.809 37.805 36.029 L 29.108 53.585 Q 28.917 53.966 28.58 54.245 Q 28.243 54.509 27.671 54.509 L 25.808 54.509 L 34.637 37.173 Q 34.828 36.806 35.019 36.498 Q 35.224 36.19 35.473 35.911 L 24.503 35.911 Q 24.253 35.911 24.048 35.721 Q 23.857 35.515 23.857 35.266 L 23.857 33.491 Z"
+            android:fillColor="#ffffff"
+            android:strokeWidth="1"/>
+    </group>
+    <group android:name="group_5">
+        <path
+            android:name="path_7"
+            android:pathData="M 51.412 79.864 L 51.412 79.438 Q 51.412 79.256 51.455 79.139 Q 51.492 79.022 51.535 78.942 L 54.698 72.557 Q 54.767 72.419 54.89 72.317 Q 55.012 72.221 55.22 72.221 L 55.898 72.221 L 52.687 78.526 Q 52.618 78.659 52.548 78.771 Q 52.474 78.883 52.383 78.984 L 56.372 78.984 Q 56.463 78.984 56.538 79.054 Q 56.607 79.128 56.607 79.219 L 56.607 79.864 Z"
+            android:fillColor="#ffffff"
+            android:strokeWidth="1"/>
+    </group>
+</vector>

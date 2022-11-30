@@ -29,7 +29,7 @@ O jogo Uno é um jogo de cartas lançado pela Mattel e Gameloft no qual o jogado
 
 4.  O jogador não possui a possibilidade de falar “Uno” enquanto joga sua penúltima carta (uma vez que isso implicaria na necessidade da criação de todo um sistema de denúncia para quando isso não acontece, trazendo mais complexidade ao projeto);
 
-5.  O jogo não possui bots. Dessa maneira, todas as opções discutidas no tópico anterior serão apresentadas no mesmo ambiente e consecutivamente, isto é, logo após um jogador ter feito sua jogada, a vez será dada ao próximo.
+5.  O jogo possui bots. Dessa maneira, logo após você fazer a sua jogada, a vez será dada ao bot.
 
 OBS: A interface em que o jogo será jogado será feita no framework flutter, feito pela Google para criar aplicações nativas e usando o pacote de gerenciamento de estado [Value Notifier](https://github.com/kalildev/value_notifier) e o renderizador de vetores [Vector Drawable.dart](https://github.com/KalilDev/vector_drawable.dart), feitos pelo aluno Pedro Morato Kalil.
 
@@ -46,7 +46,7 @@ um usuário “away from the keyboard”.~~
 
 ~~• Como jogador eu quero poder alterar os estilos dos elementos visuais, como cartas e plano de fundo, para tornar o jogo mais envolvente e diversificar minhas opções de customização~~
 
- - Como jogador, eu quero poder utilizar de, pelo menos, 3 das cartas especiais do UNO, para tornar o jogo mais divertido e mais parecido com o real;
+- Como jogador, eu quero poder utilizar de, pelo menos, 3 das cartas especiais do UNO, para tornar o jogo mais divertido e mais parecido com o real;
 - Como jogador, eu quero poder acessar um menu durante a partida, para ter opções como sair, reiniciar, ou ler as regras do jogo sem precisar de quitar a rodada;    
 - Como jogador, eu quero poder jogar com bots, para tornar a minha experiencia mais divertida, dinâmica e competitiva, de modo a testar minhas habilidades;
 - Como jogador, eu quero poder quitar a partida o momento que eu quiser, de modo a permitir uma jogabilidade mais fluida e leve;
