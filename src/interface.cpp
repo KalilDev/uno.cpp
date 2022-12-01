@@ -14,8 +14,8 @@ const char* Interface::const_regras = "1) O jogo consiste em 4 jogadores, com 7 
                                       "   Essas cartas não são acumulativas, ou seja, um outro “come 2” não pode ser jogado em cima de um previamente lançado de modo\n"
                                       "   a “formar um come 4”);\n"
                                       "4) O jogador não possui a possibilidade de falar “Uno” enquanto joga sua penúltima carta;\n"
-                                      "5) O jogo não possui bots. Dessa maneira, todas as opções disponíveis para realizar a jogada serão\n"
-                                      "   apresentadas na mesma interface e consecutivamente, isto é, logo após um jogador ter feito sua jogada, a vez será dada ao próximo.";
+                                      "5) O jogo possui bots. Dessa maneira, após realizar sua jogada, a vez será concedida a um bot,"
+                                      "   ciclo que seguirá até que chegue sua vez novamente.";
 
 Interface::Interface() {
     _partida.iniciarEstado();
