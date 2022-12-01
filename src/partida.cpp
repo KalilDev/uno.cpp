@@ -40,9 +40,12 @@ id_jogador Partida::getJogadorAtual() {
     return _jogador_atual;
 }
 
-void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) {
+void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) throw() {
     if (id_jogador != getJogadorAtual()) {
         throw NaoESuaVez(id_jogador);
+    }
+    if (card_index > jogador.getMao().size()) {
+        throw std::range_error("Valor inválido");
     }
     auto ultima_carta = _cartas_na_mesa.getTop();
     auto &jogador = _jogadores[id_jogador];
