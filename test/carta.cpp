@@ -6,6 +6,11 @@
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
 
-TEST_CASE("foo") {
+TEST_CASE("Metódos de Carta") {
+    Carta carta(Azul, 1);
+
+    CHECK(carta.getNumero() == 1);
+    CHECK(carta.getCor() == 1 );
+    CHECK(carta.toString() == "1 azul");
 }
 

@@ -53,11 +53,11 @@ um usuário “away from the keyboard”.~~
 - Como jogador, eu quero poder desfrutar de uma interface interativa, de modo a tornar a experiência mais divertida, dinâmica, fácil, realista e visualmente agradável.
 
 ### DIAGRAMA DE CLASSES:
-[Link para o Draw.io](https://drive.google.com/file/d/1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW/view?usp=sharing)
-![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/diagrama.PNG)
+[Link para o Draw.io](https://app.diagrams.net/#G1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW)
+![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/Diagrama_Final.png)
 
 ### COMO COMPILAR O CÓDIGO
-**[essa parte ainda tem que sera adicionada]**
+make all
 
 ### CHECK-LIST: O QUE VAI SER AVALIADO NO TRABALHO
 
