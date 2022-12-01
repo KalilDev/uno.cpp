@@ -72,7 +72,7 @@ var annotated_dup =
     [ "Carta", "class_carta.html", "class_carta" ],
     [ "CartaEspecial", "class_carta_especial.html", "class_carta_especial" ],
     [ "CartaInvalida", "class_carta_invalida.html", "class_carta_invalida" ],
-    [ "ExcecaoInterface", "class_excecao_interface.html", "class_excecao_interface" ],
+    [ "CartaQueVaiSerDeletada", "class_carta_que_vai_ser_deletada.html", "class_carta_que_vai_ser_deletada" ],
     [ "Interface", "class_interface.html", "class_interface" ],
     [ "Jogador", "class_jogador.html", "class_jogador" ],
     [ "Mao", "class_mao.html", "class_mao" ],

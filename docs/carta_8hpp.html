@@ -91,6 +91,9 @@ $(document).ready(function(){initNavTree('carta_8hpp.html',''); initResizable();
   <div class="headertitle"><div class="title">carta.hpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Classe responsável por criar as cartas do jogo uno.  
+<a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;string&gt;</code><br />
 </div>
 <p><a href="carta_8hpp_source.html">Go to the source code of this file.</a></p>
@@ -98,11 +101,13 @@ $(document).ready(function(){initNavTree('carta_8hpp.html',''); initResizable();
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_carta.html">Carta</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria o modelo de carta do jogo.  <a href="class_carta.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:aae46204c9d4647d0ec3045d5d36f6d5d"><td class="memItemLeft" align="right" valign="top">typedef unsigned char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="carta_8hpp.html#aae46204c9d4647d0ec3045d5d36f6d5d">numero_da_carta</a></td></tr>
+<tr class="memdesc:aae46204c9d4647d0ec3045d5d36f6d5d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define um novo "nome" para unsigned char.  <a href="carta_8hpp.html#aae46204c9d4647d0ec3045d5d36f6d5d">More...</a><br /></td></tr>
 <tr class="separator:aae46204c9d4647d0ec3045d5d36f6d5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
@@ -112,6 +117,7 @@ Enumerations</h2></td></tr>
 , <a class="el" href="carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80aaa44b44fb8d4de614cbb1f4f5f81143e">Verde</a> = 2
 , <a class="el" href="carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80aab8c48809f2aa64abc2190c4b14adfd2">Vermelho</a> = 3
  }</td></tr>
+<tr class="memdesc:a4632c9a2a7902bf174e2c766f37e2a80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria o enum CorDaCarta que permite associar a cor a um número.  <a href="carta_8hpp.html#a4632c9a2a7902bf174e2c766f37e2a80">More...</a><br /></td></tr>
 <tr class="separator:a4632c9a2a7902bf174e2c766f37e2a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
@@ -124,7 +130,11 @@ Functions</h2></td></tr>
 <tr class="separator:a60223a1b798cc865fa293389bca8168c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p >O arquivo que descreve a classe <a class="el" href="class_carta.html">Carta</a>, o enum CorDaCarta e o tipo numero_da_carta </p>
+<div class="textblock"><p >Classe responsável por criar as cartas do jogo uno. </p>
+<dl class="section author"><dt>Author</dt><dd>Gustavo Mota (<a href="#" onclick="location.href='mai'+'lto:'+'gst'+'av'+'omo'+'ta'+'1@g'+'ma'+'il.'+'co'+'m'; return false;">gstav<span class="obfuscator">.nosp@m.</span>omot<span class="obfuscator">.nosp@m.</span>a1@gm<span class="obfuscator">.nosp@m.</span>ail.<span class="obfuscator">.nosp@m.</span>com</a>) </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>1.0 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>2022-11-30</dd></dl>
+<p>O arquivo descreve a classe <a class="el" href="class_carta.html" title="Cria o modelo de carta do jogo.">Carta</a>, o enum CorDaCarta e o tipo numero_da_carta </p><dl class="section copyright"><dt>Copyright</dt><dd>GNU General Public License v2.0 </dd></dl>
 </div><h2 class="groupheader">Typedef Documentation</h2>
 <a id="aae46204c9d4647d0ec3045d5d36f6d5d" name="aae46204c9d4647d0ec3045d5d36f6d5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aae46204c9d4647d0ec3045d5d36f6d5d">&#9670;&nbsp;</a></span>numero_da_carta</h2>
@@ -137,7 +147,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >foo </p>
+
+<p>Define um novo "nome" para unsigned char. </p>
+<p >Permite na declaração de uma unsigned char usar seu novo "nome" numero_da_carta </p>
 
 </div>
 </div>
@@ -153,7 +165,9 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p >foo </p>
+
+<p>Cria o enum CorDaCarta que permite associar a cor a um número. </p>
+<p >Permite a associação de uma cor de carta a um número, ao adicionar "unsigned char" a definição do enum especifica que a cor só pode ser associada a um byte de memória </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a4632c9a2a7902bf174e2c766f37e2a80a54ddb63d25ba5b6b4e05469f4f44669a" name="a4632c9a2a7902bf174e2c766f37e2a80a54ddb63d25ba5b6b4e05469f4f44669a"></a>Amarelo&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a4632c9a2a7902bf174e2c766f37e2a80aa1c2f7d857a72cb287f656f9d0cfac6c" name="a4632c9a2a7902bf174e2c766f37e2a80aa1c2f7d857a72cb287f656f9d0cfac6c"></a>Azul&#160;</td><td class="fielddoc"></td></tr>

@@ -86,8 +86,7 @@ $(document).ready(function(){initNavTree('md__r_e_a_d_m_e.html',''); initResizab
   <div class="headertitle"><div class="title">Trabalho Prático da Disciplina de Programação e Desenvolvimento de Software 2 (UFMG): Jogo de Uno </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >*### DISCLAIMER: ESSE README N TÁ COMPLETAMENTE PRONTO, GALERA DO GRUPO. TEM MT COISA PRA ALTERAR*</p>
-<h2><a class="anchor" id="autotoc_md1"></a>
+<div class="textblock"><h2><a class="anchor" id="autotoc_md1"></a>
 Integrantes:</h2>
 <ul>
 <li>Bruno Lima</li>
@@ -95,7 +94,7 @@ Integrantes:</h2>
 <li>Maria Eduarda Sampaio</li>
 <li>Pedro Kalil</li>
 <li>Raissa Diniz</li>
-<li>Raphael Amaral </li>
+<li>Raphael Amaral</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
 Professora: Camila Laranjeiras</h2>
@@ -114,9 +113,9 @@ REGRAS E INFORMAÇÕES GERAIS SOBRE COMO FUNCIONA A NOSSA VERSÃO DO UNO:</h2>
 3.  “Come 2”: faz com que o próximo àquele que jogou adicione mais 2 cartas à sua mão. É importante ressaltar que, nesse jogo, essas cartas não são acumulativas, ou seja, um outro “come 2” não pode ser jogado em cima de um previamente lançado de modo a “formar um come 4”;
 </pre></li>
 <li>O jogador não possui a possibilidade de falar “Uno” enquanto joga sua penúltima carta (uma vez que isso implicaria na necessidade da criação de todo um sistema de denúncia para quando isso não acontece, trazendo mais complexidade ao projeto);</li>
-<li>A interface em que o jogo será jogado será feita no framework flutter, feito pela Google para criar aplicações nativas e usando o pacote de gerenciamento de estado <a href="https://github.com/kalildev/value_notifier">Value Notifier</a> e o renderizador de vetores <a href="https://github.com/KalilDev/vector_drawable.dart">Vector Drawable.dart</a>, feitos pelo aluno Pedro Morato Kalil.</li>
-<li>O jogo não possui bots. Dessa maneira, todas as opções discutidas no tópico anterior serão apresentadas no mesmo ambiente e consecutivamente, isto é, logo após um jogador ter feito sua jogada, a vez será dada ao próximo.</li>
+<li>O jogo possui bots. Dessa maneira, logo após você fazer a sua jogada, a vez será dada ao bot.</li>
 </ol>
+<p >OBS: A interface em que o jogo será jogado será feita no framework flutter, feito pela Google para criar aplicações nativas e usando o pacote de gerenciamento de estado <a href="https://github.com/kalildev/value_notifier">Value Notifier</a> e o renderizador de vetores <a href="https://github.com/KalilDev/vector_drawable.dart">Vector Drawable.dart</a>, feitos pelo aluno Pedro Morato Kalil.</p>
 <h2><a class="anchor" id="autotoc_md5"></a>
 NOSSO USER STORIES:</h2>
 <p ><strike>• Como jogador eu quero acessar meu histórico de partidas para saber como me sai e acompanhar meus resultados e minha evolução no jogo.</strike></p>
@@ -125,15 +124,43 @@ NOSSO USER STORIES:</h2>
 <p ><strike>• Como jogador eu quero delimitar o tempo para um jogador lançar uma carta para que a partida seja fluida e não seja prejudicada por um usuário “away from the keyboard”.</strike></p>
 <p ><strike>• Como jogador eu quero poder alterar os estilos dos elementos visuais, como cartas e plano de fundo, para tornar o jogo mais envolvente e diversificar minhas opções de customização</strike></p>
 <ul>
-<li>Como jogador, eu quero poder utilizar de menos 3 das cartas especiais do UNO, para tornar o jogo mais divertido e mais parecido com o real;</li>
-</ul>
-<p >Como jogador, eu quero poder acessar um menu durante a partida, para ter opções como sair, reiniciar, ou ler as regras do jogo sem precisar de quitar a rodada; <br  />
-</p><ul>
+<li>Como jogador, eu quero poder utilizar de, pelo menos, 3 das cartas especiais do UNO, para tornar o jogo mais divertido e mais parecido com o real;</li>
+<li>Como jogador, eu quero poder acessar um menu durante a partida, para ter opções como sair, reiniciar, ou ler as regras do jogo sem precisar de quitar a rodada; <br  />
+</li>
 <li>Como jogador, eu quero poder jogar com bots, para tornar a minha experiencia mais divertida, dinâmica e competitiva, de modo a testar minhas habilidades;</li>
+<li>Como jogador, eu quero poder quitar a partida o momento que eu quiser, de modo a permitir uma jogabilidade mais fluida e leve;</li>
+<li>Como jogador, eu quero poder desfrutar de uma interface interativa, de modo a tornar a experiência mais divertida, dinâmica, fácil, realista e visualmente agradável.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md6"></a>
-VERSÃO INICIAL DO DIAGRAMA DE CLASSES:</h2>
-<p ><a href="https://drive.google.com/file/d/1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW/view?usp=sharing">Link para o Draw.io</a> <img src="https://github.com/KalilDev/uno.cpp/blob/master/diagrama%202.PNG" alt="Foto do Diagrama" class="inline"/> </p>
+DIAGRAMA DE CLASSES:</h2>
+<p ><a href="https://app.diagrams.net/#G1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW">Link para o Draw.io</a> <img src="https://github.com/KalilDev/uno.cpp/blob/master/Diagrama_Final.png" alt="Foto do Diagrama" class="inline"/></p>
+<h2><a class="anchor" id="autotoc_md7"></a>
+COMO COMPILAR O CÓDIGO</h2>
+<p >make all</p>
+<h2><a class="anchor" id="autotoc_md8"></a>
+CHECK-LIST: O QUE VAI SER AVALIADO NO TRABALHO</h2>
+<ul>
+<li>[ ] Documentação e organização (5 pontos) <pre class="fragment">     1.  Detalhamento do projeto
+
+     2.  Organização dos arquivos e pastas (modularização)
+
+     3.  Doxygen, comentários, indentação (tabulação).
+</pre></li>
+<li>[ ] Funcionamento correto (5 pontos)</li>
+<li>[ ] Uso correto das boas práticas e dos conceitos de OO (15 pts). <pre class="fragment"> 1.  Abstração, Encapsulamento, Herança (pelo menos 1) e Polimorfismo (pelo menos 1).   
+
+ 2.  Modularidade e componentes reusáveis (independência)
+
+ 3.  Tratamento de exceções [link exemplo](https://github.com/flaviovdf/pds2-ufmg/tree/master/exemplos/aula-excecoes]
+
+ 4.  Preocupações com possíveis fontes de erro (entrada inválida, cenário que não funciona, abertura de arquivo, não consegue alocar memória, etc…)
+
+ 5. Customizar uma exceção própria do projeto (criar um TAD que herda das exceções nativas do C++)
+</pre></li>
+<li>[ ] Testes de unidade (7 pontos)</li>
+<li>[ ] Participação individual (2 pontos)</li>
+<li>[ ] Ponto extra para criatividade e adicionais não requisitados (+2 pontos) </li>
+</ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

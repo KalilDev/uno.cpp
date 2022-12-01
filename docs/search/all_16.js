@@ -22,7 +22,7 @@ var searchData=
   ['warn_5fthrows_5fwith_5fmessage_19',['WARN_THROWS_WITH_MESSAGE',['../doctest_8h.html#a73c691e36423baec205b6cb6e96d7eee',1,'doctest.h']]],
   ['warn_5funary_20',['WARN_UNARY',['../doctest_8h.html#abbeec03d05bb5360ac985e6e2b29ab6b',1,'doctest.h']]],
   ['warn_5funary_5ffalse_21',['WARN_UNARY_FALSE',['../doctest_8h.html#a871927e4d93df140d96dfbac9852810f',1,'doctest.h']]],
-  ['what_22',['what',['../class_nao_e_sua_vez.html#aa267961987e4d3c8f353885d5430282c',1,'NaoESuaVez::what()'],['../class_carta_invalida.html#a660a8d54edc4be81f5a624fd4a08f441',1,'CartaInvalida::what()'],['../class_excecao_interface.html#aa16d85cfb9e16b0c998ac6b4ee1987f3',1,'ExcecaoInterface::what()']]],
+  ['what_22',['what',['../class_carta_invalida.html#a660a8d54edc4be81f5a624fd4a08f441',1,'CartaInvalida::what()'],['../class_nao_e_sua_vez.html#aa267961987e4d3c8f353885d5430282c',1,'NaoESuaVez::what()']]],
   ['when_23',['WHEN',['../doctest_8h.html#a99e503d975635996314bccde232b0a60',1,'doctest.h']]],
   ['white_24',['White',['../namespacedoctest_1_1_color.html#a32e9eaf6013139846e848af6e6cf2b92a0bf060b447441fbf2e4beeb25370a808',1,'doctest::Color']]]
 ];

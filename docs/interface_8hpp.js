@@ -1,7 +1,6 @@
 var interface_8hpp =
 [
     [ "Interface", "class_interface.html", "class_interface" ],
-    [ "ExcecaoInterface", "class_excecao_interface.html", "class_excecao_interface" ],
     [ "interface_comecar", "interface_8hpp.html#a9e6d8705e4fc6edb9847044ff0357e55", null ],
     [ "interface_delete", "interface_8hpp.html#a4eebc192badd276dc9048eaedf81e2b8", null ],
     [ "interface_get_instrucoes", "interface_8hpp.html#a97532f3f0f77a85ace7d83db6a58339c", null ],
