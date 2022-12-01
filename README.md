@@ -54,10 +54,10 @@ um usuário “away from the keyboard”.~~
 
 ### DIAGRAMA DE CLASSES:
 [Link para o Draw.io](https://drive.google.com/file/d/1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW/view?usp=sharing)
-![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/diagrama.PNG)
+![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/diagrama_final.PNG)
 
 ### COMO COMPILAR O CÓDIGO
-**[essa parte ainda tem que sera adicionada]**
+make all
 
 ### CHECK-LIST: O QUE VAI SER AVALIADO NO TRABALHO
 
