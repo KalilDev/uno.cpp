@@ -54,7 +54,7 @@ um usuário “away from the keyboard”.~~
 
 ### DIAGRAMA DE CLASSES:
 [Link para o Draw.io](https://app.diagrams.net/#G1K9YqTVlmx7d_rlcXPRvTbVA9xhbsPNxW)
-![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/Diagrama_Final.PNG)
+![Foto do Diagrama](https://github.com/KalilDev/uno.cpp/blob/master/Diagrama_Final.png)
 
 ### COMO COMPILAR O CÓDIGO
 make all
