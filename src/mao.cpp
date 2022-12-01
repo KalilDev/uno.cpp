@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <cstring>
 #include "mao.hpp"
-#include "util.hpp"
+#include "util.hpp
     size_t Mao::size(){
         return _cartas.size();
     }
@@ -35,7 +35,10 @@
     }
 
     Carta * Mao::operator[](size_t i){
-        return _cartas[i];
+        if(i >= _cartas.size()){
+            throw std::range_error("Índice inválido para a mão");
+        }
+        return &_cartas[i];
     }
 
     Mao::Mao(Mao &&rvalue) noexcept {
