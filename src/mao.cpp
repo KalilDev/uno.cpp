@@ -34,7 +34,7 @@
         return _cartas[i]->getCor();
     }
 
-    Carta * Mao::operator[](size_t i){
+    Carta * Mao::operator[](size_t i) throw() {
         if(i >= _cartas.size()){
             throw std::range_error("Índice inválido para a mão");
         }
