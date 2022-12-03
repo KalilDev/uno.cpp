@@ -1,6 +1,8 @@
 var test_2mao_8cpp =
 [
+    [ "CartaQueVaiSerDeletada", "class_carta_que_vai_ser_deletada.html", "class_carta_que_vai_ser_deletada" ],
     [ "DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN", "test_2mao_8cpp.html#a623b8690a262536536a43eab2d7df03d", null ],
+    [ "TEST_CASE", "test_2mao_8cpp.html#a79665cb03096deb45b160b20abb94ef5", null ],
     [ "TEST_CASE", "test_2mao_8cpp.html#ae1b8fff389bfec7f9199a18010ecaf3a", null ],
     [ "TEST_CASE", "test_2mao_8cpp.html#a23f099aa9ff7fea9b5fa2308a8ee9010", null ],
     [ "TEST_CASE", "test_2mao_8cpp.html#ab650304fa5b0f1aa8b7e82da11aa4138", null ],

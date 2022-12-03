@@ -2,7 +2,7 @@ var searchData=
 [
   ['_7ecarta_0',['~Carta',['../class_carta.html#ae6d814103ac16b01b26fab9f47bf27c5',1,'Carta']]],
   ['_7ecartaespecial_1',['~CartaEspecial',['../class_carta_especial.html#a0fae2dd50dfb456cb929692ca8fc6e71',1,'CartaEspecial']]],
-  ['_7ecartaquevaiserdeletada_2',['~CartaQueVaiSerDeletada',['../class_carta_que_vai_ser_deletada.html#ab5258a05a3dcdfcdc71cad9530869eec',1,'CartaQueVaiSerDeletada']]],
+  ['_7ecartaquevaiserdeletada_2',['~CartaQueVaiSerDeletada',['../class_carta_que_vai_ser_deletada.html#ab5258a05a3dcdfcdc71cad9530869eec',1,'CartaQueVaiSerDeletada::~CartaQueVaiSerDeletada() override'],['../class_carta_que_vai_ser_deletada.html#ab5258a05a3dcdfcdc71cad9530869eec',1,'CartaQueVaiSerDeletada::~CartaQueVaiSerDeletada() override']]],
   ['_7econtext_3',['~Context',['../classdoctest_1_1_context.html#a33b344fbc4803dca81147c4a4cc9edbd',1,'doctest::Context']]],
   ['_7econtextscope_4',['~ContextScope',['../classdoctest_1_1detail_1_1_context_scope.html#a1ee7d4702398ee8d0e80ab843aa260d7',1,'doctest::detail::ContextScope']]],
   ['_7econtextscopebase_5',['~ContextScopeBase',['../structdoctest_1_1detail_1_1_context_scope_base.html#a3adec03d141d955f6b4655fdb1202583',1,'doctest::detail::ContextScopeBase']]],

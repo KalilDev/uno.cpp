@@ -67,13 +67,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_c_make_c_compiler_id_8c.html",
-"classdoctest_1_1_string.html#a0ce0a3e6a00b63b0a219a988fc42cec3",
-"doctest_8h.html#a4848f1d467fb5ef1dae4f31d56b8760a",
-"doctest_8h.html#ad668a8259af64e2e74d56358fd57253a",
-"mao_8hpp.html#a3ca0b4d22d328bbcca1c08d7b74ccff5",
-"src_2interface_8cpp.html#ae8cf4722647f8bcd0095afa635102465",
-"structdoctest_1_1_query_data.html#a8085a29db9a1cd5c7eff22ef44e9a9e8",
-"structdoctest_1_1detail_1_1types_1_1enable__if.html"
+"classdoctest_1_1_context.html#ae85cecc7689f009e23cba383484773b2",
+"doctest_8h.html#a468ff6c2b0a692bcf88a7a97a5de0a53",
+"doctest_8h.html#ad3e5c37dc8bd7b0f9346c99c6aab2d1d",
+"mao_8hpp.html#a03f6d9034f460092c7e47e1368bf5af8",
+"src_2interface_8cpp.html#a2e176f7fab292b3a68498de3d0f37c80",
+"structdoctest_1_1_query_data.html#a435f443f389323f47cb8b0e4202bbea9",
+"structdoctest_1_1detail_1_1has__insertion__operator_3_01_t_00_01decltype_07operator_3_3_07declvab094f732977dc5a8a6181e0b8269a776.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

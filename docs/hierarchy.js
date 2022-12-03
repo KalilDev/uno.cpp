@@ -8,6 +8,7 @@ var hierarchy =
     [ "std::basic_ostream< charT, traits >", "classstd_1_1basic__ostream.html", null ],
     [ "Carta", "class_carta.html", [
       [ "CartaEspecial", "class_carta_especial.html", null ],
+      [ "CartaQueVaiSerDeletada", "class_carta_que_vai_ser_deletada.html", null ],
       [ "CartaQueVaiSerDeletada", "class_carta_que_vai_ser_deletada.html", null ]
     ] ],
     [ "std::char_traits< charT >", "structstd_1_1char__traits.html", null ],
@@ -19,6 +20,7 @@ var hierarchy =
     [ "doctest::detail::types::enable_if< true, T >", "structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html", null ],
     [ "std::exception", null, [
       [ "CartaInvalida", "class_carta_invalida.html", null ],
+      [ "Exception", "class_exception.html", null ],
       [ "NaoESuaVez", "class_nao_e_sua_vez.html", null ]
     ] ],
     [ "doctest::detail::ExpressionDecomposer", "structdoctest_1_1detail_1_1_expression_decomposer.html", null ],
