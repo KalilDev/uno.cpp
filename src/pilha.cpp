@@ -93,6 +93,10 @@ Pilha::Pilha(Pilha &&rvalue) noexcept {
 }
 
 Pilha& Pilha::operator=(Pilha &&rvalue)  noexcept {
+    for (auto carta : _cartas) {
+        delete carta;
+    }
+    _cartas.clear();
     _cartas.reserve(rvalue._cartas.size());
     for (auto & _carta : rvalue._cartas) {
         _cartas.push_back(_carta);
