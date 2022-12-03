@@ -171,12 +171,12 @@ public:
 /**
  * @brief Retorna a pilha de cartas que já foram jogadas na mesa
  */
-    const Pilha *getCartasNaMesa() const;
+    Pilha *getCartasNaMesa();
 
 /**
  * @brief Retorna a pilha de cartas que serão comidas
  */
-    const Pilha *getCartasParaComer() const;
+    Pilha *getCartasParaComer();
 /**
  * @brief Retorna o pointer para o jogador no indice i
  * @param i indice

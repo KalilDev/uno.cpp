@@ -172,11 +172,11 @@ int Partida::getVencedor() {
     return -1;
 }
 
-const Pilha *Partida::getCartasNaMesa() const {
+Pilha *Partida::getCartasNaMesa() {
     return &_cartas_na_mesa;
 }
 
-const Pilha *Partida::getCartasParaComer() const {
+Pilha *Partida::getCartasParaComer() {
     return &_cartas_para_comer;
 }
 
