@@ -51,7 +51,7 @@ public:
  * @details Função que retorna qual o identificador do jogador em questão
  * @return id_jogador 
  */
-    id_jogador getId();
+    id_jogador getId() const;
 };
 
 /**

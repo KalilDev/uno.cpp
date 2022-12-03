@@ -9,15 +9,15 @@ Carta::Carta(CorDaCarta cor, numero_da_carta numero) {
 	_numero = numero;
 }
 
-CorDaCarta Carta::getCor() {
+CorDaCarta Carta::getCor() const {
 	return _cor;
 }
 
-numero_da_carta Carta::getNumero(){
+numero_da_carta Carta::getNumero() const{
 	return _numero;
 }
 
-std::string Carta::toString() {
+std::string Carta::toString() const {
     auto result = std::string{};
     result += std::to_string(_numero);
     result += " ";

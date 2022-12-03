@@ -57,7 +57,7 @@ public:
      * @details Função que permite retornar o atributo privado _tipo da classe CartaEspecial
      * @returns TipoDeCartaEspecial (unsigned char)
     */
-    TipoDeCartaEspecial getTipo();
+    TipoDeCartaEspecial getTipo() const;
 
     /**
      * @brief Função tranforma o _tipo em string
@@ -65,7 +65,7 @@ public:
      * o atributo _tipo em string
      * @returns string
     */
-    virtual std::string toString() override;
+    virtual std::string toString() const override;
 };
 
 extern "C" {

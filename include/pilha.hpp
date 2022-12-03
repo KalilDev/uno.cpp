@@ -47,14 +47,14 @@ public:
  * @details Pega a última carta do vetor de cartas que representa a carta do topo da pilha de cartas
  * @return Carta* (ponteiro de um objeto Carta)
  */
-    Carta *getTop();
+    Carta *getTop() noexcept(false);
 
 /**
  * @brief Retira uma carta do vetor de cartas
  * @details Retira a última carta do vetor de cartas usando pop_back e retorna a carta retirada
  * @return Carta* (ponteiro de uma carta do tipo objeto Carta)
  */
-    Carta *pop();
+    Carta *pop() noexcept(false);
 
 /**
  * @brief Coloca uma carta na pilha de cartas que representa o lixo
@@ -79,7 +79,7 @@ public:
  * @details retorna o tamanho do vetor de cartas que representa uma pilha da partida
  * @return size_t 
  */
-    size_t size();
+    size_t size() const;
 
 /**
  * @brief Retira a primeira carta não especial

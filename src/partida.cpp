@@ -32,11 +32,11 @@ const char* CartaInvalida::what() const noexcept {
 }
 Partida::Partida() = default;
 
-DirecaoDaPartida Partida::getDirecao() {
+DirecaoDaPartida Partida::getDirecao() const {
     return _direcao;
 }
 
-id_jogador Partida::getJogadorAtual() {
+id_jogador Partida::getJogadorAtual() const {
     return _jogador_atual;
 }
 
@@ -77,7 +77,7 @@ void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) noexcept(fals
 
 }
 
-CorDaCarta Partida::getCorDaPartida() {
+CorDaCarta Partida::getCorDaPartida() noexcept(false) {
     return _cartas_na_mesa.getTop()->getCor();
 }
 
@@ -172,11 +172,11 @@ int Partida::getVencedor() {
     return -1;
 }
 
-const Pilha *Partida::getCartasNaMesa() {
+const Pilha *Partida::getCartasNaMesa() const {
     return &_cartas_na_mesa;
 }
 
-const Pilha *Partida::getCartasParaComer() {
+const Pilha *Partida::getCartasParaComer() const {
     return &_cartas_para_comer;
 }
 
@@ -195,7 +195,7 @@ Jogador *Partida::operator[](size_t i) {
     return &_jogadores[i];
 }
 
-size_t Partida::size() {
+size_t Partida::size() const {
     return _jogadores.size();
 }
 

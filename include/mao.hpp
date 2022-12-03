@@ -87,7 +87,7 @@ public:
      * retornará a cor da carta correspondente ao índice passado
      * @return CorDaCarta 
      */
-        CorDaCarta getCorDaCarta(size_t i);
+        CorDaCarta getCorDaCarta(size_t i) const;
 
     /**
      * @brief Uma sobrescrita do método operator
@@ -104,7 +104,7 @@ public:
      * possui
      * @return size_t 
      */
-        size_t size();
+        size_t size() const;
 
     /**
      * @brief Destrutor de objeto mão

@@ -72,14 +72,14 @@ public:
      * @details Função que permite retornar o atributo privado _cor da classe Carta
      * @returns CorDaCarta (unsigned char)
     */
-    CorDaCarta getCor();
+    CorDaCarta getCor() const;
 
     /**
      * @brief Retorna um unsigned char com o numero da carta
      * @details Função que permite retornar o atributo privado _numero da classe Carta
      * @returns numero_da_carta (unsigned char)
     */
-    numero_da_carta getNumero();
+    numero_da_carta getNumero() const;
 
     /**
      * @brief Função junta o número e a cor da carta em uma string
@@ -87,7 +87,7 @@ public:
      * _numero e _cor em strings
      * @returns string
     */
-    virtual std::string toString();
+    virtual std::string toString() const;
 };
 
 extern "C" {

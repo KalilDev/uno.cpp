@@ -55,7 +55,7 @@ public:
      * @returns const char*;
      *
      */
-    const char *getInstrucoes();
+    const char *getInstrucoes() const;
 
     /**
      * @brief Fornece ao usuário a opção de parar a partida e não continuar jogando.

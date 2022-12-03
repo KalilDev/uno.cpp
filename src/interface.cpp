@@ -26,7 +26,7 @@ Partida *Interface::getPartida()
     return &_partida;
 }
 
-const char *Interface::getInstrucoes()
+const char *Interface::getInstrucoes() const
 {
     return Interface::const_regras;
 }

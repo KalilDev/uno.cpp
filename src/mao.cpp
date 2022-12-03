@@ -7,11 +7,11 @@
 #include <cstring>
 #include "mao.hpp"
 #include "util.hpp"
-    size_t Mao::size(){
+    size_t Mao::size() const {
         return _cartas.size();
     }
 
-    Carta **Mao::begin(){
+    Carta **Mao::begin() {
         return &*_cartas.begin();
     }
 
@@ -33,7 +33,7 @@
 #pragma clang diagnostic pop
     }
 
-    CorDaCarta Mao::getCorDaCarta(size_t i){
+    CorDaCarta Mao::getCorDaCarta(size_t i) const {
         return _cartas[i]->getCor();
     }
 

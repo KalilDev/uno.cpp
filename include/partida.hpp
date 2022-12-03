@@ -90,7 +90,7 @@ private:
 /**
  * @brief A direção atual da partida
  */
-    DirecaoDaPartida _direcao;
+    DirecaoDaPartida _direcao = DirecaoDaPartida::Normal;
 
 /**
  * @brief O id do jogador atual
@@ -121,12 +121,12 @@ public:
 /**
  * @brief A direção atual da partida
  */
-    DirecaoDaPartida getDirecao();
+    DirecaoDaPartida getDirecao() const;
 
 /**
  * @brief O id do jogador atual
  */
-    id_jogador getJogadorAtual();
+    id_jogador getJogadorAtual() const;
 
 /**
  * @brief Tenta jogar a carta e avançar a partida
@@ -139,7 +139,7 @@ public:
 /**
  * @brief A cor da ultima carta jogada
  */
-    CorDaCarta getCorDaPartida();
+    CorDaCarta getCorDaPartida() noexcept(false);
 
 /**
  * @brief Tenta comer a carta
@@ -171,12 +171,12 @@ public:
 /**
  * @brief Retorna a pilha de cartas que já foram jogadas na mesa
  */
-    const Pilha *getCartasNaMesa();
+    const Pilha *getCartasNaMesa() const;
 
 /**
  * @brief Retorna a pilha de cartas que serão comidas
  */
-    const Pilha *getCartasParaComer();
+    const Pilha *getCartasParaComer() const;
 /**
  * @brief Retorna o pointer para o jogador no indice i
  * @param i indice
@@ -194,7 +194,7 @@ public:
 /**
  * @brief Retorna a quantidade de jogadores
  */
-    size_t size();
+    size_t size() const;
 
 private:
 

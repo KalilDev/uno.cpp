@@ -4,6 +4,7 @@
 #include <algorithm>
 #include <random>
 #include <chrono>
+#include <stdexcept>
 
 Pilha::Pilha(){
 
@@ -18,12 +19,18 @@ Pilha::~Pilha(){
         delete carta;
 }
 
-Carta* Pilha::getTop(){
+Carta* Pilha::getTop() noexcept(false) {
+    if (_cartas.empty()) {
+        throw std::range_error("A Pilha está vazia");
+    }
     Carta* ultima = _cartas[_cartas.size() - 1];
     return ultima;
 }
 
-Carta* Pilha::pop(){
+Carta* Pilha::pop() noexcept(false) {
+    if (_cartas.empty()) {
+        throw std::range_error("A Pilha está vazia");
+    }
     Carta* ultima = _cartas[_cartas.size() - 1];
     _cartas.pop_back();
     return ultima;
@@ -52,7 +59,7 @@ Pilha Pilha::cheia(){
     return pilha;
 }
 
-size_t Pilha::size(){
+size_t Pilha::size() const {
  return _cartas.size();
 }
 

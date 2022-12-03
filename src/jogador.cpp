@@ -12,7 +12,7 @@ Mao* Jogador::getMao(){
     return &_mao;
 }
 
-id_jogador Jogador::getId(){
+id_jogador Jogador::getId() const {
     return _id;
 }
 
