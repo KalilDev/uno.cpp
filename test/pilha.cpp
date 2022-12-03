@@ -50,7 +50,7 @@ TEST_CASE("Size, begin e end"){
     p1.push(c3);
     CHECK_EQ(p1.size(), 3);
     CHECK_EQ(*p1.begin(), c1);
-    CHECK_EQ(*p1.end(), c3 + 1);
+    CHECK_EQ(p1.end(), p1.begin()+3);
 }
 
 TEST_CASE("Pop e getTop"){
@@ -79,11 +79,15 @@ TEST_CASE("Random"){
     p.random();
     bool isOrdenada = true;
 
-    for (numero_da_carta i = 0; i < 20; i++){
-        if (cartas[i]->getNumero() != i){
+    for (char i = 19; i >= 0; i--){
+        auto top_cartas= cartas[static_cast<size_t>(i)];
+        auto top_pilha = p.pop();
+        if (top_cartas != top_pilha) {
             isOrdenada = false;
+            delete top_pilha;
             break;
         }
+        delete top_pilha;
     }
 
     CHECK_EQ(false, isOrdenada);
