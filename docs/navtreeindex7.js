@@ -1,5 +1,6 @@
 var NAVTREEINDEX7 =
 {
+"structdoctest_1_1detail_1_1types_1_1enable__if.html":[2,0,0,0,0,0],
 "structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html":[2,0,0,0,0,1],
 "structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html":[1,0,0,2,2,1],
 "structdoctest_1_1detail_1_1types_1_1enable__if_3_01true_00_01_t_01_4.html#a37e544722a1ede5533999b1b0cee7cbf":[2,0,0,0,0,1,0],

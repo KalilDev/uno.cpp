@@ -12,7 +12,7 @@ var class_partida =
     [ "getVencedor", "class_partida.html#a3bf3ecd73ce93e9d2614134dc5cd0f2a", null ],
     [ "iniciarEstado", "class_partida.html#a40d8ce870bedd0415039a3d671200ca7", null ],
     [ "jogarBot", "class_partida.html#a5b81f53959ff5b141f1aad95d80f9839", null ],
-    [ "jogarCarta", "class_partida.html#a9ccaacbd68c3bd77dbd1eca75457c15a", null ],
+    [ "jogarCarta", "class_partida.html#a09078b8c60939078f4c18efde211ad57", null ],
     [ "limparEstado", "class_partida.html#a05a9202e0e095c3dc6fd0237d483e11d", null ],
     [ "operator[]", "class_partida.html#a962e0dfce865856e825824897ebec9e0", null ],
     [ "size", "class_partida.html#a4a82897d0e7d831e59146e3d3d67e555", null ]

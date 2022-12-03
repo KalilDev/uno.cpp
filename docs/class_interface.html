@@ -85,6 +85,7 @@ $(document).ready(function(){initNavTree('class_interface.html',''); initResizab
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="class_interface-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">Interface Class Reference</div></div>
 </div><!--header-->
@@ -115,6 +116,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7ac72fee782f416358fdbd011313ddef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interface.html#a7ac72fee782f416358fdbd011313ddef">comecar</a> ()</td></tr>
 <tr class="memdesc:a7ac72fee782f416358fdbd011313ddef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permite ao jogador começar a partida.  <a href="class_interface.html#a7ac72fee782f416358fdbd011313ddef">More...</a><br /></td></tr>
 <tr class="separator:a7ac72fee782f416358fdbd011313ddef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a2c38664fc2d6587fb6d2ba536c32de10"><td class="memItemLeft" align="right" valign="top">static const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_interface.html#a2c38664fc2d6587fb6d2ba536c32de10">const_regras</a></td></tr>
+<tr class="memdesc:a2c38664fc2d6587fb6d2ba536c32de10"><td class="mdescLeft">&#160;</td><td class="mdescRight">inicializa um objeto do tipo const char*, de modo a sempre ser possível acessar as regras do jogo.  <a href="class_interface.html#a2c38664fc2d6587fb6d2ba536c32de10">More...</a><br /></td></tr>
+<tr class="separator:a2c38664fc2d6587fb6d2ba536c32de10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Disponibiliza um pequeno menu ao usuário. </p>
@@ -238,6 +245,42 @@ Public Member Functions</h2></td></tr>
 
 <p>Fornece ao usuário a opção de parar a partida e não continuar jogando. </p>
 <p >Chama uma função da classe <a class="el" href="class_partida.html" title="A classe que controla uma partida.">Partida</a> para limpar completamente o estado atual do jogo. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a2c38664fc2d6587fb6d2ba536c32de10" name="a2c38664fc2d6587fb6d2ba536c32de10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c38664fc2d6587fb6d2ba536c32de10">&#9670;&nbsp;</a></span>const_regras</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char * Interface::const_regras</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="stringliteral">&quot;1) O jogo consiste em 4 jogadores, com 7 cartas cada;\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;2) As cartas numéricas variam entre 0 e 9, nas cores amarelo, azul, vermelho e verde);\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;3) Nessa versão, existem apenas três tipos de carta especial :\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;   Reverso(muda o sentindo da partida, podendo ser horário ou anti - horário),\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;   Bloqueio(impede o jogador seguinte ao que lançou a carta de participar nessa rodada),\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot; e Come 2”(faz com que o próximo àquele que jogou adicione mais 2 cartas à sua mão.\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;   Essas cartas não são acumulativas, ou seja, um outro “come 2” não pode ser jogado em cima de um previamente lançado de modo\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;   a “formar um come 4”);\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;4) O jogador não possui a possibilidade de falar “Uno” enquanto joga sua penúltima carta;\n&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;5) O jogo possui bots. Dessa maneira, após realizar sua jogada, a vez será concedida a um bot,&quot;</span></div>
+<div class="line">                                      <span class="stringliteral">&quot;   ciclo que seguirá até que chegue sua vez novamente.&quot;</span></div>
+</div><!-- fragment -->
+<p>inicializa um objeto do tipo const char*, de modo a sempre ser possível acessar as regras do jogo. </p>
 
 </div>
 </div>

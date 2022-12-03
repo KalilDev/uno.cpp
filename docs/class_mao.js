@@ -10,7 +10,7 @@ var class_mao =
     [ "getCorDaCarta", "class_mao.html#a466b4d47fe8c83b84cbe2f58e30bb1f5", null ],
     [ "operator=", "class_mao.html#a1fa2b513e97579a9b7baa891b2aaf76b", null ],
     [ "operator=", "class_mao.html#a15f7e4c69a8a3975a37ef1336f09aa4c", null ],
-    [ "operator[]", "class_mao.html#a324cfe8e3ebf902ef5dd20490ab88fc6", null ],
+    [ "operator[]", "class_mao.html#a9af6abf5d5863d3ac18deb9136c34097", null ],
     [ "removerCarta", "class_mao.html#ab5bd5729c68efcd36833d4c64e4d6bf8", null ],
-    [ "size", "class_mao.html#a7eb29935d1ceda0a789a48a7d205d689", null ]
+    [ "size", "class_mao.html#af6ecc057f89958525aaa4e36fa71afa6", null ]
 ];

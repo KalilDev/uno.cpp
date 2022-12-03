@@ -1,5 +1,6 @@
 var NAVTREEINDEX6 =
 {
+"structdoctest_1_1_query_data.html#a8085a29db9a1cd5c7eff22ef44e9a9e8":[2,0,0,11,0],
 "structdoctest_1_1_query_data.html#af1033338fe975ae3c19b16452401230d":[2,0,0,11,1],
 "structdoctest_1_1_query_data.html#af1033338fe975ae3c19b16452401230d":[1,0,0,14,1],
 "structdoctest_1_1_string_maker.html":[2,0,0,13],
@@ -248,6 +249,5 @@ var NAVTREEINDEX6 =
 "structdoctest_1_1detail_1_1has__insertion__operator.html":[1,0,0,2,13],
 "structdoctest_1_1detail_1_1has__insertion__operator_3_01_t_00_01decltype_07operator_3_3_07declvab094f732977dc5a8a6181e0b8269a776.html":[1,0,0,2,14],
 "structdoctest_1_1detail_1_1has__insertion__operator_3_01_t_00_01decltype_07operator_3_3_07declvab094f732977dc5a8a6181e0b8269a776.html":[2,0,0,0,12],
-"structdoctest_1_1detail_1_1types_1_1enable__if.html":[1,0,0,2,2,0],
-"structdoctest_1_1detail_1_1types_1_1enable__if.html":[2,0,0,0,0,0]
+"structdoctest_1_1detail_1_1types_1_1enable__if.html":[1,0,0,2,2,0]
 };
