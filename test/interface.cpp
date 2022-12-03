@@ -7,5 +7,6 @@
 #include "doctest.h"
 
 TEST_CASE("Teste da Interface: ") {
-    CHECK(getInstrucoes() == const_regras);
+    Interface i;
+    CHECK_EQ(Interface::const_regras, i.getInstrucoes());
 }

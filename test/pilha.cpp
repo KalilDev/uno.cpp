@@ -7,10 +7,15 @@
 #include "doctest.h"
 
 class CartaQueVaiSerDeletada : public Carta {
+private:
     bool* _foi_deletada;
     public:
-    CartaQueVaiSerDeletada(bool* foi_deletada): _foi_deletada(foi_deletada), Carta::Carta(CorDaCarta::Verde, 100) {
+    CartaQueVaiSerDeletada(bool* foi_deletada): Carta::Carta(CorDaCarta::Verde, 100), _foi_deletada(foi_deletada) {
         *foi_deletada = false;
+    }
+    virtual ~CartaQueVaiSerDeletada() override {
+        *_foi_deletada = true;
+        Carta::~Carta();
     }
 };
 
@@ -43,7 +48,7 @@ TEST_CASE("Size, begin e end"){
     p1.push(c1);
     p1.push(c2);
     p1.push(c3);
-    CHECK(p1.size() == 3);
+    CHECK_EQ(p1.size(), 3);
     CHECK_EQ(*p1.begin(), c1);
     CHECK_EQ(*p1.end(), c3 + 1);
 }
@@ -66,7 +71,7 @@ TEST_CASE("Random"){
     std::vector<Carta*> cartas;
     Pilha p;
 
-    for (size_t i = 0; i < 20; i++){
+    for (numero_da_carta i = 0; i < 20; i++){
         auto carta = new Carta(CorDaCarta::Vermelho, i);
         cartas.push_back(carta);
         p.push(carta);
@@ -74,7 +79,7 @@ TEST_CASE("Random"){
     p.random();
     bool isOrdenada = true;
 
-    for (size_t i = 0; i < 20; i++){
+    for (numero_da_carta i = 0; i < 20; i++){
         if (cartas[i]->getNumero() != i){
             isOrdenada = false;
             break;

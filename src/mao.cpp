@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <cstring>
 #include "mao.hpp"
-#include "util.hpp
+#include "util.hpp"
     size_t Mao::size(){
         return _cartas.size();
     }
@@ -27,18 +27,21 @@
         auto it = _cartas.begin() + (long)i;
         auto carta = *it;
         _cartas.erase(it);
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "LocalValueEscapesScope"
         return carta;
+#pragma clang diagnostic pop
     }
 
     CorDaCarta Mao::getCorDaCarta(size_t i){
         return _cartas[i]->getCor();
     }
 
-    Carta * Mao::operator[](size_t i) throw() {
+    Carta * Mao::operator[](size_t i) noexcept(false) {
         if(i >= _cartas.size()){
             throw std::range_error("Índice inválido para a mão");
         }
-        return &_cartas[i];
+        return _cartas[i];
     }
 
     Mao::Mao(Mao &&rvalue) noexcept {
@@ -57,6 +60,12 @@
         rvalue._cartas.clear();
         return *this;
     }
+
+Mao::~Mao() {
+    for (auto carta:_cartas) {
+        delete carta;
+    }
+}
 
 extern "C" {
     size_t mao_size(Mao* self){

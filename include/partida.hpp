@@ -134,7 +134,7 @@ public:
  * @param i o índice da carta
  * @details Verifica se é a vez do jogador, verifica se a carta pode ser jogada, executa as ações necessárias caso a carta seja especial e avança a partida
  */
-    void jogarCarta(id_jogador id_jogador, size_t i);
+    void jogarCarta(id_jogador id_jogador, size_t i) noexcept(false);
 
 /**
  * @brief A cor da ultima carta jogada

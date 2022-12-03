@@ -40,12 +40,9 @@ id_jogador Partida::getJogadorAtual() {
     return _jogador_atual;
 }
 
-void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) throw() {
+void Partida::jogarCarta(id_jogador id_jogador, size_t card_index) noexcept(false) {
     if (id_jogador != getJogadorAtual()) {
         throw NaoESuaVez(id_jogador);
-    }
-    if (card_index > jogador.getMao().size()) {
-        throw std::range_error("Valor inválido");
     }
     auto ultima_carta = _cartas_na_mesa.getTop();
     auto &jogador = _jogadores[id_jogador];
@@ -136,7 +133,11 @@ void Partida::jogarBot() {
         return;
     }
     auto i = static_cast<size_t>(random()) % cartas_possiveis.size();
-    jogarCarta(_jogador_atual, i);
+    try {
+        jogarCarta(_jogador_atual, i);
+    } catch (std::exception&e) {
+        comerCarta(_jogador_atual);
+    }
 }
 
 void Partida::avancarJogador() {

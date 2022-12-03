@@ -95,7 +95,7 @@ public:
      * o elemento do vector _cartas, na posição i.
      * @return Carta* 
      */
-        Carta *operator[](size_t i);
+        Carta *operator[](size_t i)  noexcept(false);
     
     /**
      * @brief Função que retorna o tamanho do vector

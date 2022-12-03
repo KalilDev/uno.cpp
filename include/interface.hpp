@@ -28,13 +28,13 @@ private:
      *
      */
     Partida _partida;
+
+public:
     /**
      * @brief inicializa um objeto do tipo const char*, de modo a sempre ser possível acessar as regras do jogo.
      *
      */
     static const char* const_regras;
-
-public:
     /**
      * @brief Constrói um objeto do tipo Interface.
      * @details Inicialização sem parâmetros.

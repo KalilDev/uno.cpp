@@ -6,7 +6,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 include_directories(include)
 include_directories(third_party)
-add_executable(main src/main.cpp src/carta.cpp src/carta_especial.cpp src/interface.cpp src/jogador.cpp src/mao.cpp src/partida.cpp src/pilha.cpp src/util.cpp)
 add_test(carta carta_test)
 add_test(carta_especial carta_especial_test)
 add_test(interface interface_test)
