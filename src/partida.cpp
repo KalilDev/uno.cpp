@@ -149,14 +149,16 @@ void Partida::avancarJogador() {
 
 void Partida::comerUmaCarta() {
     auto &jogador = _jogadores[_jogador_atual];
-    if (_cartas_para_comer.size() == 0) {
-        auto ultima_carta = _cartas_na_mesa.pop();
-        _cartas_para_comer = {};
+    if (_cartas_para_comer.size() == 1 && _cartas_na_mesa.size() > 1) {
+        auto ultima_carta_na_mesa = _cartas_na_mesa.pop();
         for (auto carta : _cartas_na_mesa) {
             _cartas_para_comer.push(carta);
         }
         _cartas_para_comer.random();
-        _cartas_na_mesa = {ultima_carta};
+        _cartas_na_mesa = {ultima_carta_na_mesa};
+    }
+    if (_cartas_para_comer.size() == 0) {
+        return;
     }
     auto carta = _cartas_para_comer.pop();
     jogador.getMao()->adicionarCarta(carta);
