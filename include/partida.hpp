@@ -24,7 +24,7 @@ enum DirecaoDaPartida : char {
     /**
      * @brief O próximo jogador será à esquerda
      */
-    Reversa = -1,
+    Reversa = (char)-1,
 };
 /**
  * @brief
