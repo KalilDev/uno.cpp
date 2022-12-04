@@ -85,12 +85,14 @@ $(document).ready(function(){initNavTree('test_2partida_8cpp.html',''); initResi
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">partida.cpp File Reference</div></div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="partida_8hpp_source.html">partida.hpp</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="doctest_8h_source.html">doctest.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="carta__especial_8hpp_source.html">carta_especial.hpp</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
@@ -101,6 +103,23 @@ Macros</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a24af83d96e3f436863c23c78b5943533"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a24af83d96e3f436863c23c78b5943533">TEST_CASE</a> (&quot;partida vazia&quot;)</td></tr>
 <tr class="separator:a24af83d96e3f436863c23c78b5943533"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a822f14aa7c77123b91b06ea5c34f976c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a822f14aa7c77123b91b06ea5c34f976c">TEST_CASE</a> (&quot;partida inicial&quot;)</td></tr>
+<tr class="separator:a822f14aa7c77123b91b06ea5c34f976c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecb870f1e8216725c3c5cde062c0b9fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#aecb870f1e8216725c3c5cde062c0b9fa">TEST_CASE</a> (&quot;partida limpa&quot;)</td></tr>
+<tr class="separator:aecb870f1e8216725c3c5cde062c0b9fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ac5d63273f11fc83ea8e3976247ab64"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a8ac5d63273f11fc83ea8e3976247ab64">TEST_CASE</a> (&quot;vencedor&quot;)</td></tr>
+<tr class="separator:a8ac5d63273f11fc83ea8e3976247ab64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fd887f002d14020e94f17be8e0117f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a38fd887f002d14020e94f17be8e0117f">TEST_CASE</a> (&quot;jogar carta&quot;)</td></tr>
+<tr class="separator:a38fd887f002d14020e94f17be8e0117f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab903c20591dd2953e475ecd721eb7177"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#ab903c20591dd2953e475ecd721eb7177">TEST_CASE</a> (&quot;trocar cartas na mesa por cartas para comer&quot;)</td></tr>
+<tr class="separator:ab903c20591dd2953e475ecd721eb7177"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34dfca7d88df91ced8c85769cf4b64ba"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a34dfca7d88df91ced8c85769cf4b64ba">TEST_CASE</a> (&quot;tentar comer com o bolo vazio&quot;)</td></tr>
+<tr class="separator:a34dfca7d88df91ced8c85769cf4b64ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a1dd9fae95006795d666b2d7b04463aff"><td class="memItemLeft" align="right" valign="top">auto&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="test_2partida_8cpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a></td></tr>
+<tr class="separator:a1dd9fae95006795d666b2d7b04463aff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >O arquivo que testa a classe <a class="el" href="class_partida.html" title="A classe que controla uma partida.">Partida</a> </p>
@@ -120,8 +139,62 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a38fd887f002d14020e94f17be8e0117f" name="a38fd887f002d14020e94f17be8e0117f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fd887f002d14020e94f17be8e0117f">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[1/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;jogar carta&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a822f14aa7c77123b91b06ea5c34f976c" name="a822f14aa7c77123b91b06ea5c34f976c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a822f14aa7c77123b91b06ea5c34f976c">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[2/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;partida inicial&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aecb870f1e8216725c3c5cde062c0b9fa" name="aecb870f1e8216725c3c5cde062c0b9fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecb870f1e8216725c3c5cde062c0b9fa">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[3/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;partida limpa&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a24af83d96e3f436863c23c78b5943533" name="a24af83d96e3f436863c23c78b5943533"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24af83d96e3f436863c23c78b5943533">&#9670;&nbsp;</a></span>TEST_CASE()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a24af83d96e3f436863c23c78b5943533">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[4/7]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -136,6 +209,82 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a34dfca7d88df91ced8c85769cf4b64ba" name="a34dfca7d88df91ced8c85769cf4b64ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34dfca7d88df91ced8c85769cf4b64ba">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[5/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;tentar comer com o bolo vazio&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab903c20591dd2953e475ecd721eb7177" name="ab903c20591dd2953e475ecd721eb7177"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab903c20591dd2953e475ecd721eb7177">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[6/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;trocar cartas na mesa por cartas para comer&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8ac5d63273f11fc83ea8e3976247ab64" name="a8ac5d63273f11fc83ea8e3976247ab64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ac5d63273f11fc83ea8e3976247ab64">&#9670;&nbsp;</a></span>TEST_CASE() <span class="overload">[7/7]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_CASE </td>
+          <td>(</td>
+          <td class="paramtype">&quot;vencedor&quot;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a1dd9fae95006795d666b2d7b04463aff" name="a1dd9fae95006795d666b2d7b04463aff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dd9fae95006795d666b2d7b04463aff">&#9670;&nbsp;</a></span>p</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto p</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= [](){</div>
+<div class="line">    <span class="keyword">auto</span> <a class="code hl_variable" href="test_2partida_8cpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a> =<a class="code hl_class" href="class_partida.html">Partida</a>{};</div>
+<div class="line">    <a class="code hl_variable" href="test_2partida_8cpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a>.iniciarEstado();</div>
+<div class="line">    <span class="keywordflow">return</span> <a class="code hl_variable" href="test_2partida_8cpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a>;</div>
+<div class="line">}()</div>
+<div class="ttc" id="aclass_partida_html"><div class="ttname"><a href="class_partida.html">Partida</a></div><div class="ttdoc">A classe que controla uma partida.</div><div class="ttdef"><b>Definition:</b> partida.hpp:87</div></div>
+<div class="ttc" id="atest_2partida_8cpp_html_a1dd9fae95006795d666b2d7b04463aff"><div class="ttname"><a href="test_2partida_8cpp.html#a1dd9fae95006795d666b2d7b04463aff">p</a></div><div class="ttdeci">auto p</div><div class="ttdef"><b>Definition:</b> partida.cpp:60</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

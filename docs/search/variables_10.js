@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['testcase_0',['TestCase',['../namespacedoctest_1_1detail.html#ade1619b532a3d3e6f19ee1187ff3c514',1,'doctest::detail']]],
-  ['testcasesuccess_1',['testCaseSuccess',['../structdoctest_1_1_current_test_case_stats.html#a2c77d43c1fbab06710da7b5bbba4f3ab',1,'doctest::CurrentTestCaseStats']]]
+  ['seconds_0',['seconds',['../structdoctest_1_1_current_test_case_stats.html#a29b1963f1d624d9f939f404726298f48',1,'doctest::CurrentTestCaseStats']]],
+  ['string_1',['string',['../classdoctest_1_1_contains.html#a2170129e81f070d872df8f34e07bf182',1,'doctest::Contains']]],
+  ['subcase_5ffilter_5flevels_2',['subcase_filter_levels',['../structdoctest_1_1_context_options.html#a93281aa958eed5c2a1533d404b1ebeff',1,'doctest::ContextOptions']]],
+  ['success_3',['success',['../structdoctest_1_1_context_options.html#a5c7bc4cf57fadf73e626666a0a548b92',1,'doctest::ContextOptions']]]
 ];
