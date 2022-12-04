@@ -41,8 +41,7 @@ void Pilha::push(Carta* carta){
 }
 
 void Pilha::random(){
-    unsigned seed = static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count());
-    std::shuffle (_cartas.begin(), _cartas.end(), std::default_random_engine(seed));
+    std::shuffle(_cartas.begin(), _cartas.end(), std::default_random_engine(std::random_device{}()));
 }
 
 Pilha Pilha::cheia(){
