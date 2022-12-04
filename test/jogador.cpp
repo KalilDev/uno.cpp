@@ -27,7 +27,7 @@ TEST_CASE("mao do jogador"){
     jogador2.getMao()->adicionarCarta(c2);
 
     CHECK_EQ(c, (*jogador.getMao())[0]);
-    CHECK_EQ(c1, (*jogador.getMao())[0]);
-    CHECK_EQ(c2, (*jogador.getMao())[0]);
+    CHECK_EQ(c1, (*jogador1.getMao())[0]);
+    CHECK_EQ(c2, (*jogador2.getMao())[0]);
 
 }
