@@ -36,7 +36,7 @@ DirecaoDaPartida direcaoOposta(DirecaoDaPartida direcao);
 /**
  * @brief A excessão arremessada quando o jogador tenta jogar fora da vez dele
  */
-class NaoESuaVez : std::exception {
+class NaoESuaVez : public std::exception {
 private:
 /**
  * @brief O id do jogador que tentou jogar fora da vez
@@ -55,7 +55,7 @@ public:
 /**
  * @brief A excessão arremessada quando o jogador tenta jogar uma carta que não pode ser jogada
  */
-class CartaInvalida : std::exception {
+class CartaInvalida : public std::exception {
 private:
 /**
  * @brief O id do jogador
