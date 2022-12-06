@@ -143,8 +143,14 @@ void Partida::jogarBot() {
 void Partida::avancarJogador() {
     using id = id_jogador;
     using ll = long long;
-    using c = char;
-    _jogador_atual = (id)((id)((ll) _jogador_atual + (c) _direcao+(ll)_jogadores.size())) % _jogadores.size();
+    switch (_direcao) {
+        case DirecaoDaPartida::Normal:
+            _jogador_atual = (_jogador_atual + 1) % _jogadores.size();
+            break;
+        case DirecaoDaPartida::Reversa:
+            _jogador_atual = (id)((ll)_jogadores.size() + (ll)_jogador_atual - 1) % _jogadores.size();
+            break;
+    }
 }
 
 void Partida::comerUmaCarta() {

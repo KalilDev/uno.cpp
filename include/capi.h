@@ -66,8 +66,8 @@ struct Carta **pilha_end(struct Pilha*);
  *
  */
 enum DirecaoDaPartida {
-    Normal = 1,
-    Reversa = -1,
+    Normal = 0,
+    Reversa = 1,
 } __attribute__((packed));
 struct Partida;
 
