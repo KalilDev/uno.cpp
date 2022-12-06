@@ -76,6 +76,7 @@ TEST_CASE("jogar carta") {
         j.getMao()->removerCarta(7);
         CHECK_THROWS_AS(p.jogarCarta(0, 7), std::range_error);
         CHECK_EQ(0, p.getJogadorAtual());
+        delete carta;
     }
     SUBCASE("jogar com cor igual") {
         auto &j0 = *p[0];
