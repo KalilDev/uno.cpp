@@ -157,7 +157,7 @@ void Partida::comerUmaCarta() {
     auto &jogador = _jogadores[_jogador_atual];
     if (_cartas_para_comer.size() == 1 && _cartas_na_mesa.size() > 1) {
         auto ultima_carta_na_mesa = _cartas_na_mesa.pop();
-        for (auto carta : _cartas_na_mesa) {
+        for (auto carta = _cartas_na_mesa.pop(); _cartas_na_mesa.size() > 0; carta = _cartas_na_mesa.pop()) {
             _cartas_para_comer.push(carta);
         }
         _cartas_para_comer.random();
@@ -253,7 +253,13 @@ extern "C" {
         try {
             *e = nullptr;
             return (*self)[i];
-        } catch (const std::exception& exception) {
+        } catch (const std::range_error& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }catch (const NaoESuaVez& exception) {
+            exception_to_c(e, exception);
+            return nullptr;
+        }catch (const CartaInvalida& exception) {
             exception_to_c(e, exception);
             return nullptr;
         }
