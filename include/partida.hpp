@@ -95,7 +95,7 @@ private:
 /**
  * @brief O id do jogador atual
  */
-    id_jogador _jogador_atual;
+    id_jogador _jogador_atual = 0;
 
 /**
  * @brief A pilha de cartas que já foram jogadas na mesa
