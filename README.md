@@ -59,6 +59,9 @@ um usuário “away from the keyboard”.~~
 ### COMO COMPILAR O CÓDIGO
 make all
 
+### BAIXE O APLICATIVO PELO LINK ABAIXO
+[Link para baixar](https://github.com/KalilDev/uno.dart/releases/tag/1.0.0)
+
 ### CHECK-LIST: O QUE VAI SER AVALIADO NO TRABALHO
 
  - [ ] Documentação e organização (5 pontos)
